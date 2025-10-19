@@ -44,6 +44,94 @@
       "meta": {
         "tags": ["clock"]
       }
+    },
+    {
+      "name": "widget-04",
+      "type": "registry:component",
+      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
+      "files": [
+        {
+          "path": "registry/default/widgets/widget-04.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["clock"]
+      }
+    },
+    {
+      "name": "widget-05",
+      "type": "registry:component",
+      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
+      "files": [
+        {
+          "path": "registry/default/widgets/widget-05.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["clock"]
+      }
+    },
+    {
+      "name": "widget-06",
+      "type": "registry:component",
+      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
+      "files": [
+        {
+          "path": "registry/default/widgets/widget-06.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["clock"]
+      }
+    },
+    {
+      "name": "widget-07",
+      "type": "registry:component",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/separator.json"
+      ],
+      "files": [
+        {
+          "path": "registry/default/widgets/widget-07.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["clock"]
+      }
+    },
+    {
+      "name": "widget-08",
+      "type": "registry:component",
+      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
+      "files": [
+        {
+          "path": "registry/default/widgets/widget-08.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["clock"]
+      }
+    },
+    {
+      "name": "widget-09",
+      "type": "registry:component",
+      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
+      "files": [
+        {
+          "path": "registry/default/widgets/widget-09.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["clock"]
+      }
     }
   ]
 }

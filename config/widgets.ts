@@ -13,6 +13,12 @@ export const categories: WidgetCategory[] = [
       { name: "widget-01" },
       { name: "widget-02" },
       { name: "widget-03" },
+      { name: "widget-04" },
+      { name: "widget-05" },
+      { name: "widget-06" },
+      { name: "widget-07" },
+      { name: "widget-08" },
+      { name: "widget-09" },
     ],
   },
 ];

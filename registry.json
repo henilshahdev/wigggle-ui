@@ -1,0 +1,49 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "wigggle-ui",
+  "homepage": "https://wigggle-ui.vercel.app",
+  "items": [
+    {
+      "name": "widget-01",
+      "type": "registry:component",
+      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
+      "files": [
+        {
+          "path": "registry/default/widgets/widget-01.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["clock"]
+      }
+    },
+    {
+      "name": "widget-02",
+      "type": "registry:component",
+      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
+      "files": [
+        {
+          "path": "registry/default/widgets/widget-02.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["clock"]
+      }
+    },
+    {
+      "name": "widget-03",
+      "type": "registry:component",
+      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
+      "files": [
+        {
+          "path": "registry/default/widgets/widget-03.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["clock"]
+      }
+    }
+  ]
+}

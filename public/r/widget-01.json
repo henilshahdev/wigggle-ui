@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "widget-01",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/widget.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/widgets/widget-01.tsx",
+      "content": "\"use client\";\r\n\r\nimport * as React from \"react\";\r\n\r\nimport {\r\n  Widget,\r\n  WidgetContent,\r\n  WidgetTitle,\r\n} from \"@/registry/default/ui/widget\";\r\n\r\nexport function WidgetDemo() {\r\n  const [time, setTime] = React.useState(new Date());\r\n\r\n  React.useEffect(() => {\r\n    const timer = setInterval(() => {\r\n      setTime(new Date());\r\n    }, 1000);\r\n\r\n    return () => {\r\n      clearInterval(timer);\r\n    };\r\n  }, []);\r\n\r\n  const days = [\r\n    \"Sunday\",\r\n    \"Monday\",\r\n    \"Tuesday\",\r\n    \"Wednesday\",\r\n    \"Thursday\",\r\n    \"Friday\",\r\n    \"Saturday\",\r\n  ];\r\n  const day = days[time.getDay()];\r\n\r\n  const hours = time.getHours() % 12;\r\n  const minutes = String(time.getMinutes()).padStart(2, \"0\");\r\n\r\n  return (\r\n    <Widget>\r\n      <WidgetContent className=\"flex-col gap-2\">\r\n        <WidgetTitle className=\"text-2xl\">{day}</WidgetTitle>\r\n        <WidgetTitle className=\"text-5xl tracking-widest\">\r\n          {hours}:{minutes}\r\n        </WidgetTitle>\r\n      </WidgetContent>\r\n    </Widget>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "clock"
+    ]
+  }
+}

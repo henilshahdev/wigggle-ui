@@ -9,6 +9,14 @@ export const categories: WidgetCategory[] = [
   {
     slug: "clock",
     name: "Clock",
-    widgets: [{ name: "clock-01" }, { name: "clock-02" }, { name: "clock-03" }],
+    widgets: [
+      { name: "widget-01" },
+      { name: "widget-02" },
+      { name: "widget-03" },
+    ],
   },
 ];
+
+export function getCategory(slug: string): WidgetCategory | undefined {
+  return categories.find((category) => category.slug === slug);
+}

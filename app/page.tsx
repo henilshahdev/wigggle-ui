@@ -3,6 +3,7 @@ import Link from "next/link";
 import CategoryCard from "@/components/category-card";
 import { Button } from "@/components/ui/button";
 import { categories } from "@/config/widgets";
+import GetStarted from "@/components/get-started";
 
 export default function Home() {
   return (
@@ -16,9 +17,7 @@ export default function Home() {
       </p>
 
       <div className="flex items-center justify-start gap-x-3">
-        <Button asChild size="sm">
-          <Link href="/installation">Get Started</Link>
-        </Button>
+        <GetStarted />
       </div>
 
       <div className="relative my-16">

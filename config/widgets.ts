@@ -36,6 +36,12 @@ export const categories: WidgetCategory[] = [
     ],
     isNew: true,
   },
+  {
+    slug: "calendar",
+    name: "Calendar",
+    widgets: [{ name: "widget-17" }],
+    isNew: true,
+  },
 ];
 
 export function getCategory(slug: string): WidgetCategory | undefined {

@@ -342,6 +342,20 @@
       "meta": {
         "tags": ["weather"]
       }
+    },
+    {
+      "name": "widget-17",
+      "type": "registry:component",
+      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
+      "files": [
+        {
+          "path": "registry/default/widgets/widget-17.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["calendar"]
+      }
     }
   ]
 }

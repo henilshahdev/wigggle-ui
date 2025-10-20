@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "widget-17",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/widget.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/widgets/widget-17.tsx",
+      "content": "import * as React from \"react\";\r\nimport { Widget, WidgetContent } from \"@/registry/default/ui/widget\";\r\n\r\nexport default function WidgetDemo() {\r\n  return (\r\n    <Widget>\r\n      <WidgetContent className=\"mx-auto flex-col items-start\">\r\n        <div className=\"flex items-center justify-between gap-2\">\r\n          <p className=\"text-destructive text-2xl\">Tue</p>\r\n          <p className=\"text-2xl\">Oct</p>\r\n        </div>\r\n        <p className=\"text-8xl\">21</p>\r\n      </WidgetContent>\r\n    </Widget>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "calendar"
+    ]
+  }
+}

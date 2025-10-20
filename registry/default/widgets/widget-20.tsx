@@ -13,7 +13,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
-export default function Calendar03() {
+export default function WidgetDemo() {
   const [date, setDate] = useState(new Date());
   const { getFullYear: y, getMonth: m } = date;
   const [year, month] = [y.call(date), m.call(date)];
@@ -51,7 +51,7 @@ export default function Calendar03() {
         <Button
           variant="ghost"
           size="icon"
-          className="size-4 p-0"
+          className="size-4 p-0 hover:cursor-pointer"
           onClick={() => changeMonth(-1)}
         >
           <ChevronLeft className="h-4 w-4" />
@@ -62,7 +62,7 @@ export default function Calendar03() {
         <Button
           variant="ghost"
           size="icon"
-          className="size-4 p-0"
+          className="size-4 p-0 hover:cursor-pointer"
           onClick={() => changeMonth(1)}
         >
           <ChevronRight className="h-4 w-4" />

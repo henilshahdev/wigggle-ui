@@ -9,6 +9,7 @@ import PageHeader from "@/components/page-header";
 import PageGrid from "@/components/page-grid";
 import WidgetCard from "@/components/widget-card";
 import WidgetLoader from "@/components/widget-loader-client";
+import WidgetDetails from "@/components/widget-details";
 
 type PageProps = {
   params: Promise<{ category: string }>;
@@ -64,7 +65,7 @@ export default async function Page({ params }: PageProps) {
         {widgets.map((widget) => (
           <WidgetCard key={widget.name} widget={widget}>
             <WidgetLoader widget={widget} />
-            {/* <WidgetDetails widget={widget} /> */}
+            <WidgetDetails widget={widget} />
           </WidgetCard>
         ))}
       </PageGrid>

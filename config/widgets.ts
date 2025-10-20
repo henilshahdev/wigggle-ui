@@ -20,6 +20,7 @@ export const categories: WidgetCategory[] = [
       { name: "widget-08" },
       { name: "widget-09" },
     ],
+    isNew: true,
   },
 ];
 

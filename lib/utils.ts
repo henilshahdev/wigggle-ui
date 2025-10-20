@@ -16,3 +16,10 @@ export const getWidgetsByNames = (names: string[]): RegistryItem[] => {
     .map((name) => widgetsMap.get(name))
     .filter((comp): comp is RegistryItem => comp !== undefined);
 };
+
+export const convertRegistryPaths = (content: string): string => {
+  return content
+    .replace(/@\/registry\/default\/ui/g, "@/components/ui")
+    .replace(/@\/registry\/default\/hooks/g, "@/hooks")
+    .replace(/@\/registry\/default\/lib/g, "@/lib");
+};

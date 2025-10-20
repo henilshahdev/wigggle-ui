@@ -8,12 +8,12 @@ Visit https://wigggle-ui.vercel.app
 
 ## License
 
-Licensed under the [MIT license](https://github.com/magicuidesign/magicui/blob/main/LICENSE.md).
+Licensed under the [MIT license](https://github.com/henilshahdev/wigggle-ui/blob/main/LICENSE.md).
 
 ## Community
 
-Have questions, comments or feedback? [File an Issue](http://github.com/henilshahdev).
+Have questions, comments or feedback? [File an Issue](https://github.com/henilshahdev/wigggle-ui/issues/new).
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=magicuidesign/magicui&type=Date)](https://www.star-history.com/#magicuidesign/magicui&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=henilshahdev/wigggle-ui&type=Date)](https://www.star-history.com/#henilshahdev/wigggle-ui&Date)

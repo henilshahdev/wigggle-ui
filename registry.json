@@ -132,6 +132,95 @@
       "meta": {
         "tags": ["clock"]
       }
+    },
+    {
+      "name": "widget-10",
+      "type": "registry:component",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
+      "files": [
+        {
+          "path": "registry/default/widgets/widget-10.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["weather"]
+      }
+    },
+    {
+      "name": "widget-11",
+      "type": "registry:component",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
+      "files": [
+        {
+          "path": "registry/default/widgets/widget-11.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["weather"]
+      }
+    },
+    {
+      "name": "widget-12",
+      "type": "registry:component",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
+      "files": [
+        {
+          "path": "registry/default/widgets/widget-12.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["weather"]
+      }
+    },
+    {
+      "name": "widget-13",
+      "type": "registry:component",
+      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
+      "files": [
+        {
+          "path": "registry/default/widgets/widget-13.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["weather"]
+      }
+    },
+    {
+      "name": "widget-14",
+      "type": "registry:component",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
+      "files": [
+        {
+          "path": "registry/default/widgets/widget-14.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["weather"]
+      }
+    },
+    {
+      "name": "widget-15",
+      "type": "registry:component",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
+      "files": [
+        {
+          "path": "registry/default/widgets/widget-15.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["weather"]
+      }
     }
   ]
 }

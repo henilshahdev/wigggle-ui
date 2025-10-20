@@ -5,6 +5,8 @@ import "./globals.css";
 
 import { ThemeProvider } from "@/components/theme-provider";
 import SiteHeader from "@/components/site-header";
+import SiteFooter from "@/components/site-footer";
+import { DotBackground } from "@/components/dot-background";
 
 const outfit = Outfit({
   weight: ["300", "400", "500", "600", "700", "800"],
@@ -31,9 +33,15 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="relative mx-auto flex min-h-screen max-w-6xl flex-col max-sm:text-center">
-            <SiteHeader />
-            {children}
+          <div className="relative">
+            <div className="absolute inset-0">
+              <DotBackground />
+            </div>
+            <div className="mx-auto flex min-h-screen max-w-7xl flex-col max-sm:text-center">
+              <SiteHeader />
+              <div className="flex-1 px-6">{children}</div>
+              <SiteFooter />
+            </div>
           </div>
         </ThemeProvider>
       </body>

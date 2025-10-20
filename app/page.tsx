@@ -1,13 +1,11 @@
-import Link from "next/link";
+import { categories } from "@/config/widgets";
 
 import CategoryCard from "@/components/category-card";
-import { Button } from "@/components/ui/button";
-import { categories } from "@/config/widgets";
 import GetStarted from "@/components/get-started";
 
 export default function Home() {
   return (
-    <div data-home>
+    <div className="relative" data-home>
       <h1 className="text-foreground mb-4 text-4xl/[1.1] font-semibold md:text-5xl/[1.1]">
         The first ever collection of <br /> Widgets for the Web.
       </h1>
@@ -21,7 +19,7 @@ export default function Home() {
       </div>
 
       <div className="relative my-16">
-        <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+        <div className="grid gap-x-12 gap-y-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
           {categories
             .sort((a, b) => {
               if (a.isNew && !b.isNew) return -1;

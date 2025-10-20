@@ -14,7 +14,7 @@ export default function WidgetCard({
   return (
     <div
       className={cn(
-        "group/item relative mx-auto border border-zinc-200 has-[[data-comp-loading=true]]:border-none dark:border-zinc-900",
+        "group/item relative mx-auto border-zinc-200 has-[[data-comp-loading=true]]:border-none dark:border-zinc-900",
         "col-span-12 sm:col-span-6 lg:col-span-3",
         className,
       )}

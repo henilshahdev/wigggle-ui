@@ -21,7 +21,7 @@ export default function CategoryCard({
     <div className="space-y-2 text-center">
       <Link
         href={href}
-        className="peer hover:bg-secondary relative flex h-48 w-full items-center justify-center overflow-hidden rounded-lg border sm:flex dark:border-zinc-700/80"
+        className="bg-background peer hover:bg-secondary relative flex size-52 items-center justify-center overflow-hidden rounded-lg border sm:flex dark:border-zinc-700/80"
         tabIndex={-1}
       >
         {isNew && (

@@ -77,7 +77,7 @@ export default function WidgetDetails({ widget }: { widget: RegistryItem }) {
               <span>
                 <DialogTrigger asChild>
                   <Button
-                    variant="ghost"
+                    variant="outline"
                     size="icon"
                     className="text-muted-foreground/80 hover:text-foreground transition-none hover:bg-transparent disabled:opacity-100 lg:opacity-0 lg:group-focus-within/item:opacity-100 lg:group-hover/item:opacity-100"
                   >

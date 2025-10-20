@@ -8,7 +8,7 @@
   "files": [
     {
       "path": "registry/default/widgets/widget-17.tsx",
-      "content": "import * as React from \"react\";\r\nimport { Widget, WidgetContent } from \"@/registry/default/ui/widget\";\r\n\r\nexport default function WidgetDemo() {\r\n  return (\r\n    <Widget>\r\n      <WidgetContent className=\"mx-auto flex-col items-start\">\r\n        <div className=\"flex items-center justify-between gap-2\">\r\n          <p className=\"text-destructive text-2xl\">Tue</p>\r\n          <p className=\"text-2xl\">Oct</p>\r\n        </div>\r\n        <p className=\"text-8xl\">21</p>\r\n      </WidgetContent>\r\n    </Widget>\r\n  );\r\n}\r\n",
+      "content": "import * as React from \"react\";\r\nimport { Widget, WidgetContent } from \"@/registry/default/ui/widget\";\r\n\r\nexport default function WidgetDemo() {\r\n  const now = new Date();\r\n\r\n  const day = now.toLocaleDateString(\"en-US\", { weekday: \"short\" });\r\n  const month = now.toLocaleDateString(\"en-US\", { month: \"short\" });\r\n  const date = now.getDate();\r\n\r\n  return (\r\n    <Widget>\r\n      <WidgetContent className=\"mx-auto flex-col items-start\">\r\n        <div className=\"flex items-center justify-between gap-2\">\r\n          <p className=\"text-destructive text-2xl\">{day}</p>\r\n          <p className=\"text-2xl\">{month}</p>\r\n        </div>\r\n        <p className=\"text-8xl\">{date}</p>\r\n      </WidgetContent>\r\n    </Widget>\r\n  );\r\n}\r\n",
       "type": "registry:component"
     }
   ],

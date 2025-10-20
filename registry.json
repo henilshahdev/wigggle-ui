@@ -16,6 +16,18 @@
       ]
     },
     {
+      "name": "badge",
+      "type": "registry:ui",
+      "dependencies": ["@radix-ui/react-slot", "class-variance-authority"],
+      "registryDependencies": ["https://wigggle-ui.vercel.app/r/utils.json"],
+      "files": [
+        {
+          "path": "registry/default/ui/badge.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "button",
       "type": "registry:ui",
       "dependencies": ["@radix-ui/react-slot", "class-variance-authority"],
@@ -350,6 +362,23 @@
       "files": [
         {
           "path": "registry/default/widgets/widget-17.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["calendar"]
+      }
+    },
+    {
+      "name": "widget-18",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/badge.json"
+      ],
+      "files": [
+        {
+          "path": "registry/default/widgets/widget-18.tsx",
           "type": "registry:component"
         }
       ],

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "widget-18",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/widget.json",
+    "https://wigggle-ui.vercel.app/r/badge.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/widgets/widget-18.tsx",
+      "content": "import * as React from \"react\";\r\nimport { Widget, WidgetContent } from \"@/registry/default/ui/widget\";\r\nimport { Badge } from \"@/registry/default/ui/badge\";\r\n\r\nexport default function WidgetDemo() {\r\n  const now = new Date();\r\n\r\n  const day = now.toLocaleDateString(\"en-US\", { weekday: \"long\" });\r\n  const month = now.toLocaleDateString(\"en-US\", { month: \"long\" });\r\n  const date = now.getDate();\r\n\r\n  return (\r\n    <Widget>\r\n      <WidgetContent className=\"flex flex-col gap-2\">\r\n        <p className=\"text-muted-foreground\">{day}</p>\r\n        <h2 className=\"text-5xl font-bold\">{date}</h2>\r\n        <p className=\"text-muted-foreground\">{month}</p>\r\n        <Badge variant=\"outline\">{now.getFullYear()}</Badge>\r\n      </WidgetContent>\r\n    </Widget>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "calendar"
+    ]
+  }
+}

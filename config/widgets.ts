@@ -21,7 +21,6 @@ export const categories: WidgetCategory[] = [
       { name: "widget-09" },
       { name: "widget-10" },
     ],
-    isNew: true,
   },
   {
     slug: "weather",
@@ -34,13 +33,11 @@ export const categories: WidgetCategory[] = [
       { name: "widget-15" },
       { name: "widget-16" },
     ],
-    isNew: true,
   },
   {
     slug: "calendar",
     name: "Calendar",
     widgets: [{ name: "widget-17" }],
-    isNew: true,
   },
 ];
 

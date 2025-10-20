@@ -4,6 +4,108 @@
   "homepage": "https://wigggle-ui.vercel.app",
   "items": [
     {
+      "name": "widget",
+      "type": "registry:ui",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["https://wigggle-ui.vercel.app/r/utils.json"],
+      "files": [
+        {
+          "path": "registry/default/ui/widget.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "dependencies": ["@radix-ui/react-slot", "class-variance-authority"],
+      "registryDependencies": ["https://wigggle-ui.vercel.app/r/utils.json"],
+      "files": [
+        {
+          "path": "registry/default/ui/button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "dependencies": ["@radix-ui/react-dialog"],
+      "files": [
+        {
+          "path": "registry/default/ui/dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "label",
+      "type": "registry:ui",
+      "dependencies": ["@radix-ui/react-label"],
+      "files": [
+        {
+          "path": "registry/default/ui/label.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "dependencies": ["@radix-ui/react-separator"],
+      "files": [
+        {
+          "path": "registry/default/ui/separator.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "dependencies": ["@radix-ui/react-switch"],
+      "files": [
+        {
+          "path": "registry/default/ui/switch.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "dependencies": ["@radix-ui/react-tabs"],
+      "files": [
+        {
+          "path": "registry/default/ui/tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "dependencies": ["@radix-ui/react-tooltip"],
+      "files": [
+        {
+          "path": "registry/default/ui/tooltip.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "utils",
+      "type": "registry:lib",
+      "dependencies": ["clsx", "tailwind-merge"],
+      "files": [
+        {
+          "path": "registry/default/lib/utils.ts",
+          "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
       "name": "widget-01",
       "type": "registry:component",
       "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
@@ -137,7 +239,11 @@
       "name": "widget-10",
       "type": "registry:component",
       "dependencies": ["lucide-react"],
-      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/switch.json",
+        "https://wigggle-ui.vercel.app/r/label.json"
+      ],
       "files": [
         {
           "path": "registry/default/widgets/widget-10.tsx",
@@ -145,7 +251,7 @@
         }
       ],
       "meta": {
-        "tags": ["weather"]
+        "tags": ["clock"]
       }
     },
     {
@@ -181,6 +287,7 @@
     {
       "name": "widget-13",
       "type": "registry:component",
+      "dependencies": ["lucide-react"],
       "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
       "files": [
         {
@@ -195,7 +302,6 @@
     {
       "name": "widget-14",
       "type": "registry:component",
-      "dependencies": ["lucide-react"],
       "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
       "files": [
         {
@@ -215,6 +321,21 @@
       "files": [
         {
           "path": "registry/default/widgets/widget-15.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["weather"]
+      }
+    },
+    {
+      "name": "widget-16",
+      "type": "registry:component",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
+      "files": [
+        {
+          "path": "registry/default/widgets/widget-16.tsx",
           "type": "registry:component"
         }
       ],

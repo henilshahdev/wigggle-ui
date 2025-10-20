@@ -1,7 +1,7 @@
 import * as React from "react";
 import {
   Widget,
-  WidgetFooter,
+  WidgetContent,
   WidgetHeader,
   WidgetTitle,
 } from "@/registry/default/ui/widget";
@@ -9,15 +9,14 @@ import { SunIcon } from "lucide-react";
 
 export default function WidgetDemo() {
   return (
-    <Widget size="square" design="default" variant="default">
+    <Widget>
       <WidgetHeader>
-        <WidgetTitle className="text-4xl">29&deg;</WidgetTitle>
+        <WidgetTitle>Mumbai</WidgetTitle>
+        <SunIcon className="size-5 fill-current" />
       </WidgetHeader>
-
-      <WidgetFooter className="flex-col items-end gap-y-1.5">
-        <SunIcon className="size-8" />
-        <p className="text-lg font-medium">Mumbai</p>
-      </WidgetFooter>
+      <WidgetContent>
+        <p className="text-5xl">29&deg;</p>
+      </WidgetContent>
     </Widget>
   );
 }

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "tabs",
+  "type": "registry:ui",
+  "dependencies": [
+    "@radix-ui/react-tabs"
+  ],
+  "files": [
+    {
+      "path": "registry/default/ui/tabs.tsx",
+      "content": "\"use client\";\r\n\r\nimport * as React from \"react\";\r\nimport * as TabsPrimitive from \"@radix-ui/react-tabs\";\r\n\r\nimport { cn } from \"@/lib/utils\";\r\n\r\nfunction Tabs({\r\n  className,\r\n  ...props\r\n}: React.ComponentProps<typeof TabsPrimitive.Root>) {\r\n  return (\r\n    <TabsPrimitive.Root\r\n      data-slot=\"tabs\"\r\n      className={cn(\"flex flex-col\", className)}\r\n      {...props}\r\n    />\r\n  );\r\n}\r\n\r\nfunction TabsList({\r\n  className,\r\n  ...props\r\n}: React.ComponentProps<typeof TabsPrimitive.List>) {\r\n  return (\r\n    <TabsPrimitive.List\r\n      data-slot=\"tabs-list\"\r\n      className={cn(\r\n        \"bg-muted text-muted-foreground h-9 w-max items-center justify-center space-x-3 rounded-lg p-[3px]\",\r\n        className,\r\n      )}\r\n      {...props}\r\n    />\r\n  );\r\n}\r\n\r\nfunction TabsTrigger({\r\n  className,\r\n  ...props\r\n}: React.ComponentProps<typeof TabsPrimitive.Trigger>) {\r\n  return (\r\n    <TabsPrimitive.Trigger\r\n      data-slot=\"tabs-trigger\"\r\n      className={cn(\r\n        \"dark:data-[state=active]:text-foreground text-muted-foreground dark:text-muted-foreground inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 rounded-md px-2 py-1 text-sm font-medium whitespace-nowrap transition-[color,box-shadow] disabled:pointer-events-none disabled:opacity-50 data-[state=active]:shadow-sm [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4\",\r\n        className,\r\n      )}\r\n      {...props}\r\n    />\r\n  );\r\n}\r\n\r\nfunction TabsContent({\r\n  className,\r\n  ...props\r\n}: React.ComponentProps<typeof TabsPrimitive.Content>) {\r\n  return (\r\n    <TabsPrimitive.Content\r\n      data-slot=\"tabs-content\"\r\n      className={cn(\"flex-1 outline-none\", className)}\r\n      {...props}\r\n    />\r\n  );\r\n}\r\n\r\nexport { Tabs, TabsList, TabsTrigger, TabsContent };\r\n",
+      "type": "registry:ui"
+    }
+  ]
+}

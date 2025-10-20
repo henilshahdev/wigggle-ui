@@ -11,7 +11,7 @@
   "files": [
     {
       "path": "registry/default/widgets/widget-12.tsx",
-      "content": "import * as React from \"react\";\r\nimport {\r\n  Widget,\r\n  WidgetFooter,\r\n  WidgetHeader,\r\n  WidgetTitle,\r\n} from \"@/registry/default/ui/widget\";\r\nimport { SunIcon } from \"lucide-react\";\r\n\r\nexport default function WidgetDemo() {\r\n  return (\r\n    <Widget size=\"square\" design=\"default\" variant=\"default\">\r\n      <WidgetHeader>\r\n        <WidgetTitle className=\"text-4xl\">29&deg;</WidgetTitle>\r\n      </WidgetHeader>\r\n\r\n      <WidgetFooter className=\"flex-col items-end gap-y-1.5\">\r\n        <SunIcon className=\"size-8\" />\r\n        <p className=\"text-lg font-medium\">Mumbai</p>\r\n      </WidgetFooter>\r\n    </Widget>\r\n  );\r\n}\r\n",
+      "content": "import * as React from \"react\";\r\nimport {\r\n  Widget,\r\n  WidgetContent,\r\n  WidgetHeader,\r\n  WidgetTitle,\r\n} from \"@/registry/default/ui/widget\";\r\nimport { SunIcon } from \"lucide-react\";\r\n\r\nexport default function WidgetDemo() {\r\n  return (\r\n    <Widget>\r\n      <WidgetHeader>\r\n        <WidgetTitle>Mumbai</WidgetTitle>\r\n        <SunIcon className=\"size-5 fill-current\" />\r\n      </WidgetHeader>\r\n      <WidgetContent>\r\n        <p className=\"text-5xl\">29&deg;</p>\r\n      </WidgetContent>\r\n    </Widget>\r\n  );\r\n}\r\n",
       "type": "registry:component"
     }
   ],

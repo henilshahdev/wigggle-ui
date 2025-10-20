@@ -2,37 +2,42 @@ import * as React from "react";
 import {
   Widget,
   WidgetContent,
-  WidgetFooter,
   WidgetHeader,
   WidgetTitle,
 } from "@/registry/default/ui/widget";
-import { DropletIcon, SunIcon, ThermometerIcon } from "lucide-react";
+import { MoveDownIcon, MoveUpIcon, SunIcon } from "lucide-react";
 
 export default function WidgetDemo() {
   return (
     <Widget size="square" design="default" variant="default">
-      <WidgetHeader>
+      <WidgetHeader className="flex-col gap-3">
         <WidgetTitle>Mumbai</WidgetTitle>
-        <WidgetTitle className="font-normal">4:04</WidgetTitle>
+        <div className="flex flex-col">
+          <div className="flex items-center gap-x-2">
+            <SunIcon className="size-8 fill-current" />
+            <p className="text-4xl">29&deg;</p>
+          </div>
+          <p className="text-muted-foreground">Feels Like 28&deg;</p>
+        </div>
       </WidgetHeader>
-      <WidgetContent>
-        <SunIcon className="size-9 text-yellow-500" />
+      <WidgetContent className="items-end">
+        <div className="flex h-max w-full items-center justify-start">
+          <MoveUpIcon
+            fill="currentColor"
+            className="mr-1 size-4"
+            strokeWidth={4}
+          />
+          <p>32&deg;</p>
+        </div>
+        <div className="flex w-full items-center justify-end">
+          <MoveDownIcon
+            fill="currentColor"
+            className="mr-1 size-4"
+            strokeWidth={4}
+          />
+          <p>28&deg;</p>
+        </div>
       </WidgetContent>
-      <WidgetFooter>
-        <div className="flex flex-col items-center">
-          <div className="flex h-max w-full items-center justify-start">
-            <ThermometerIcon className="mr-1 size-5" />
-            <p>29&deg;</p>
-          </div>
-          <div className="flex h-max w-full items-center justify-start">
-            <DropletIcon className="mr-1 size-5" />
-            <p>9%</p>
-          </div>
-        </div>
-        <div className="flex w-full justify-end">
-          <p className="text-4xl">29&deg;</p>
-        </div>
-      </WidgetFooter>
     </Widget>
   );
 }

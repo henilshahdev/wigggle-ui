@@ -455,6 +455,20 @@
       "meta": {
         "tags": ["stocks"]
       }
+    },
+    {
+      "name": "stock-02",
+      "type": "registry:component",
+      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
+      "files": [
+        {
+          "path": "registry/default/widgets/stocks/stock-02.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["stocks"]
+      }
     }
   ]
 }

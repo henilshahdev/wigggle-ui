@@ -1,6 +1,8 @@
 import * as React from "react";
+
 import { Widget, WidgetContent } from "@/registry/default/ui/widget";
 import { Badge } from "@/registry/default/ui/badge";
+import { Label } from "@/registry/default/ui/label";
 
 export default function WidgetDemo() {
   const now = new Date();
@@ -12,9 +14,9 @@ export default function WidgetDemo() {
   return (
     <Widget>
       <WidgetContent className="flex flex-col gap-2">
-        <p className="text-muted-foreground">{day}</p>
-        <h2 className="text-5xl font-bold">{date}</h2>
-        <p className="text-muted-foreground">{month}</p>
+        <Label className="text-muted-foreground">{day}</Label>
+        <Label className="text-5xl font-bold">{date}</Label>
+        <Label className="text-muted-foreground">{month}</Label>
         <Badge variant="outline">{now.getFullYear()}</Badge>
       </WidgetContent>
     </Widget>

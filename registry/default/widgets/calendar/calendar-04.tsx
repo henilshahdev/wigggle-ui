@@ -71,19 +71,19 @@ export default function WidgetDemo() {
       <Separator className="h-0.5 rounded-full" />
       <WidgetContent>
         <div className="grid size-full grid-cols-7 gap-1 text-center">
-          {days.map((d, i) => (
-            <div key={`weekday-${i}-${d}`} className="text-xs">
-              {d}
+          {days.map((day, i) => (
+            <div key={`weekday-${i}-${day}`} className="text-xs">
+              {day}
             </div>
           ))}
-          {calendarDays.map((d, i) => (
+          {calendarDays.map((day, i) => (
             <div key={i} className="text-muted-foreground text-xs">
-              {d && isToday(d) ? (
+              {day && isToday(day) ? (
                 <Badge className="flex size-4 items-center justify-center p-2">
-                  {d}
+                  {day}
                 </Badge>
               ) : (
-                d
+                day
               )}
             </div>
           ))}

@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import {
   Widget,
   WidgetHeader,
@@ -31,9 +32,9 @@ export default function WidgetDemo() {
       <Separator className="h-0.5 rounded-full" />
       <WidgetContent>
         <div className="grid size-full grid-cols-7 gap-1 text-center">
-          {["S", "M", "T", "W", "T", "F", "S"].map((d, i) => (
-            <div key={`weekday-${i}-${d}`} className="text-xs">
-              {d}
+          {["S", "M", "T", "W", "T", "F", "S"].map((day, i) => (
+            <div key={`weekday-${i}-${day}`} className="text-xs">
+              {day}
             </div>
           ))}
 
@@ -43,14 +44,14 @@ export default function WidgetDemo() {
             </div>
           ))}
 
-          {days.map((d) => (
-            <div key={d} className="text-muted-foreground text-xs">
-              {d === date ? (
+          {days.map((day) => (
+            <div key={day} className="text-muted-foreground text-xs">
+              {day === date ? (
                 <Badge className="flex size-4 items-center justify-center p-2">
-                  {d}
+                  {day}
                 </Badge>
               ) : (
-                d
+                day
               )}
             </div>
           ))}

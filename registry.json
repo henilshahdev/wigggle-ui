@@ -119,7 +119,10 @@
     {
       "name": "calendar-01",
       "type": "registry:component",
-      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/label.json"
+      ],
       "files": [
         {
           "path": "registry/default/widgets/calendar/calendar-01.tsx",
@@ -135,7 +138,8 @@
       "type": "registry:component",
       "registryDependencies": [
         "https://wigggle-ui.vercel.app/r/widget.json",
-        "https://wigggle-ui.vercel.app/r/badge.json"
+        "https://wigggle-ui.vercel.app/r/badge.json",
+        "https://wigggle-ui.vercel.app/r/label.json"
       ],
       "files": [
         {
@@ -190,7 +194,8 @@
       "type": "registry:component",
       "registryDependencies": [
         "https://wigggle-ui.vercel.app/r/widget.json",
-        "https://wigggle-ui.vercel.app/r/badge.json"
+        "https://wigggle-ui.vercel.app/r/badge.json",
+        "https://wigggle-ui.vercel.app/r/label.json"
       ],
       "files": [
         {
@@ -292,7 +297,8 @@
       "dependencies": ["lucide-react"],
       "registryDependencies": [
         "https://wigggle-ui.vercel.app/r/widget.json",
-        "https://wigggle-ui.vercel.app/r/separator.json"
+        "https://wigggle-ui.vercel.app/r/separator.json",
+        "https://wigggle-ui.vercel.app/r/label.json"
       ],
       "files": [
         {
@@ -307,7 +313,10 @@
     {
       "name": "clock-08",
       "type": "registry:component",
-      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/label.json"
+      ],
       "files": [
         {
           "path": "registry/default/widgets/clock/clock-08.tsx",
@@ -321,7 +330,10 @@
     {
       "name": "clock-09",
       "type": "registry:component",
-      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/label.json"
+      ],
       "files": [
         {
           "path": "registry/default/widgets/clock/clock-09.tsx",
@@ -355,7 +367,10 @@
       "name": "weather-01",
       "type": "registry:component",
       "dependencies": ["lucide-react"],
-      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/label.json"
+      ],
       "files": [
         {
           "path": "registry/default/widgets/weather/weather-01.tsx",
@@ -370,7 +385,10 @@
       "name": "weather-02",
       "type": "registry:component",
       "dependencies": ["lucide-react"],
-      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/label.json"
+      ],
       "files": [
         {
           "path": "registry/default/widgets/weather/weather-02.tsx",
@@ -385,7 +403,10 @@
       "name": "weather-03",
       "type": "registry:component",
       "dependencies": ["lucide-react"],
-      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/label.json"
+      ],
       "files": [
         {
           "path": "registry/default/widgets/weather/weather-03.tsx",
@@ -399,7 +420,10 @@
     {
       "name": "weather-04",
       "type": "registry:component",
-      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/label.json"
+      ],
       "files": [
         {
           "path": "registry/default/widgets/weather/weather-04.tsx",
@@ -414,7 +438,10 @@
       "name": "weather-05",
       "type": "registry:component",
       "dependencies": ["lucide-react"],
-      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/label.json"
+      ],
       "files": [
         {
           "path": "registry/default/widgets/weather/weather-05.tsx",
@@ -429,7 +456,10 @@
       "name": "weather-06",
       "type": "registry:component",
       "dependencies": ["lucide-react"],
-      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/label.json"
+      ],
       "files": [
         {
           "path": "registry/default/widgets/weather/weather-06.tsx",

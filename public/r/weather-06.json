@@ -6,12 +6,13 @@
     "lucide-react"
   ],
   "registryDependencies": [
-    "https://wigggle-ui.vercel.app/r/widget.json"
+    "https://wigggle-ui.vercel.app/r/widget.json",
+    "https://wigggle-ui.vercel.app/r/label.json"
   ],
   "files": [
     {
       "path": "registry/default/widgets/weather/weather-06.tsx",
-      "content": "import * as React from \"react\";\r\nimport {\r\n  Widget,\r\n  WidgetContent,\r\n  WidgetFooter,\r\n  WidgetHeader,\r\n  WidgetTitle,\r\n} from \"@/registry/default/ui/widget\";\r\nimport { DropletIcon, SunIcon, ThermometerIcon } from \"lucide-react\";\r\n\r\nexport default function WidgetDemo() {\r\n  return (\r\n    <Widget size=\"square\" design=\"default\" variant=\"default\">\r\n      <WidgetHeader>\r\n        <WidgetTitle>Mumbai</WidgetTitle>\r\n        <WidgetTitle className=\"font-normal\">4:04</WidgetTitle>\r\n      </WidgetHeader>\r\n      <WidgetContent>\r\n        <SunIcon className=\"size-9 text-yellow-500\" />\r\n      </WidgetContent>\r\n      <WidgetFooter>\r\n        <div className=\"flex flex-col items-center\">\r\n          <div className=\"flex h-max w-full items-center justify-start\">\r\n            <ThermometerIcon className=\"mr-1 size-5\" />\r\n            <p>29&deg;</p>\r\n          </div>\r\n          <div className=\"flex h-max w-full items-center justify-start\">\r\n            <DropletIcon className=\"mr-1 size-5\" />\r\n            <p>9%</p>\r\n          </div>\r\n        </div>\r\n        <div className=\"flex w-full justify-end\">\r\n          <p className=\"text-4xl\">29&deg;</p>\r\n        </div>\r\n      </WidgetFooter>\r\n    </Widget>\r\n  );\r\n}\r\n",
+      "content": "import * as React from \"react\";\r\nimport { DropletIcon, SunIcon, ThermometerIcon } from \"lucide-react\";\r\n\r\nimport {\r\n  Widget,\r\n  WidgetContent,\r\n  WidgetFooter,\r\n  WidgetHeader,\r\n  WidgetTitle,\r\n} from \"@/registry/default/ui/widget\";\r\nimport { Label } from \"@/registry/default/ui/label\";\r\n\r\nexport default function WidgetDemo() {\r\n  return (\r\n    <Widget>\r\n      <WidgetHeader>\r\n        <WidgetTitle>Mumbai</WidgetTitle>\r\n        <WidgetTitle className=\"font-normal\">4:04</WidgetTitle>\r\n      </WidgetHeader>\r\n      <WidgetContent>\r\n        <SunIcon className=\"size-9 text-yellow-500\" />\r\n      </WidgetContent>\r\n      <WidgetFooter>\r\n        <div className=\"flex flex-col items-center\">\r\n          <div className=\"flex h-max w-full items-center justify-start\">\r\n            <ThermometerIcon className=\"mr-1 size-5\" />\r\n            <Label>29&deg;</Label>\r\n          </div>\r\n          <div className=\"flex h-max w-full items-center justify-start\">\r\n            <DropletIcon className=\"mr-1 size-5\" />\r\n            <Label>9%</Label>\r\n          </div>\r\n        </div>\r\n        <div className=\"flex w-full justify-end\">\r\n          <Label className=\"text-4xl\">29&deg;</Label>\r\n        </div>\r\n      </WidgetFooter>\r\n    </Widget>\r\n  );\r\n}\r\n",
       "type": "registry:component"
     }
   ],

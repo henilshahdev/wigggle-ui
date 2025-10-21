@@ -6,12 +6,13 @@
     "lucide-react"
   ],
   "registryDependencies": [
-    "https://wigggle-ui.vercel.app/r/widget.json"
+    "https://wigggle-ui.vercel.app/r/widget.json",
+    "https://wigggle-ui.vercel.app/r/label.json"
   ],
   "files": [
     {
       "path": "registry/default/widgets/weather/weather-02.tsx",
-      "content": "import * as React from \"react\";\r\nimport {\r\n  Widget,\r\n  WidgetContent,\r\n  WidgetHeader,\r\n  WidgetTitle,\r\n} from \"@/registry/default/ui/widget\";\r\nimport { SunIcon } from \"lucide-react\";\r\n\r\nexport default function WidgetDemo() {\r\n  return (\r\n    <Widget>\r\n      <WidgetHeader>\r\n        <WidgetTitle>Mumbai</WidgetTitle>\r\n        <SunIcon className=\"size-5 fill-current\" />\r\n      </WidgetHeader>\r\n      <WidgetContent>\r\n        <p className=\"text-5xl\">29&deg;</p>\r\n      </WidgetContent>\r\n    </Widget>\r\n  );\r\n}\r\n",
+      "content": "import { SunIcon } from \"lucide-react\";\r\nimport * as React from \"react\";\r\n\r\nimport {\r\n  Widget,\r\n  WidgetContent,\r\n  WidgetHeader,\r\n  WidgetTitle,\r\n} from \"@/registry/default/ui/widget\";\r\nimport { Label } from \"@/registry/default/ui/label\";\r\n\r\nexport default function WidgetDemo() {\r\n  return (\r\n    <Widget>\r\n      <WidgetHeader>\r\n        <WidgetTitle>Mumbai</WidgetTitle>\r\n        <SunIcon className=\"size-5 fill-current\" />\r\n      </WidgetHeader>\r\n      <WidgetContent>\r\n        <Label className=\"text-5xl\">29&deg;</Label>\r\n      </WidgetContent>\r\n    </Widget>\r\n  );\r\n}\r\n",
       "type": "registry:component"
     }
   ],

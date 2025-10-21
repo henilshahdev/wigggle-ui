@@ -1,5 +1,7 @@
 import * as React from "react";
+
 import { Widget, WidgetContent } from "@/registry/default/ui/widget";
+import { Label } from "@/registry/default/ui/label";
 
 export default function WidgetDemo() {
   const now = new Date();
@@ -12,10 +14,10 @@ export default function WidgetDemo() {
     <Widget>
       <WidgetContent className="mx-auto flex-col items-start">
         <div className="flex items-center justify-between gap-2">
-          <p className="text-destructive text-2xl">{day}</p>
-          <p className="text-2xl">{month}</p>
+          <Label className="text-destructive text-2xl">{day}</Label>
+          <Label className="text-2xl">{month}</Label>
         </div>
-        <p className="text-8xl">{date}</p>
+        <Label className="text-8xl">{date}</Label>
       </WidgetContent>
     </Widget>
   );

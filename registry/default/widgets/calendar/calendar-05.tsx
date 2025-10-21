@@ -1,10 +1,12 @@
 import * as React from "react";
+
 import {
   Widget,
   WidgetHeader,
   WidgetContent,
 } from "@/registry/default/ui/widget";
 import { Badge } from "@/registry/default/ui/badge";
+import { Label } from "@/registry/default/ui/label";
 
 export default function WidgetDemo() {
   const now = new Date();
@@ -21,7 +23,7 @@ export default function WidgetDemo() {
     <Widget design="mumbai">
       <WidgetHeader className="text-destructive text-base">{day}</WidgetHeader>
       <WidgetContent className="flex-col items-start justify-start gap-2">
-        <p className="text-3xl">{date}</p>
+        <Label className="text-3xl">{date}</Label>
         {events.map((event, i) => (
           <Badge
             key={i}

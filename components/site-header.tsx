@@ -23,7 +23,7 @@ export default function SiteHeader() {
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com/henilshahdev"
+              href="https://github.com/henilshahdev/wigggle-ui"
               className="text-muted-foreground hover:text-foreground/80 focus-visible:border-ring focus-visible:ring-ring/50 inline-flex size-5 items-center justify-center rounded outline-none focus-visible:ring-2"
               target="_blank"
               rel="noopener noreferrer"

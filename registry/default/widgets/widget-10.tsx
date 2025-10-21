@@ -10,16 +10,16 @@ import {
 } from "@/registry/default/ui/widget";
 import { Label } from "@/registry/default/ui/label";
 
-const alarms = ["7:00 AM", "12:30 PM", "10:00 PM"];
+const alarms = ["7:00 AM", "12:30 PM", "5:30 PM", "10:00 PM"];
 
 export default function WidgetDemo() {
   return (
-    <Widget>
+    <Widget design="mumbai">
       <WidgetHeader>
         <WidgetTitle>Alarms</WidgetTitle>
         <AlarmClockIcon className="size-5" />
       </WidgetHeader>
-      <WidgetContent className="flex-col gap-4">
+      <WidgetContent className="mt-3 flex-col gap-3">
         {alarms.map((alarm) => (
           <div
             key={alarm}

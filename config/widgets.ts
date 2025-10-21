@@ -42,6 +42,7 @@ export const categories: WidgetCategory[] = [
       { name: "widget-18" },
       { name: "widget-19" },
       { name: "widget-20" },
+      { name: "widget-21" },
     ],
   },
 ];

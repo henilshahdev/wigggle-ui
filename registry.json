@@ -423,6 +423,23 @@
       "meta": {
         "tags": ["calendar"]
       }
+    },
+    {
+      "name": "widget-21",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/badge.json"
+      ],
+      "files": [
+        {
+          "path": "registry/default/widgets/widget-21.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["calendar"]
+      }
     }
   ]
 }

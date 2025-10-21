@@ -67,7 +67,7 @@ export default function WidgetDetails({ widget }: { widget: RegistryItem }) {
   }, [widget.name]);
 
   return (
-    <div className="absolute top-2 right-2 flex gap-1 peer-data-comp-loading:hidden">
+    <div className="absolute top-1 right-2 flex gap-1 peer-data-comp-loading:hidden lg:top-2">
       <Dialog>
         <TooltipProvider delayDuration={0}>
           <Tooltip>
@@ -77,7 +77,7 @@ export default function WidgetDetails({ widget }: { widget: RegistryItem }) {
                   <Button
                     variant="outline"
                     size="icon"
-                    className="text-muted-foreground/80 hover:text-foreground transition-none hover:bg-transparent disabled:opacity-100 lg:opacity-0 lg:group-focus-within/item:opacity-100 lg:group-hover/item:opacity-100"
+                    className="text-foreground transition-none disabled:opacity-100"
                   >
                     <CodeIcon size={16} aria-hidden={true} />
                   </Button>

@@ -9,7 +9,7 @@ import { Icons } from "@/components/icons";
 export default function SiteHeader() {
   return (
     <header className="relative mb-14">
-      <div className="flex justify-between gap-2 p-6 max-sm:flex-col max-sm:text-center">
+      <div className="flex justify-between gap-2 p-6">
         <div className="-mt-0.5 flex shrink-0 items-start gap-1.5 text-2xl font-semibold sm:text-xl">
           <Link
             href="/"

@@ -21,7 +21,7 @@ export default function CategoryCard({
     <div className="space-y-2 text-center">
       <Link
         href={href}
-        className="bg-background peer hover:bg-secondary relative flex size-52 items-center justify-center overflow-hidden rounded-lg border sm:flex dark:border-zinc-700/80"
+        className="bg-background peer hover:bg-secondary relative mx-auto flex size-52 items-center justify-center overflow-hidden rounded-lg border sm:flex dark:border-zinc-700/80"
         tabIndex={-1}
       >
         {isNew && (
@@ -33,11 +33,9 @@ export default function CategoryCard({
           {name}
         </h2>
       </Link>
-      <div className="[&_a]:peer-hover:underline">
-        <p className="text-muted-foreground text-base">
-          {widgetCount} {widgetCount === 1 ? "Widget" : "Widgets"}
-        </p>
-      </div>
+      <p className="text-muted-foreground">
+        {widgetCount} {widgetCount === 1 ? "Widget" : "Widgets"}
+      </p>
     </div>
   );
 }

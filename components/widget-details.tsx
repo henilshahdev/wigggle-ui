@@ -25,8 +25,6 @@ import {
 } from "@/registry/default/ui/tooltip";
 
 export default function WidgetDetails({ widget }: { widget: RegistryItem }) {
-  const baseURL =
-    process.env.NEXT_PUBLIC_APP_URL || "https://wigggle-ui.vercel.app";
   const [code, setCode] = useState<string | null>(null);
   const [highlightedCode, setHighlightedCode] = useState<JSX.Element | null>(
     null,

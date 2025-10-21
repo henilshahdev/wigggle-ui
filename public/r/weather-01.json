@@ -1,6 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "name": "widget-11",
+  "name": "weather-01",
   "type": "registry:component",
   "dependencies": [
     "lucide-react"
@@ -10,7 +10,7 @@
   ],
   "files": [
     {
-      "path": "registry/default/widgets/widget-11.tsx",
+      "path": "registry/default/widgets/weather/weather-01.tsx",
       "content": "import * as React from \"react\";\r\nimport {\r\n  Widget,\r\n  WidgetContent,\r\n  WidgetFooter,\r\n} from \"@/registry/default/ui/widget\";\r\nimport { SunIcon } from \"lucide-react\";\r\n\r\nexport default function WidgetDemo() {\r\n  return (\r\n    <Widget>\r\n      <WidgetContent className=\"flex-col gap-4\">\r\n        <SunIcon className=\"size-10\" strokeWidth={2} />\r\n        <p className=\"text-4xl\">29&deg;</p>\r\n      </WidgetContent>\r\n      <WidgetFooter className=\"justify-center\">\r\n        <p className=\"text-lg font-semibold\">Mumbai</p>\r\n      </WidgetFooter>\r\n    </Widget>\r\n  );\r\n}\r\n",
       "type": "registry:component"
     }

@@ -1,6 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "name": "widget-21",
+  "name": "calendar-05",
   "type": "registry:component",
   "registryDependencies": [
     "https://wigggle-ui.vercel.app/r/widget.json",
@@ -8,7 +8,7 @@
   ],
   "files": [
     {
-      "path": "registry/default/widgets/widget-21.tsx",
+      "path": "registry/default/widgets/calendar/calendar-05.tsx",
       "content": "import * as React from \"react\";\r\nimport {\r\n  Widget,\r\n  WidgetHeader,\r\n  WidgetContent,\r\n} from \"@/registry/default/ui/widget\";\r\nimport { Badge } from \"@/registry/default/ui/badge\";\r\n\r\nexport default function WidgetDemo() {\r\n  const now = new Date();\r\n\r\n  const day = now.toLocaleDateString(\"en-US\", { weekday: \"long\" });\r\n  const date = now.getDate();\r\n\r\n  const events = [\r\n    { title: \"Scrum\", time: \"9 AM\" },\r\n    { title: \"Design Roundup\", time: \"11 AM\" },\r\n  ];\r\n\r\n  return (\r\n    <Widget design=\"mumbai\">\r\n      <WidgetHeader className=\"text-destructive text-base\">{day}</WidgetHeader>\r\n      <WidgetContent className=\"flex-col items-start justify-start gap-2\">\r\n        <p className=\"text-3xl\">{date}</p>\r\n        {events.map((event, i) => (\r\n          <Badge\r\n            key={i}\r\n            variant=\"secondary\"\r\n            className=\"flex w-full items-center justify-between gap-2 px-2 py-1 text-xs\"\r\n          >\r\n            {event.title}\r\n            <span className=\"text-muted-foreground\">{event.time}</span>\r\n          </Badge>\r\n        ))}\r\n      </WidgetContent>\r\n    </Widget>\r\n  );\r\n}\r\n",
       "type": "registry:component"
     }

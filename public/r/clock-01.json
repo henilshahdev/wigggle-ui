@@ -1,13 +1,13 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "name": "widget-01",
+  "name": "clock-01",
   "type": "registry:component",
   "registryDependencies": [
     "https://wigggle-ui.vercel.app/r/widget.json"
   ],
   "files": [
     {
-      "path": "registry/default/widgets/widget-01.tsx",
+      "path": "registry/default/widgets/clock/clock-01.tsx",
       "content": "\"use client\";\r\n\r\nimport * as React from \"react\";\r\nimport {\r\n  Widget,\r\n  WidgetContent,\r\n  WidgetTitle,\r\n} from \"@/registry/default/ui/widget\";\r\n\r\nexport default function WidgetDemo() {\r\n  const [time, setTime] = React.useState(new Date());\r\n\r\n  React.useEffect(() => {\r\n    const timer = setInterval(() => {\r\n      setTime(new Date());\r\n    }, 1000);\r\n\r\n    return () => {\r\n      clearInterval(timer);\r\n    };\r\n  }, []);\r\n\r\n  const formatTime = (num: number) => String(num).padStart(2, \"0\");\r\n\r\n  const minutes = formatTime(time.getMinutes());\r\n  const hours = time.getHours() % 12 || 12;\r\n\r\n  return (\r\n    <Widget>\r\n      <WidgetContent className=\"flex-col gap-4\">\r\n        <WidgetTitle className=\"text-5xl tracking-widest\">\r\n          {hours}:{minutes}\r\n        </WidgetTitle>\r\n      </WidgetContent>\r\n    </Widget>\r\n  );\r\n}\r\n",
       "type": "registry:component"
     }

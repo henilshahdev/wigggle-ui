@@ -1,6 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "name": "widget-07",
+  "name": "clock-07",
   "type": "registry:component",
   "dependencies": [
     "lucide-react"
@@ -11,7 +11,7 @@
   ],
   "files": [
     {
-      "path": "registry/default/widgets/widget-07.tsx",
+      "path": "registry/default/widgets/clock/clock-07.tsx",
       "content": "import * as React from \"react\";\r\nimport {\r\n  Widget,\r\n  WidgetContent,\r\n  WidgetTitle,\r\n} from \"@/registry/default/ui/widget\";\r\nimport { MoonIcon, SunIcon } from \"lucide-react\";\r\nimport { Separator } from \"@/registry/default/ui/separator\";\r\n\r\nexport default function WidgetDemo() {\r\n  return (\r\n    <Widget>\r\n      <WidgetContent className=\"flex-col justify-between gap-3\">\r\n        <div className=\"flex w-full flex-col gap-2\">\r\n          <div className=\"flex w-full items-center justify-between\">\r\n            <p>Mumbai</p>\r\n            <SunIcon className=\"size-5\" />\r\n          </div>\r\n          <WidgetTitle className=\"text-xl\">8:15 AM</WidgetTitle>\r\n        </div>\r\n        <Separator />\r\n        <div className=\"flex w-full flex-col gap-2\">\r\n          <div className=\"flex w-full items-center justify-between\">\r\n            <p>Vancouver</p>\r\n            <MoonIcon className=\"size-5\" />\r\n          </div>\r\n          <WidgetTitle className=\"text-xl\">6:45 PM</WidgetTitle>\r\n        </div>\r\n      </WidgetContent>\r\n    </Widget>\r\n  );\r\n}\r\n",
       "type": "registry:component"
     }

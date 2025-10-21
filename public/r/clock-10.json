@@ -1,6 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "name": "widget-10",
+  "name": "clock-10",
   "type": "registry:component",
   "dependencies": [
     "lucide-react"
@@ -12,7 +12,7 @@
   ],
   "files": [
     {
-      "path": "registry/default/widgets/widget-10.tsx",
+      "path": "registry/default/widgets/clock/clock-10.tsx",
       "content": "import * as React from \"react\";\r\nimport { AlarmClockIcon } from \"lucide-react\";\r\n\r\nimport { Switch } from \"@/registry/default/ui/switch\";\r\nimport {\r\n  Widget,\r\n  WidgetContent,\r\n  WidgetHeader,\r\n  WidgetTitle,\r\n} from \"@/registry/default/ui/widget\";\r\nimport { Label } from \"@/registry/default/ui/label\";\r\n\r\nconst alarms = [\"7:00 AM\", \"12:30 PM\", \"5:30 PM\", \"10:00 PM\"];\r\n\r\nexport default function WidgetDemo() {\r\n  return (\r\n    <Widget design=\"mumbai\">\r\n      <WidgetHeader>\r\n        <WidgetTitle>Alarms</WidgetTitle>\r\n        <AlarmClockIcon className=\"size-5\" />\r\n      </WidgetHeader>\r\n      <WidgetContent className=\"mt-3 flex-col gap-3\">\r\n        {alarms.map((alarm) => (\r\n          <div\r\n            key={alarm}\r\n            className=\"flex w-full items-center justify-between space-x-2\"\r\n          >\r\n            <Label htmlFor={alarm} className=\"font-semibold\">\r\n              {alarm}\r\n            </Label>\r\n            <Switch id={alarm} />\r\n          </div>\r\n        ))}\r\n      </WidgetContent>\r\n    </Widget>\r\n  );\r\n}\r\n",
       "type": "registry:component"
     }

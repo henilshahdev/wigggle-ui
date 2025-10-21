@@ -1,13 +1,13 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "name": "widget-14",
+  "name": "weather-04",
   "type": "registry:component",
   "registryDependencies": [
     "https://wigggle-ui.vercel.app/r/widget.json"
   ],
   "files": [
     {
-      "path": "registry/default/widgets/widget-14.tsx",
+      "path": "registry/default/widgets/weather/weather-04.tsx",
       "content": "import * as React from \"react\";\r\nimport { Widget, WidgetContent } from \"@/registry/default/ui/widget\";\r\n\r\nexport default function WidgetDemo() {\r\n  return (\r\n    <Widget>\r\n      <WidgetContent className=\"mx-auto flex-col items-start\">\r\n        <p className=\"text-6xl\">29&deg;</p>\r\n        <p className=\"text-2xl\">Sunny</p>\r\n        <p>Tue Nov 22</p>\r\n      </WidgetContent>\r\n    </Widget>\r\n  );\r\n}\r\n",
       "type": "registry:component"
     }

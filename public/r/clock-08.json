@@ -1,13 +1,13 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "name": "widget-08",
+  "name": "clock-08",
   "type": "registry:component",
   "registryDependencies": [
     "https://wigggle-ui.vercel.app/r/widget.json"
   ],
   "files": [
     {
-      "path": "registry/default/widgets/widget-08.tsx",
+      "path": "registry/default/widgets/clock/clock-08.tsx",
       "content": "import * as React from \"react\";\r\nimport {\r\n  Widget,\r\n  WidgetContent,\r\n  WidgetTitle,\r\n} from \"@/registry/default/ui/widget\";\r\n\r\nexport default function WidgetDemo() {\r\n  return (\r\n    <Widget>\r\n      <WidgetContent className=\"flex-col justify-between\">\r\n        <div className=\"flex w-full items-center justify-between gap-2\">\r\n          <p className=\"text-sm\">Mumbai</p>\r\n          <WidgetTitle>8:15 AM</WidgetTitle>\r\n        </div>\r\n        <div className=\"flex w-full items-center justify-between gap-2\">\r\n          <p className=\"text-sm\">London</p>\r\n          <WidgetTitle>6:45 PM</WidgetTitle>\r\n        </div>\r\n        <div className=\"flex w-full items-center justify-between gap-2\">\r\n          <p className=\"text-sm\">Tokyo</p>\r\n          <WidgetTitle>8:15 AM</WidgetTitle>\r\n        </div>\r\n        <div className=\"flex w-full items-center justify-between gap-2\">\r\n          <p className=\"text-sm\">Seoul</p>\r\n          <WidgetTitle>6:45 PM</WidgetTitle>\r\n        </div>\r\n      </WidgetContent>\r\n    </Widget>\r\n  );\r\n}\r\n",
       "type": "registry:component"
     }

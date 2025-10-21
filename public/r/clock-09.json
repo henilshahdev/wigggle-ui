@@ -1,13 +1,13 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "name": "widget-09",
+  "name": "clock-09",
   "type": "registry:component",
   "registryDependencies": [
     "https://wigggle-ui.vercel.app/r/widget.json"
   ],
   "files": [
     {
-      "path": "registry/default/widgets/widget-09.tsx",
+      "path": "registry/default/widgets/clock/clock-09.tsx",
       "content": "import * as React from \"react\";\r\nimport {\r\n  Widget,\r\n  WidgetContent,\r\n  WidgetTitle,\r\n} from \"@/registry/default/ui/widget\";\r\n\r\nexport default function WidgetDemo() {\r\n  return (\r\n    <Widget design=\"mumbai\">\r\n      <WidgetContent>\r\n        <div className=\"grid size-full grid-cols-2 items-center gap-x-4\">\r\n          <div className=\"flex flex-col items-center justify-center gap-2\">\r\n            <p className=\"text-sm\">Mumbai</p>\r\n            <WidgetTitle>8:15 AM</WidgetTitle>\r\n          </div>\r\n          <div className=\"flex flex-col items-center justify-center gap-2\">\r\n            <p className=\"text-sm\">London</p>\r\n            <WidgetTitle>6:45 PM</WidgetTitle>\r\n          </div>\r\n          <div className=\"flex flex-col items-center justify-center gap-2\">\r\n            <p className=\"text-sm\">Tokyo</p>\r\n            <WidgetTitle>8:15 AM</WidgetTitle>\r\n          </div>\r\n          <div className=\"flex flex-col items-center justify-center gap-2\">\r\n            <p className=\"text-sm\">Seoul</p>\r\n            <WidgetTitle>6:45 PM</WidgetTitle>\r\n          </div>\r\n        </div>\r\n      </WidgetContent>\r\n    </Widget>\r\n  );\r\n}\r\n",
       "type": "registry:component"
     }

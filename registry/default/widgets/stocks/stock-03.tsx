@@ -52,7 +52,7 @@ export default function WidgetDemo() {
                 <TriangleIcon
                   className={cn(
                     stock.isPositive
-                      ? "fill-green-500"
+                      ? "fill-productive"
                       : "fill-destructive rotate-180",
                     "size-2 stroke-none",
                   )}
@@ -67,7 +67,7 @@ export default function WidgetDemo() {
               <Label className="text-sm font-semibold">{stock.value}</Label>
               <Label
                 className={cn(
-                  stock.isPositive ? "text-green-500" : "text-destructive",
+                  stock.isPositive ? "text-productive" : "text-destructive",
                 )}
               >
                 {stock.isPositive ? "+" : "-"}

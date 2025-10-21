@@ -16,12 +16,12 @@ export default function WidgetDemo() {
       <WidgetHeader>
         <WidgetTitle className="flex w-full items-center justify-between">
           <Label className="text-4xl">732.17</Label>
-          <TriangleIcon className="size-6 fill-green-500 stroke-none" />
+          <TriangleIcon className="fill-productive size-6 stroke-none" />
         </WidgetTitle>
       </WidgetHeader>
       <WidgetContent className="justify-between">
-        <Label className="text-green-500">+2.76</Label>
-        <Label className="text-green-500">+0.47%</Label>
+        <Label className="text-productive">+2.76</Label>
+        <Label className="text-productive">+0.47%</Label>
       </WidgetContent>
       <WidgetFooter className="flex-col items-start">
         <Label className="text-2xl font-medium">META</Label>

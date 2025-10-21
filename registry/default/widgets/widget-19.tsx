@@ -31,8 +31,8 @@ export default function WidgetDemo() {
       <Separator className="h-0.5 rounded-full" />
       <WidgetContent>
         <div className="grid size-full grid-cols-7 gap-1 text-center">
-          {["S", "M", "T", "W", "T", "F", "S"].map((d) => (
-            <div key={d} className="text-xs">
+          {["S", "M", "T", "W", "T", "F", "S"].map((d, i) => (
+            <div key={`weekday-${i}-${d}`} className="text-xs">
               {d}
             </div>
           ))}

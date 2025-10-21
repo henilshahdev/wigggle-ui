@@ -3,7 +3,7 @@
 import * as React from "react";
 import { Widget, WidgetContent } from "@/registry/default/ui/widget";
 
-export default function WidgetDemo() {
+export default function Clock04() {
   const [time, setTime] = React.useState(new Date());
 
   React.useEffect(() => {
@@ -27,24 +27,6 @@ export default function WidgetDemo() {
   return (
     <Widget>
       <WidgetContent>
-        {[...Array(12)].map((_, i) => {
-          const hour = i + 1;
-          const angle = (hour / 12) * 360;
-          const radians = (angle * Math.PI) / 180;
-          const x = Math.sin(radians) * 70;
-          const y = -Math.cos(radians) * 70;
-          return (
-            <div
-              key={hour}
-              className="absolute text-sm font-semibold text-gray-800 dark:text-gray-200"
-              style={{
-                transform: `translate(${x}px, ${y}px)`,
-              }}
-            >
-              {hour}
-            </div>
-          );
-        })}
         <div className="relative size-[88px]">
           <div
             className="absolute bottom-1/2 left-1/2 h-12 w-1 origin-bottom rounded-full bg-gray-800 dark:bg-gray-200"

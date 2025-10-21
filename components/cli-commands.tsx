@@ -18,7 +18,7 @@ export default function CliCommands({ name }: { name: string }) {
   const commands = {
     pnpm: `pnpm dlx shadcn@latest add ${baseURL}/r/${name}.json`,
     npm: `npx shadcn@latest add ${baseURL}/r/${name}.json`,
-    yarn: `npx shadcn@latest add ${baseURL}/r/${name}.json`,
+    yarn: `yarn dlx shadcn@latest add ${baseURL}/r/${name}.json`,
     bun: `bunx --bun shadcn@latest add ${baseURL}/r/${name}.json`,
   };
 

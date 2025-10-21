@@ -112,7 +112,6 @@
       "files": [
         {
           "path": "registry/default/lib/utils.ts",
-          "content": "import { clsx, type ClassValue } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n",
           "type": "registry:lib"
         }
       ]
@@ -463,6 +462,25 @@
       "files": [
         {
           "path": "registry/default/widgets/stocks/stock-02.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["stocks"]
+      }
+    },
+    {
+      "name": "stock-03",
+      "type": "registry:component",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/label.json",
+        "https://wigggle-ui.vercel.app/r/utils.json"
+      ],
+      "files": [
+        {
+          "path": "registry/default/widgets/stocks/stock-03.tsx",
           "type": "registry:component"
         }
       ],

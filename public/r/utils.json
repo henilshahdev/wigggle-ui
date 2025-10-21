@@ -9,7 +9,7 @@
   "files": [
     {
       "path": "registry/default/lib/utils.ts",
-      "content": "import { clsx, type ClassValue } from \"clsx\";\r\nimport { twMerge } from \"tailwind-merge\";\r\n\r\nexport function cn(...inputs: ClassValue[]) {\r\n  return twMerge(clsx(inputs));\r\n}\r\n",
+      "content": "import { clsx, type ClassValue } from \"clsx\";\r\nimport { twMerge } from \"tailwind-merge\";\r\n\r\nexport function cn(...inputs: ClassValue[]) {\r\n  return twMerge(clsx(inputs));\r\n}\r\n\r\nexport function truncate(text: string, maxLength = 15): string {\r\n  if (typeof text !== \"string\") return \"\";\r\n  if (text.length <= maxLength) return text;\r\n  return text.slice(0, maxLength - 3) + \"...\";\r\n}\r\n",
       "type": "registry:lib"
     }
   ]

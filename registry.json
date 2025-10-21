@@ -440,6 +440,21 @@
       "meta": {
         "tags": ["weather"]
       }
+    },
+    {
+      "name": "stock-01",
+      "type": "registry:component",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
+      "files": [
+        {
+          "path": "registry/default/widgets/stocks/stock-01.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["stocks"]
+      }
     }
   ]
 }

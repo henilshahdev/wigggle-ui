@@ -1,9 +1,9 @@
 import * as React from "react";
 import {
   Widget,
-  WidgetFooter,
   WidgetHeader,
   WidgetTitle,
+  WidgetFooter,
 } from "@/registry/default/ui/widget";
 import { SunIcon } from "lucide-react";
 

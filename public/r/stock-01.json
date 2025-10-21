@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "stock-01",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/widget.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/widgets/stocks/stock-01.tsx",
+      "content": "import * as React from \"react\";\r\nimport { TriangleIcon } from \"lucide-react\";\r\n\r\nimport {\r\n  Widget,\r\n  WidgetHeader,\r\n  WidgetTitle,\r\n  WidgetContent,\r\n  WidgetFooter,\r\n} from \"@/registry/default/ui/widget\";\r\nimport { Label } from \"@/registry/default/ui/label\";\r\n\r\nexport default function WidgetDemo() {\r\n  return (\r\n    <Widget design=\"mumbai\">\r\n      <WidgetHeader>\r\n        <WidgetTitle className=\"flex w-full items-center justify-between\">\r\n          <Label className=\"text-4xl\">732.17</Label>\r\n          <TriangleIcon className=\"size-6 fill-green-500 stroke-none\" />\r\n        </WidgetTitle>\r\n      </WidgetHeader>\r\n      <WidgetContent className=\"justify-between\">\r\n        <Label className=\"text-green-500\">+2.76</Label>\r\n        <Label className=\"text-green-500\">+0.47%</Label>\r\n      </WidgetContent>\r\n      <WidgetFooter className=\"flex-col items-start\">\r\n        <Label className=\"text-2xl font-medium\">META</Label>\r\n        <Label className=\"text-muted-foreground text-base\">\r\n          Meta Platforms Inc\r\n        </Label>\r\n      </WidgetFooter>\r\n    </Widget>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "stocks"
+    ]
+  }
+}

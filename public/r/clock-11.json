@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "clock-11",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/widget.json",
+    "https://wigggle-ui.vercel.app/r/label.json",
+    "https://wigggle-ui.vercel.app/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/widgets/clock/clock-11.tsx",
+      "content": "\"use client\";\r\n\r\nimport * as React from \"react\";\r\nimport {\r\n  MinusIcon,\r\n  PauseIcon,\r\n  PlayIcon,\r\n  PlusIcon,\r\n  RotateCcw,\r\n} from \"lucide-react\";\r\n\r\nimport {\r\n  Widget,\r\n  WidgetContent,\r\n  WidgetFooter,\r\n  WidgetHeader,\r\n} from \"@/registry/default/ui/widget\";\r\nimport { Label } from \"@/registry/default/ui/label\";\r\nimport { Button } from \"@/registry/default/ui/button\";\r\n\r\ntype TimeAction = \"add\" | \"subtract\";\r\n\r\nexport default function WidgetDemo() {\r\n  const [isCountingDown, setIsCountingDown] = React.useState(false);\r\n  const [timeLeft, setTimeLeft] = React.useState(60);\r\n  const intervalRef = React.useRef<NodeJS.Timeout | null>(null);\r\n\r\n  const minutes = Math.floor(timeLeft / 60);\r\n  const seconds = (timeLeft % 60).toString().padStart(2, \"0\");\r\n\r\n  const updateTime = React.useCallback((action: TimeAction) => {\r\n    setTimeLeft((prev) => {\r\n      if (action === \"add\") return prev + 60;\r\n      if (action === \"subtract\" && prev >= 60) return prev - 60;\r\n      return prev;\r\n    });\r\n  }, []);\r\n\r\n  const resetTimer = React.useCallback(() => {\r\n    setIsCountingDown(false);\r\n    setTimeLeft(60);\r\n  }, []);\r\n\r\n  const handleToggle = React.useCallback(() => {\r\n    setIsCountingDown((prev) => !prev);\r\n  }, []);\r\n\r\n  React.useEffect(() => {\r\n    if (isCountingDown && !intervalRef.current) {\r\n      intervalRef.current = setInterval(() => {\r\n        setTimeLeft((prev) => (prev > 0 ? prev - 1 : 0));\r\n      }, 1000);\r\n    }\r\n\r\n    if (!isCountingDown) {\r\n      clearInterval(intervalRef.current!);\r\n      intervalRef.current = null;\r\n    }\r\n\r\n    return () => {\r\n      clearInterval(intervalRef.current!);\r\n      intervalRef.current = null;\r\n    };\r\n  }, [isCountingDown]);\r\n\r\n  return (\r\n    <Widget className=\"gap-3\" design=\"mumbai\">\r\n      <WidgetHeader className=\"items-center\">\r\n        <Button\r\n          aria-label=\"Subtract one minute\"\r\n          disabled={isCountingDown || timeLeft <= 60}\r\n          onClick={() => updateTime(\"subtract\")}\r\n          variant=\"ghost\"\r\n          size=\"icon-sm\"\r\n          className=\"disabled:cursor-not-allowed\"\r\n        >\r\n          <MinusIcon />\r\n        </Button>\r\n\r\n        <Label className=\"text-muted-foreground text-base\">\r\n          {minutes} Min{minutes !== 1 ? \"s\" : \"\"}\r\n        </Label>\r\n        <Button\r\n          aria-label=\"Add one minute\"\r\n          disabled={isCountingDown || timeLeft >= 600}\r\n          onClick={() => updateTime(\"add\")}\r\n          variant=\"ghost\"\r\n          size=\"icon-sm\"\r\n          className=\"disabled:cursor-not-allowed\"\r\n        >\r\n          <PlusIcon />\r\n        </Button>\r\n      </WidgetHeader>\r\n      <WidgetContent>\r\n        <div className=\"flex h-full w-full items-center justify-center\">\r\n          <Label className=\"text-5xl\">\r\n            {minutes}:{seconds}\r\n          </Label>\r\n        </div>\r\n      </WidgetContent>\r\n      <WidgetFooter>\r\n        <Button\r\n          aria-label=\"Reset timer\"\r\n          onClick={resetTimer}\r\n          variant=\"outline\"\r\n          size=\"icon-sm\"\r\n          className=\"rounded-full\"\r\n        >\r\n          <RotateCcw />\r\n        </Button>\r\n        <Button\r\n          aria-label={isCountingDown ? \"Pause timer\" : \"Start timer\"}\r\n          onClick={handleToggle}\r\n          variant=\"outline\"\r\n          size=\"icon-sm\"\r\n          className=\"rounded-full\"\r\n        >\r\n          {isCountingDown ? (\r\n            <PauseIcon className=\"size-4 fill-current stroke-none\" />\r\n          ) : (\r\n            <PlayIcon className=\"size-4 fill-current stroke-none\" />\r\n          )}\r\n        </Button>\r\n      </WidgetFooter>\r\n    </Widget>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "clock"
+    ]
+  }
+}

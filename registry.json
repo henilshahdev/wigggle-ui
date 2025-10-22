@@ -364,6 +364,25 @@
       }
     },
     {
+      "name": "clock-11",
+      "type": "registry:component",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/label.json",
+        "https://wigggle-ui.vercel.app/r/button.json"
+      ],
+      "files": [
+        {
+          "path": "registry/default/widgets/clock/clock-11.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["clock"]
+      }
+    },
+    {
       "name": "weather-01",
       "type": "registry:component",
       "dependencies": ["lucide-react"],

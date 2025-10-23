@@ -13,7 +13,7 @@ export default function WidgetDemo() {
   return (
     <Widget>
       <WidgetContent className="mx-auto flex-col items-start">
-        <div className="flex items-center justify-between gap-2">
+        <div className="flex w-full items-center justify-center gap-2">
           <Label className="text-destructive text-2xl">{day}</Label>
           <Label className="text-2xl">{month}</Label>
         </div>

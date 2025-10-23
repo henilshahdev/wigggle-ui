@@ -545,6 +545,24 @@
       }
     },
     {
+      "name": "weather-09",
+      "type": "registry:component",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/label.json"
+      ],
+      "files": [
+        {
+          "path": "registry/default/widgets/weather/weather-09.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["weather"]
+      }
+    },
+    {
       "name": "stock-01",
       "type": "registry:component",
       "dependencies": ["lucide-react"],

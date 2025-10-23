@@ -38,7 +38,12 @@ export const categories: WidgetCategory[] = [
   {
     slug: "stocks",
     name: "Stocks",
-    widgets: [{ name: "stock-01" }, { name: "stock-02" }, { name: "stock-03" }],
+    widgets: [
+      { name: "stock-01" },
+      { name: "stock-02" },
+      { name: "stock-03" },
+      { name: "stock-04" },
+    ],
   },
   {
     slug: "weather",

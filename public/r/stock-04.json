@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "stock-04",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react",
+    "recharts"
+  ],
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/widget.json",
+    "https://wigggle-ui.vercel.app/r/label.json",
+    "https://wigggle-ui.vercel.app/r/chart.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/widgets/stocks/stock-04.tsx",
+      "content": "\"use client\";\r\n\r\nimport { Area, AreaChart, CartesianGrid } from \"recharts\";\r\nimport { TriangleIcon } from \"lucide-react\";\r\n\r\nimport {\r\n  Widget,\r\n  WidgetContent,\r\n  WidgetFooter,\r\n  WidgetHeader,\r\n  WidgetTitle,\r\n} from \"@/registry/default/ui/widget\";\r\nimport { ChartConfig, ChartContainer } from \"@/registry/default/ui/chart\";\r\nimport { Label } from \"@/registry/default/ui/label\";\r\n\r\nconst chartData = [\r\n  { month: \"November 2024\", desktop: 36.49 },\r\n  { month: \"December 2024\", desktop: 49.53 },\r\n  { month: \"January 2025\", desktop: 35.16 },\r\n  { month: \"February 2025\", desktop: 41.25 },\r\n  { month: \"March 2025\", desktop: 21.59 },\r\n  { month: \"April 2025\", desktop: 11.98 },\r\n  { month: \"May 2025\", desktop: 21.62 },\r\n  { month: \"June 2025\", desktop: 24.94 },\r\n  { month: \"July 2025\", desktop: 47.34 },\r\n  { month: \"August 2025\", desktop: 27.14 },\r\n  { month: \"September 2025\", desktop: 24.63 },\r\n  { month: \"October 2025\", desktop: 25.45 },\r\n];\r\n\r\nconst chartConfig = {\r\n  desktop: {\r\n    label: \"Desktop\",\r\n    color: \"var(--destructive)\",\r\n  },\r\n} satisfies ChartConfig;\r\n\r\nexport default function WidgetDemo() {\r\n  return (\r\n    <Widget design=\"mumbai\" className=\"gap-1\">\r\n      <WidgetHeader className=\"items-center\">\r\n        <div className=\"flex items-center justify-start gap-1\">\r\n          <TriangleIcon className=\"fill-destructive size-4 rotate-180 stroke-none\" />\r\n          <WidgetTitle className=\"text-base font-normal\">AAPL</WidgetTitle>\r\n        </div>\r\n        <Label className=\"text-destructive text-base tracking-wide\">\r\n          -4.26\r\n        </Label>\r\n      </WidgetHeader>\r\n      <WidgetContent>\r\n        <ChartContainer className=\"h-20 w-full\" config={chartConfig}>\r\n          <AreaChart accessibilityLayer data={chartData}>\r\n            <CartesianGrid vertical={false} />\r\n            <defs>\r\n              <linearGradient id=\"fillDesktop\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\r\n                <stop\r\n                  offset=\"5%\"\r\n                  stopColor=\"var(--color-desktop)\"\r\n                  stopOpacity={0.8}\r\n                />\r\n                <stop\r\n                  offset=\"95%\"\r\n                  stopColor=\"var(--color-desktop)\"\r\n                  stopOpacity={0.1}\r\n                />\r\n              </linearGradient>\r\n            </defs>\r\n            <Area\r\n              dataKey=\"desktop\"\r\n              type=\"natural\"\r\n              fill=\"url(#fillDesktop)\"\r\n              fillOpacity={0.4}\r\n              stroke=\"var(--color-desktop)\"\r\n              stackId=\"a\"\r\n            />\r\n          </AreaChart>\r\n        </ChartContainer>\r\n      </WidgetContent>\r\n      <WidgetFooter className=\"justify-end\">\r\n        <Label className=\"text-3xl font-medium\">262.24</Label>\r\n      </WidgetFooter>\r\n    </Widget>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "stocks"
+    ]
+  }
+}

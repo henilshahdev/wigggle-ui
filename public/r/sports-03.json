@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sports-03",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/widget.json",
+    "https://wigggle-ui.vercel.app/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/widgets/sports/sports-03.tsx",
+      "content": "import * as React from \"react\";\r\nimport Image from \"next/image\";\r\n\r\nimport {\r\n  Widget,\r\n  WidgetContent,\r\n  WidgetHeader,\r\n} from \"@/registry/default/ui/widget\";\r\nimport { Label } from \"@/registry/default/ui/label\";\r\n\r\nconst upcomingMatches = [\r\n  { teamName: \"FCB (H)\", date: \"25 Oct\", time: \"18:00\" },\r\n  { teamName: \"BVB (A)\", date: \"29 Oct\", time: \"21:00\" },\r\n];\r\n\r\nexport default function WidgetDemo() {\r\n  return (\r\n    <Widget design=\"mumbai\">\r\n      <WidgetHeader className=\"items-center\">\r\n        <Image\r\n          className=\"size-12\"\r\n          src=\"/assets/logos/mci.png\"\r\n          alt=\"FC Barcelona\"\r\n          width={48}\r\n          height={48}\r\n        />\r\n        <div className=\"text-muted-foreground flex flex-col gap-2\">\r\n          <Label>UCL - 1st</Label>\r\n          <Label>EPL - 4th</Label>\r\n        </div>\r\n      </WidgetHeader>\r\n      <WidgetContent className=\"mt-3 flex-col items-center gap-3\">\r\n        {upcomingMatches.map((match, i) => (\r\n          <div\r\n            key={i}\r\n            className=\"bg-secondary flex w-full items-center justify-between rounded-lg px-2 py-1\"\r\n          >\r\n            <Label className=\"text-base tracking-wider\">{match.teamName}</Label>\r\n            <div className=\"text-muted-foreground flex flex-col gap-0.5\">\r\n              <Label className=\"text-xs\">{match.date}</Label>\r\n              <Label className=\"text-xs\">{match.time}</Label>\r\n            </div>\r\n          </div>\r\n        ))}\r\n      </WidgetContent>\r\n    </Widget>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "sports"
+    ]
+  }
+}

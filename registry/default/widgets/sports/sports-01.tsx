@@ -42,8 +42,8 @@ export default function WidgetDemo() {
               className="size-8"
               src={team.image}
               alt={team.teamName}
-              width={200}
-              height={200}
+              width={32}
+              height={32}
             />
             <Label className="text-lg tracking-wider">{team.name}</Label>
             <Label className="text-3xl">{team.score}</Label>

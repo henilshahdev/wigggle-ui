@@ -402,6 +402,90 @@
       }
     },
     {
+      "name": "sports-01",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/label.json"
+      ],
+      "files": [
+        {
+          "path": "registry/default/widgets/sports/sports-01.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["sports"]
+      }
+    },
+    {
+      "name": "stock-01",
+      "type": "registry:component",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
+      "files": [
+        {
+          "path": "registry/default/widgets/stocks/stock-01.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["stocks"]
+      }
+    },
+    {
+      "name": "stock-02",
+      "type": "registry:component",
+      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
+      "files": [
+        {
+          "path": "registry/default/widgets/stocks/stock-02.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["stocks"]
+      }
+    },
+    {
+      "name": "stock-03",
+      "type": "registry:component",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/label.json",
+        "https://wigggle-ui.vercel.app/r/utils.json"
+      ],
+      "files": [
+        {
+          "path": "registry/default/widgets/stocks/stock-03.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["stocks"]
+      }
+    },
+    {
+      "name": "stock-04",
+      "type": "registry:component",
+      "dependencies": ["lucide-react", "recharts"],
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/label.json",
+        "https://wigggle-ui.vercel.app/r/chart.json"
+      ],
+      "files": [
+        {
+          "path": "registry/default/widgets/stocks/stock-04.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["stocks"]
+      }
+    },
+    {
       "name": "weather-01",
       "type": "registry:component",
       "dependencies": ["lucide-react"],
@@ -560,73 +644,6 @@
       ],
       "meta": {
         "tags": ["weather"]
-      }
-    },
-    {
-      "name": "stock-01",
-      "type": "registry:component",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
-      "files": [
-        {
-          "path": "registry/default/widgets/stocks/stock-01.tsx",
-          "type": "registry:component"
-        }
-      ],
-      "meta": {
-        "tags": ["stocks"]
-      }
-    },
-    {
-      "name": "stock-02",
-      "type": "registry:component",
-      "registryDependencies": ["https://wigggle-ui.vercel.app/r/widget.json"],
-      "files": [
-        {
-          "path": "registry/default/widgets/stocks/stock-02.tsx",
-          "type": "registry:component"
-        }
-      ],
-      "meta": {
-        "tags": ["stocks"]
-      }
-    },
-    {
-      "name": "stock-03",
-      "type": "registry:component",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": [
-        "https://wigggle-ui.vercel.app/r/widget.json",
-        "https://wigggle-ui.vercel.app/r/label.json",
-        "https://wigggle-ui.vercel.app/r/utils.json"
-      ],
-      "files": [
-        {
-          "path": "registry/default/widgets/stocks/stock-03.tsx",
-          "type": "registry:component"
-        }
-      ],
-      "meta": {
-        "tags": ["stocks"]
-      }
-    },
-    {
-      "name": "stock-04",
-      "type": "registry:component",
-      "dependencies": ["lucide-react", "recharts"],
-      "registryDependencies": [
-        "https://wigggle-ui.vercel.app/r/widget.json",
-        "https://wigggle-ui.vercel.app/r/label.json",
-        "https://wigggle-ui.vercel.app/r/chart.json"
-      ],
-      "files": [
-        {
-          "path": "registry/default/widgets/stocks/stock-04.tsx",
-          "type": "registry:component"
-        }
-      ],
-      "meta": {
-        "tags": ["stocks"]
       }
     }
   ]

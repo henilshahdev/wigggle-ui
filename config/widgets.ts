@@ -55,6 +55,7 @@ export const categories: WidgetCategory[] = [
       { name: "weather-04" },
       { name: "weather-05" },
       { name: "weather-06" },
+      { name: "weather-07" },
     ],
   },
 ];

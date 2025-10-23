@@ -66,7 +66,7 @@ export default function StopwatchPage() {
 
   return (
     <Widget design="mumbai">
-      <WidgetContent className="border-border relative mx-auto aspect-square size-full max-h-32 max-w-32 rounded-full border-2">
+      <WidgetContent className="border-foreground/50 relative mx-auto aspect-square size-full max-h-32 max-w-32 rounded-full border-2">
         {/* Clock center dot */}
         <div className="absolute top-1/2 left-1/2 z-20 size-2 -translate-x-1/2 -translate-y-1/2 transform rounded-full border-2 border-red-500" />
 
@@ -147,7 +147,7 @@ export default function StopwatchPage() {
           className="rounded-full"
           aria-label="Reset stopwatch"
         >
-          <RotateCcw className="size-4 text-slate-300" />
+          <RotateCcw className="size-4" />
         </Button>
         <Button
           onClick={handlePlayPause}
@@ -157,9 +157,9 @@ export default function StopwatchPage() {
           aria-label={isRunning ? "Pause stopwatch" : "Start stopwatch"}
         >
           {isRunning ? (
-            <Pause className="size-4 fill-slate-300 text-slate-300" />
+            <Pause className="size-4 fill-current" />
           ) : (
-            <Play className="size-4 fill-slate-300 text-slate-300" />
+            <Play className="size-4 fill-current" />
           )}
         </Button>
       </WidgetFooter>

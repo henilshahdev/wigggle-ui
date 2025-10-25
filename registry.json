@@ -488,6 +488,24 @@
       }
     },
     {
+      "name": "sports-06",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/label.json",
+        "https://wigggle-ui.vercel.app/r/separator.json"
+      ],
+      "files": [
+        {
+          "path": "registry/default/widgets/sports/sports-06.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["sports"]
+      }
+    },
+    {
       "name": "stock-01",
       "type": "registry:component",
       "dependencies": ["lucide-react"],

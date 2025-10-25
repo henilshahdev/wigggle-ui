@@ -44,6 +44,7 @@ export const categories: WidgetCategory[] = [
       { name: "sports-03" },
       { name: "sports-04" },
       { name: "sports-05" },
+      { name: "sports-06" },
     ],
     isNew: true,
   },

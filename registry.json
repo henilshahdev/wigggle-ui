@@ -16,6 +16,16 @@
       ]
     },
     {
+      "name": "icons",
+      "type": "registry:ui",
+      "files": [
+        {
+          "path": "registry/default/ui/icons.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "badge",
       "type": "registry:ui",
       "dependencies": ["@radix-ui/react-slot", "class-variance-authority"],
@@ -584,6 +594,25 @@
       "files": [
         {
           "path": "registry/default/widgets/stocks/stock-04.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["stocks"]
+      }
+    },
+    {
+      "name": "stock-05",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/icons.json",
+        "https://wigggle-ui.vercel.app/r/label.json",
+        "https://wigggle-ui.vercel.app/r/tooltip.json"
+      ],
+      "files": [
+        {
+          "path": "registry/default/widgets/stocks/stock-05.tsx",
           "type": "registry:component"
         }
       ],

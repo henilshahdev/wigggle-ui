@@ -65,11 +65,11 @@
   --border: oklch(0.922 0 0); /* Neutral 200 */
   --input: oklch(0.922 0 0); /* Neutral 200 */
   --ring: oklch(0.708 0 0); /* Neutral 400 */
-  --chart-1: oklch(0.646 0.222 41.116); /* Orange 600 */
-  --chart-2: oklch(0.6 0.118 184.704); /* Teal 600 */
-  --chart-3: oklch(0.398 0.07 227.392); /* Cyan 900 */
-  --chart-4: oklch(0.828 0.189 84.429); /* Amber 400 */
-  --chart-5: oklch(0.769 0.188 70.08); /* Amber 500 */
+  --chart-1: oklch(0.809 0.105 251.813); /* Blue 300 */
+  --chart-2: oklch(0.71 0.14 255); /* Custom */
+  --chart-3: oklch(0.546 0.245 262.881); /* Blue 600 */
+  --chart-4: oklch(0.488 0.243 264.376); /* Blue 700 */
+  --chart-5: oklch(0.424 0.199 265.638); /* Blue 800 */
   --sidebar: oklch(0.985 0 0); /* Zinc 50 */
   --sidebar-foreground: oklch(0.145 0 0); /* Neutral 950 */
   --sidebar-primary: oklch(0.205 0 0); /* Neutral 900 */
@@ -100,11 +100,11 @@
   --border: oklch(1 0 0 / 10%); /* White / 10% */
   --input: oklch(1 0 0 / 15%); /* White / 15% */
   --ring: oklch(0.556 0 0); /* Neutral 500 */
-  --chart-1: oklch(0.488 0.243 264.376); /* Blue 700 */
-  --chart-2: oklch(0.696 0.17 162.48); /* Emerald 500 */
-  --chart-3: oklch(0.769 0.188 70.08); /* Amber 500 */
-  --chart-4: oklch(0.627 0.265 303.9); /* Purple 500 */
-  --chart-5: oklch(0.645 0.246 16.439); /* Rose 500 */
+  --chart-1: oklch(0.809 0.105 251.813); /* Blue 300 */
+  --chart-2: oklch(0.71 0.14 255); /* Custom */
+  --chart-3: oklch(0.546 0.245 262.881); /* Blue 600 */
+  --chart-4: oklch(0.488 0.243 264.376); /* Blue 700 */
+  --chart-5: oklch(0.424 0.199 265.638); /* Blue 800 */
   --sidebar: oklch(0.205 0 0); /* Neutral 900 */
   --sidebar-foreground: oklch(0.985 0 0); /* Zinc 50 */
   --sidebar-primary: oklch(0.488 0.243 264.376); /* Blue 700 */

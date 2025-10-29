@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
-    "build:registry": "shadcn build",
+    "build:registry": "shadcn build && tsx ./scripts/copy-registry.mts",
     "start": "next start",
     "lint": "eslint"
   },

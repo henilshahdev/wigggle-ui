@@ -16,7 +16,7 @@ export default function GetStarted() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button size="sm"> Get Started</Button>
+        <Button> Get Started</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-3xl">
         <DialogHeader>

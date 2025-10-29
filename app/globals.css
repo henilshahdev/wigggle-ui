@@ -147,3 +147,20 @@
     scrollbar-color: var(--border) transparent;
   }
 }
+
+@keyframes depthIn {
+  from {
+    transform: translateZ(1000px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    transform: translateZ(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.animate-depth-in {
+  animation: depthIn 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}

@@ -38,7 +38,7 @@ export default function RootLayout({
             <div className="absolute inset-0">
               <DotBackground />
             </div>
-            <div className="mx-auto flex min-h-screen max-w-7xl flex-col max-sm:text-center">
+            <div className="mx-auto flex min-h-screen max-w-[1500px] flex-col max-sm:text-center">
               <SiteHeader />
               <div className="flex-1 px-6">{children}</div>
               <SiteFooter />

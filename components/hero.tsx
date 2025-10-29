@@ -67,7 +67,7 @@ export default function Hero() {
 
   return (
     <div>
-      <div className="relative hidden h-[800px] w-full items-start justify-start overflow-hidden perspective-distant xl:flex">
+      <div className="relative hidden h-[700px] w-full items-start justify-start overflow-hidden perspective-distant xl:flex">
         <div className="flex w-full flex-col items-center justify-center gap-5">
           <h1 className="text-foreground text-4xl/[1.1] font-semibold md:text-5xl/[1.1]">
             The first ever collection of Widgets for the Web.
@@ -97,7 +97,7 @@ export default function Hero() {
           ))}
       </div>
 
-      <div className="relative z-10 flex w-full flex-col gap-5 text-center">
+      <div className="relative z-10 flex w-full flex-col gap-5 text-center xl:hidden">
         <h1 className="text-foreground text-4xl/[1.1] font-semibold md:text-5xl/[1.1]">
           The first ever collection of Widgets for the Web.
         </h1>

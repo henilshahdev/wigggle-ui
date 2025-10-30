@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import GetStarted from "@/components/get-started";
 
@@ -19,21 +19,24 @@ import Clock07 from "@/registry/default/widgets/clock/clock-07";
 import Weather04 from "@/registry/default/widgets/weather/weather-04";
 
 export default function Hero() {
-  const widgets = [
-    <Calendar01 key="cal01" />,
-    <Sports02 key="sport02" />,
-    <Clock05 key="clock05" />,
-    <Stocks01 key="stocks01" />,
-    <Weather07 key="weather07" />,
-    <Clock12 key="clock12" />,
-    <Stocks04 key="stocks04a" />,
-    <Stocks04 key="stocks04b" />,
-    <Weather09 key="weather09" />,
-    <Sports05 key="sports05" />,
-    <Clock07 key="clock07" />,
-    <Calendar04 key="calendar04" />,
-    <Weather04 key="weather04" />,
-  ];
+  const widgets = useMemo(
+    () => [
+      <Calendar01 key="cal01" />,
+      <Sports02 key="sport02" />,
+      <Clock05 key="clock05" />,
+      <Stocks01 key="stocks01" />,
+      <Weather07 key="weather07" />,
+      <Clock12 key="clock12" />,
+      <Stocks04 key="stocks04a" />,
+      <Stocks04 key="stocks04b" />,
+      <Weather09 key="weather09" />,
+      <Sports05 key="sports05" />,
+      <Clock07 key="clock07" />,
+      <Calendar04 key="calendar04" />,
+      <Weather04 key="weather04" />,
+    ],
+    [],
+  );
 
   const positions = [
     "top-56 left-0",
@@ -63,7 +66,7 @@ export default function Hero() {
         (Math.random() - 0.5) * 40,
       ]),
     );
-  }, []);
+  }, [widgets]);
 
   return (
     <div>

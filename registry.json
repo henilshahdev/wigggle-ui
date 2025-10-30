@@ -116,6 +116,20 @@
       ]
     },
     {
+      "name": "item",
+      "type": "registry:ui",
+      "dependencies": ["@radix-ui/react-slot", "class-variance-authority"],
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/separator.json"
+      ],
+      "files": [
+        {
+          "path": "registry/default/ui/item.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "wheel-picker",
       "type": "registry:ui",
       "dependencies": ["@ncdai/react-wheel-picker"],

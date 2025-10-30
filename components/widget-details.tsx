@@ -1,10 +1,11 @@
 "use client";
 
 import { JSX, useEffect, useState } from "react";
-import { ArrowUpRight, CodeIcon, Plus } from "lucide-react";
+import { ArrowUpRight, CodeIcon } from "lucide-react";
 import type { RegistryItem } from "shadcn/registry";
 
 import { convertRegistryPaths } from "@/lib/utils";
+import { WidgetCreditType } from "@/types";
 import WidgetCli from "@/components/cli-commands";
 import CodeBlock, { highlight } from "@/components/code-block";
 import CopyButton from "@/components/copy-button";
@@ -27,10 +28,9 @@ import {
   Item,
   ItemActions,
   ItemContent,
-  ItemDescription,
   ItemMedia,
   ItemTitle,
-} from "@/components/ui/item";
+} from "@/registry/default/ui/item";
 
 export default function WidgetDetails({ widget }: { widget: RegistryItem }) {
   const [code, setCode] = useState<string | null>(null);
@@ -108,7 +108,7 @@ export default function WidgetDetails({ widget }: { widget: RegistryItem }) {
                 Special thanks to the authors of the components used here.
               </DialogDescription>
               <div className="flex flex-col gap-2">
-                {widget.meta?.credits.map((el: any) => (
+                {widget.meta?.credits.map((el: WidgetCreditType) => (
                   <Item key={el.name} variant="outline">
                     <ItemMedia
                       variant="image"

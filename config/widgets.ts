@@ -1,8 +1,21 @@
+import { ForwardRefExoticComponent, RefAttributes } from "react";
+import {
+  LucideProps,
+  CalendarIcon,
+  Clock3Icon,
+  TrophyIcon,
+  ChartNoAxesCombinedIcon,
+  CloudSunIcon,
+} from "lucide-react";
+
 export interface WidgetCategory {
   slug: string;
   name: string;
   widgets: { name: string }[];
   isNew?: boolean;
+  icon: ForwardRefExoticComponent<
+    Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
+  >;
 }
 
 export const categories: WidgetCategory[] = [
@@ -16,6 +29,7 @@ export const categories: WidgetCategory[] = [
       { name: "calendar-04" },
       { name: "calendar-05" },
     ],
+    icon: CalendarIcon,
   },
   {
     slug: "clock",
@@ -35,6 +49,7 @@ export const categories: WidgetCategory[] = [
       { name: "clock-12" },
       { name: "clock-13" },
     ],
+    icon: Clock3Icon,
   },
   {
     slug: "sports",
@@ -48,6 +63,7 @@ export const categories: WidgetCategory[] = [
       { name: "sports-06" },
       { name: "sports-07" },
     ],
+    icon: TrophyIcon,
     isNew: true,
   },
   {
@@ -61,6 +77,7 @@ export const categories: WidgetCategory[] = [
       { name: "stock-05" },
       { name: "stock-06" },
     ],
+    icon: ChartNoAxesCombinedIcon,
   },
   {
     slug: "weather",
@@ -76,6 +93,7 @@ export const categories: WidgetCategory[] = [
       { name: "weather-08" },
       { name: "weather-09" },
     ],
+    icon: CloudSunIcon,
   },
 ];
 

@@ -23,6 +23,7 @@ export default function Home() {
               name={category.name}
               widgetCount={category.widgets.length}
               isNew={category.isNew}
+              icon={category.icon}
             />
           ))}
         </div>

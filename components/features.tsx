@@ -3,7 +3,7 @@ import { RocketIcon } from "lucide-react";
 
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
-import { Icons } from "./icons";
+import { Icons } from "@/components/icons";
 
 const features = [
   {
@@ -25,7 +25,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="py-8py-16 relative z-10">
+    <section className="relative z-10 py-8">
       <div className="@container mx-auto flex max-w-5xl flex-col items-center justify-center gap-12 px-6">
         <h2 className="text-4xl font-semibold text-balance lg:text-5xl">
           Why Wigggle UI?
@@ -54,7 +54,7 @@ export default function Features() {
   );
 }
 
-const CardDecorator = ({ children }: { children: ReactNode }) => (
+export const CardDecorator = ({ children }: { children: ReactNode }) => (
   <div className="relative mx-auto size-36 mask-radial-from-40% mask-radial-to-60% duration-200 [--color-border:color-mix(in_oklab,var(--color-zinc-950)10%,transparent)] group-hover:[--color-border:color-mix(in_oklab,var(--color-zinc-950)20%,transparent)] dark:[--color-border:color-mix(in_oklab,var(--color-white)15%,transparent)] dark:group-hover:[--color-border:color-mix(in_oklab,var(--color-white)20%,transparent)]">
     <div
       aria-hidden

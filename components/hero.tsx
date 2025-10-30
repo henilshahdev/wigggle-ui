@@ -17,6 +17,8 @@ import Clock12 from "@/registry/default/widgets/clock/clock-12";
 import Calendar04 from "@/registry/default/widgets/calendar/calendar-04";
 import Clock07 from "@/registry/default/widgets/clock/clock-07";
 import Weather04 from "@/registry/default/widgets/weather/weather-04";
+import { Button } from "@/registry/default/ui/button";
+import Link from "next/link";
 
 export default function Hero() {
   const widgets = useMemo(
@@ -70,7 +72,7 @@ export default function Hero() {
 
   return (
     <div>
-      <div className="relative hidden h-[700px] w-full items-start justify-start overflow-hidden perspective-distant xl:flex">
+      <div className="relative z-10 hidden h-[700px] w-full items-start justify-start overflow-hidden perspective-distant xl:flex">
         <div className="flex w-full flex-col items-center justify-center gap-5">
           <h1 className="text-foreground text-4xl/[1.1] font-semibold md:text-5xl/[1.1]">
             The first ever collection of Widgets for the Web.
@@ -79,8 +81,11 @@ export default function Hero() {
             An open-source curated collection of copy-paste widgets for your
             next project.
           </p>
-          <div className="mx-auto w-max gap-x-3">
+          <div className="mx-auto flex w-max gap-x-3">
             <GetStarted />
+            <Button variant="ghost" asChild>
+              <Link href="/widgets">View Widgets</Link>
+            </Button>
           </div>
         </div>
         {mounted &&
@@ -108,8 +113,11 @@ export default function Hero() {
           An open-source curated collection of copy-paste widgets for your next
           project.
         </p>
-        <div className="mx-auto w-max gap-x-3">
+        <div className="mx-auto flex w-max gap-x-3">
           <GetStarted />
+          <Button variant="ghost" asChild>
+            <Link href="/widgets">View Widgets</Link>
+          </Button>
         </div>
       </div>
     </div>

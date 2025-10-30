@@ -1,7 +1,7 @@
 "use client";
 
 import { JSX, useEffect, useState } from "react";
-import { CodeIcon } from "lucide-react";
+import { ArrowUpRight, CodeIcon, Plus } from "lucide-react";
 import type { RegistryItem } from "shadcn/registry";
 
 import { convertRegistryPaths } from "@/lib/utils";
@@ -23,6 +23,14 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/registry/default/ui/tooltip";
+import {
+  Item,
+  ItemActions,
+  ItemContent,
+  ItemDescription,
+  ItemMedia,
+  ItemTitle,
+} from "@/components/ui/item";
 
 export default function WidgetDetails({ widget }: { widget: RegistryItem }) {
   const [code, setCode] = useState<string | null>(null);
@@ -90,15 +98,46 @@ export default function WidgetDetails({ widget }: { widget: RegistryItem }) {
           </Tooltip>
         </TooltipProvider>
         <DialogContent className="sm:max-w-3xl">
-          <DialogHeader>
-            <DialogTitle className="text-left">Installation</DialogTitle>
-            <DialogDescription className="sr-only">
-              Use the CLI to add widgets to your project
-            </DialogDescription>
-          </DialogHeader>
-          <div className="min-w-0 space-y-5">
+          <DialogTitle className="text-center text-2xl">
+            {widget.name}
+          </DialogTitle>
+          {widget?.meta?.credits && (
+            <DialogHeader>
+              <p className="text-lg font-semibold tracking-tight">Credits</p>
+              <DialogDescription className="sr-only">
+                Special thanks to the authors of the components used here.
+              </DialogDescription>
+              <div className="flex flex-col gap-2">
+                {widget.meta?.credits.map((el: any) => (
+                  <Item key={el.name} variant="outline">
+                    <ItemMedia
+                      variant="image"
+                      dangerouslySetInnerHTML={{ __html: el.logo }}
+                      className="*:[svg]:fill-foreground grayscale *:[svg]:size-8"
+                    />
+                    <ItemContent>
+                      <ItemTitle className="text-base">{el.name}</ItemTitle>
+                    </ItemContent>
+                    <ItemActions>
+                      <Button size="sm" variant="outline" asChild>
+                        <a
+                          href={el.homepage}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          View <ArrowUpRight />
+                        </a>
+                      </Button>
+                    </ItemActions>
+                  </Item>
+                ))}
+              </div>
+            </DialogHeader>
+          )}
+          <p className="text-lg font-semibold tracking-tight">Installation</p>
+          <div className="min-w-0 space-y-4">
             <WidgetCli name={widget.name} />
-            <div className="space-y-4">
+            <div className="space-y-2">
               <p className="text-lg font-semibold tracking-tight">Code</p>
               <div className="relative">
                 {code === "" ? (

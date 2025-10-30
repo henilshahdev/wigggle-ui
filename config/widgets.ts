@@ -33,6 +33,7 @@ export const categories: WidgetCategory[] = [
       { name: "clock-10" },
       { name: "clock-11" },
       { name: "clock-12" },
+      { name: "clock-13" },
     ],
   },
   {

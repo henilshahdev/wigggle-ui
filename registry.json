@@ -116,6 +116,17 @@
       ]
     },
     {
+      "name": "wheel-picker",
+      "type": "registry:ui",
+      "dependencies": ["@ncdai/react-wheel-picker"],
+      "files": [
+        {
+          "path": "registry/default/ui/wheel-picker.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "utils",
       "type": "registry:lib",
       "dependencies": ["clsx", "tailwind-merge"],
@@ -409,6 +420,33 @@
       ],
       "meta": {
         "tags": ["clock"]
+      }
+    },
+    {
+      "name": "clock-13",
+      "type": "registry:component",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/button.json",
+        "https://chanhdai.com/r/wheel-picker.json"
+      ],
+      "files": [
+        {
+          "path": "registry/default/widgets/clock/clock-13.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["clock"],
+        "credits": [
+          {
+            "name": "@ncdai",
+            "homepage": "https://chanhdai.com/components/react-wheel-picker",
+            "url": "https://chanhdai.com/r/{name}.json",
+            "logo": "<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 640 640'><path fill='var(--foreground)' d='M0 0h640v640H0z'/><path fill='var(--background)' d='M256 448H128v-64h128v64ZM512 256H384v128h128v64H320V192h192v64ZM128 384H64V256h64v128ZM576 384h-64V256h64v128ZM256 256H128v-64h128v64Z'/></svg>"
+          }
+        ]
       }
     },
     {

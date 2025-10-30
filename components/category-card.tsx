@@ -15,7 +15,7 @@ export default function CategoryCard({
   widgetCount,
   isNew,
 }: CategoryCardProps) {
-  const href = `/${slug}`;
+  const href = `/widgets/${slug}`;
 
   return (
     <div className="space-y-2 text-center">

@@ -16,16 +16,22 @@ export default function Home() {
 
       <div className="relative my-16">
         <div className="grid gap-x-12 gap-y-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-          {categories.map((category) => (
-            <CategoryCard
-              key={category.slug}
-              slug={category.slug}
-              name={category.name}
-              widgetCount={category.widgets.length}
-              isNew={category.isNew}
-              icon={category.icon}
-            />
-          ))}
+          {categories.map((category) => {
+            const totalWidgets =
+              category.widgets.sm.length +
+              (category.widgets.md?.length ?? 0) +
+              (category.widgets.lg?.length ?? 0);
+            return (
+              <CategoryCard
+                key={category.slug}
+                slug={category.slug}
+                name={category.name}
+                widgetCount={totalWidgets}
+                isNew={category.isNew}
+                icon={category.icon}
+              />
+            );
+          })}
         </div>
       </div>
     </div>

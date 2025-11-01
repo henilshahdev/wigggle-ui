@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "stock-sm-06",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react",
+    "recharts"
+  ],
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/widget.json",
+    "https://wigggle-ui.vercel.app/r/chart.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/widgets/stocks/sm/stock-06.tsx",
+      "content": "\"use client\";\r\n\r\nimport React from \"react\";\r\nimport { Label, Pie, PieChart } from \"recharts\";\r\nimport { ChartNoAxesCombinedIcon } from \"lucide-react\";\r\n\r\nimport {\r\n  Widget,\r\n  WidgetContent,\r\n  WidgetHeader,\r\n  WidgetTitle,\r\n} from \"@/registry/default/ui/widget\";\r\nimport {\r\n  ChartConfig,\r\n  ChartContainer,\r\n  ChartTooltip,\r\n  ChartTooltipContent,\r\n} from \"@/registry/default/ui/chart\";\r\n\r\nconst chartData = [\r\n  { category: \"ecommerce\", visitors: 12.72, fill: \"var(--color-ecommerce)\" },\r\n  { category: \"finance\", visitors: 24.14, fill: \"var(--color-finance)\" },\r\n  { category: \"automobiles\", visitors: 8.55, fill: \"var(--color-automobiles)\" },\r\n  { category: \"healthcare\", visitors: 23.64, fill: \"var(--color-healthcare)\" },\r\n  { category: \"technology\", visitors: 30.95, fill: \"var(--color-technology)\" },\r\n];\r\nconst chartConfig = {\r\n  ecommerce: {\r\n    label: \"E-Comm\",\r\n    color: \"var(--chart-1)\",\r\n  },\r\n  finance: {\r\n    label: \"Finance\",\r\n    color: \"var(--chart-2)\",\r\n  },\r\n  automobiles: {\r\n    label: \"Auto\",\r\n    color: \"var(--chart-3)\",\r\n  },\r\n  healthcare: {\r\n    label: \"Health\",\r\n    color: \"var(--chart-4)\",\r\n  },\r\n  technology: {\r\n    label: \"Tech\",\r\n    color: \"var(--chart-5)\",\r\n  },\r\n} satisfies ChartConfig;\r\n\r\nexport default function WidgetDemo() {\r\n  return (\r\n    <Widget design=\"mumbai\">\r\n      <WidgetHeader className=\"items-center\">\r\n        <WidgetTitle className=\"text-base font-normal\">Portfolio</WidgetTitle>\r\n        <ChartNoAxesCombinedIcon className=\"size-5\" />\r\n      </WidgetHeader>\r\n      <WidgetContent>\r\n        <ChartContainer config={chartConfig} className=\"h-full w-full\">\r\n          <PieChart>\r\n            <ChartTooltip\r\n              cursor={false}\r\n              content={<ChartTooltipContent hideLabel />}\r\n            />\r\n            <Pie\r\n              data={chartData}\r\n              dataKey=\"visitors\"\r\n              nameKey=\"category\"\r\n              innerRadius={35}\r\n              strokeWidth={5}\r\n            >\r\n              <Label\r\n                content={({ viewBox }) => {\r\n                  if (viewBox && \"cx\" in viewBox && \"cy\" in viewBox) {\r\n                    return (\r\n                      <text\r\n                        x={viewBox.cx}\r\n                        y={viewBox.cy}\r\n                        textAnchor=\"middle\"\r\n                        dominantBaseline=\"middle\"\r\n                      >\r\n                        <tspan\r\n                          x={viewBox.cx}\r\n                          y={viewBox.cy}\r\n                          className=\"fill-foreground text-lg font-semibold\"\r\n                        >\r\n                          $1.2M\r\n                        </tspan>\r\n                      </text>\r\n                    );\r\n                  }\r\n                }}\r\n              />\r\n            </Pie>\r\n          </PieChart>\r\n        </ChartContainer>\r\n      </WidgetContent>\r\n    </Widget>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "stocks"
+    ],
+    "size": "sm"
+  }
+}

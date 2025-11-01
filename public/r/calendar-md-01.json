@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-md-01",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/widget.json",
+    "https://wigggle-ui.vercel.app/r/badge.json",
+    "https://wigggle-ui.vercel.app/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/widgets/calendar/md/calendar-01.tsx",
+      "content": "import * as React from \"react\";\n\nimport { Widget, WidgetContent } from \"@/registry/default/ui/widget\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { Badge } from \"@/registry/default/ui/badge\";\n\nexport default function WidgetDemo() {\n  const now = new Date();\n\n  const dayName = now.toLocaleDateString(\"en-US\", { weekday: \"short\" });\n  const monthName = now.toLocaleDateString(\"en-US\", { month: \"short\" });\n  const date = now.getDate();\n  const paddedDate = date.toString().padStart(2, \"0\");\n\n  const year = now.getFullYear();\n  const month = now.getMonth();\n\n  const daysInMonth = new Date(year, month + 1, 0).getDate();\n  const firstDayOfMonth = new Date(year, month, 1).getDay();\n\n  const calendarDays = [\n    ...Array(firstDayOfMonth).fill(null),\n    ...Array.from({ length: daysInMonth }, (_, i) => i + 1),\n  ];\n\n  return (\n    <Widget size=\"md\">\n      <WidgetContent className=\"items-center justify-between gap-4\">\n        <div className=\"flex w-full flex-col items-center justify-center\">\n          <div className=\"flex w-full items-center justify-center gap-2\">\n            <Label className=\"text-destructive text-2xl\">{dayName}</Label>\n            <Label className=\"text-2xl\">{monthName}</Label>\n          </div>\n          <Label className=\"text-8xl\">{paddedDate}</Label>\n        </div>\n\n        <div className=\"grid size-full grid-cols-7 gap-1 text-center\">\n          {[\"S\", \"M\", \"T\", \"W\", \"T\", \"F\", \"S\"].map((d, i) => (\n            <div key={i} className=\"text-xs\">\n              {d}\n            </div>\n          ))}\n\n          {calendarDays.map((d, i) => (\n            <div key={i} className=\"text-muted-foreground text-xs\">\n              {d === date ? (\n                <Badge className=\"flex size-4 items-center justify-center p-2\">\n                  {d}\n                </Badge>\n              ) : (\n                (d ?? <>&nbsp;</>)\n              )}\n            </div>\n          ))}\n        </div>\n      </WidgetContent>\n    </Widget>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "calendar"
+    ],
+    "size": "md"
+  }
+}

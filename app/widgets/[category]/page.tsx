@@ -22,18 +22,9 @@ export async function generateMetadata({
 
   if (!category) return {};
 
-  // Get widgets to check count
-  const widgets = getWidgetsByNames(category.widgets.map((item) => item.name));
-
-  const isSingleWidget = widgets.length === 1;
-
   return {
-    title: isSingleWidget
-      ? `${category.name} widget ~ Wigggle UI`
-      : `${category.name} widgets ~ Wigggle UI`,
-    description: isSingleWidget
-      ? `Ready to use ${category.name} widget for your next web project.`
-      : `Ready to use ${category.name} widgets for your next web project.`,
+    title: `${category.name} widgets ~ Wigggle UI`,
+    description: `Ready to use ${category.name} widgets for your next web project.`,
   };
 }
 
@@ -50,25 +41,51 @@ export default async function Page({ params }: PageProps) {
     notFound();
   }
 
-  const widgets = getWidgetsByNames(category.widgets.map((item) => item.name));
+  const smWidgets = getWidgetsByNames(
+    category.widgets.sm.map((item) => item.name),
+  );
+  const mdWidgets = getWidgetsByNames(
+    category.widgets.md?.map((item) => item.name) ?? [],
+  );
+  const lgWidgets = getWidgetsByNames(
+    category.widgets.lg?.map((item) => item.name) ?? [],
+  );
 
   const getDescription = () => {
-    return widgets.length === 1
-      ? `A ${category.name} widget from Wigggle UI.`
-      : `A collection of ${category.name} widgets from Wigggle UI.`;
+    return `A collection of ${category.name} widgets from Wigggle UI.`;
   };
 
   return (
     <>
       <PageHeader title={category.name}>{getDescription()}</PageHeader>
-      <PageGrid>
-        {widgets.map((widget) => (
+      <PageGrid title="sm">
+        {smWidgets.map((widget) => (
           <WidgetCard key={widget.name} widget={widget}>
             <WidgetLoader widget={widget} />
             <WidgetDetails widget={widget} />
           </WidgetCard>
         ))}
       </PageGrid>
+      {category.widgets.md && category.widgets.md?.length > 1 && (
+        <PageGrid title="md">
+          {mdWidgets.map((widget) => (
+            <WidgetCard key={widget.name} widget={widget}>
+              <WidgetLoader widget={widget} />
+              <WidgetDetails widget={widget} />
+            </WidgetCard>
+          ))}
+        </PageGrid>
+      )}
+      {category.widgets.lg && category.widgets.lg?.length > 1 && (
+        <PageGrid title="lg">
+          {lgWidgets.map((widget) => (
+            <WidgetCard key={widget.name} widget={widget}>
+              <WidgetLoader widget={widget} />
+              <WidgetDetails widget={widget} />
+            </WidgetCard>
+          ))}
+        </PageGrid>
+      )}
     </>
   );
 }

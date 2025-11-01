@@ -1,6 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "name": "calendar-05",
+  "name": "calendar-sm-05",
   "type": "registry:component",
   "registryDependencies": [
     "https://wigggle-ui.vercel.app/r/widget.json",

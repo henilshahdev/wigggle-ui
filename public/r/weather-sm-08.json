@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "weather-sm-08",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/widget.json",
+    "https://wigggle-ui.vercel.app/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/widgets/weather/sm/weather-08.tsx",
+      "content": "import * as React from \"react\";\r\nimport { MoveDownIcon, MoveUpIcon, SunIcon } from \"lucide-react\";\r\n\r\nimport {\r\n  Widget,\r\n  WidgetContent,\r\n  WidgetFooter,\r\n  WidgetTitle,\r\n} from \"@/registry/default/ui/widget\";\r\nimport { Label } from \"@/registry/default/ui/label\";\r\n\r\nexport default function WidgetDemo() {\r\n  return (\r\n    <Widget>\r\n      <WidgetTitle>Mumbai</WidgetTitle>\r\n      <WidgetContent className=\"flex items-center justify-center gap-2\">\r\n        <SunIcon className=\"size-10\" strokeWidth={2} />\r\n        <Label className=\"text-5xl\">29&deg;</Label>\r\n      </WidgetContent>\r\n      <WidgetFooter className=\"justify-start gap-3\">\r\n        <div className=\"flex items-center justify-start\">\r\n          <MoveDownIcon\r\n            fill=\"currentColor\"\r\n            className=\"mr-1 size-4\"\r\n            strokeWidth={4}\r\n          />\r\n          <Label>28&deg;</Label>\r\n        </div>\r\n        <div className=\"flex h-max items-center justify-start\">\r\n          <MoveUpIcon\r\n            fill=\"currentColor\"\r\n            className=\"mr-1 size-4\"\r\n            strokeWidth={4}\r\n          />\r\n          <Label>32&deg;</Label>\r\n        </div>\r\n      </WidgetFooter>\r\n    </Widget>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "weather"
+    ],
+    "size": "sm"
+  }
+}

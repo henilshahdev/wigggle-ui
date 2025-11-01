@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-lg-03",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/widget.json",
+    "https://wigggle-ui.vercel.app/r/badge.json",
+    "https://wigggle-ui.vercel.app/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/widgets/calendar/lg/calendar-03.tsx",
+      "content": "import * as React from \"react\";\n\nimport { Widget, WidgetContent } from \"@/registry/default/ui/widget\";\nimport { Label } from \"@/registry/default/ui/label\";\n\nexport default function WidgetDemo() {\n  const now = new Date();\n\n  const day = now.toLocaleDateString(\"en-US\", { weekday: \"short\" });\n  const month = now.toLocaleDateString(\"en-US\", { month: \"short\" });\n  const date = now.getDate().toString().padStart(2, \"0\");\n\n  return (\n    <Widget size=\"lg\">\n      <WidgetContent className=\"mx-auto flex-col items-start\">\n        <div className=\"flex w-full items-center justify-center gap-2\">\n          <Label className=\"text-destructive text-2xl\">{day}</Label>\n          <Label className=\"text-2xl\">{month}</Label>\n        </div>\n        <Label className=\"text-8xl\">{date}</Label>\n      </WidgetContent>\n    </Widget>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "calendar"
+    ],
+    "size": "lg"
+  }
+}

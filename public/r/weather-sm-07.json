@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "weather-sm-07",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/widget.json",
+    "https://wigggle-ui.vercel.app/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/widgets/weather/sm/weather-07.tsx",
+      "content": "import * as React from \"react\";\r\nimport { MoveDownIcon, MoveUpIcon, SunIcon } from \"lucide-react\";\r\n\r\nimport {\r\n  Widget,\r\n  WidgetContent,\r\n  WidgetFooter,\r\n  WidgetHeader,\r\n  WidgetTitle,\r\n} from \"@/registry/default/ui/widget\";\r\nimport { Label } from \"@/registry/default/ui/label\";\r\n\r\nexport default function WidgetDemo() {\r\n  return (\r\n    <Widget design=\"mumbai\" className=\"gap-6\">\r\n      <WidgetHeader className=\"flex items-center justify-between gap-3\">\r\n        <div className=\"flex flex-col gap-2\">\r\n          <Label>Mumbai</Label>\r\n          <Label className=\"text-muted-foreground\">Feels Like 36&deg;</Label>\r\n        </div>\r\n        <WidgetTitle className=\"text-3xl\">35&deg;</WidgetTitle>\r\n      </WidgetHeader>\r\n      <WidgetContent className=\"items-start\">\r\n        <div className=\"flex h-max w-full items-center justify-start\">\r\n          <MoveUpIcon\r\n            fill=\"currentColor\"\r\n            className=\"mr-1 size-4\"\r\n            strokeWidth={4}\r\n          />\r\n          <Label>37&deg;</Label>\r\n        </div>\r\n        <div className=\"flex w-full items-center justify-end\">\r\n          <MoveDownIcon\r\n            fill=\"currentColor\"\r\n            className=\"mr-1 size-4\"\r\n            strokeWidth={4}\r\n          />\r\n          <Label>31&deg;</Label>\r\n        </div>\r\n      </WidgetContent>\r\n      <WidgetFooter className=\"bg-muted w-full rounded-xl\">\r\n        <div className=\"flex w-full items-center justify-between gap-3 p-2\">\r\n          <div className=\"flex flex-col gap-2\">\r\n            <SunIcon className=\"size-4 text-yellow-500\" />\r\n            <Label className=\"text-xs font-light\">32&deg;</Label>\r\n          </div>\r\n          <div className=\"flex flex-col gap-2\">\r\n            <SunIcon className=\"size-4 text-yellow-500\" />\r\n            <Label className=\"text-xs font-light\">37&deg;</Label>\r\n          </div>\r\n          <div className=\"flex flex-col gap-2\">\r\n            <SunIcon className=\"size-4 text-yellow-500\" />\r\n            <Label className=\"text-xs font-light\">36&deg;</Label>\r\n          </div>\r\n          <div className=\"flex flex-col gap-2\">\r\n            <SunIcon className=\"size-4 text-yellow-500\" />\r\n            <Label className=\"text-xs font-light\">38&deg;</Label>\r\n          </div>\r\n          <div className=\"flex flex-col gap-2\">\r\n            <SunIcon className=\"size-4 text-yellow-500\" />\r\n            <Label className=\"text-xs font-light\">33&deg;</Label>\r\n          </div>\r\n        </div>\r\n      </WidgetFooter>\r\n    </Widget>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "weather"
+    ],
+    "size": "sm"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "clock-sm-04",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/widget.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/widgets/clock/sm/clock-04.tsx",
+      "content": "\"use client\";\r\n\r\nimport * as React from \"react\";\r\nimport { Widget, WidgetContent } from \"@/registry/default/ui/widget\";\r\n\r\nexport default function Clock04() {\r\n  const [time, setTime] = React.useState(new Date());\r\n\r\n  React.useEffect(() => {\r\n    const timer = setInterval(() => {\r\n      setTime(new Date());\r\n    }, 1000);\r\n\r\n    return () => {\r\n      clearInterval(timer);\r\n    };\r\n  }, []);\r\n\r\n  const hours = time.getHours() % 12;\r\n  const minutes = time.getMinutes();\r\n  const seconds = time.getSeconds();\r\n\r\n  const hoursDegrees = ((hours + minutes / 60) / 12) * 360;\r\n  const minutesDegrees = ((minutes + seconds / 60) / 60) * 360;\r\n  const secondsDegrees = (seconds / 60) * 360;\r\n\r\n  return (\r\n    <Widget>\r\n      <WidgetContent>\r\n        <div className=\"relative size-[88px]\">\r\n          <div\r\n            className=\"absolute bottom-1/2 left-1/2 h-12 w-1 origin-bottom rounded-full bg-gray-800 dark:bg-gray-200\"\r\n            style={{\r\n              transform: `translateX(-50%) rotate(${hoursDegrees}deg)`,\r\n            }}\r\n          />\r\n          <div\r\n            className=\"absolute bottom-1/2 left-1/2 h-12 w-1 origin-bottom rounded-full bg-gray-600 dark:bg-gray-400\"\r\n            style={{\r\n              transform: `translateX(-50%) rotate(${minutesDegrees}deg)`,\r\n            }}\r\n          />\r\n          <div\r\n            className=\"absolute bottom-1/2 left-1/2 h-12 w-0.5 origin-bottom rounded-full bg-red-500\"\r\n            style={{\r\n              transform: `translateX(-50%) rotate(${secondsDegrees}deg)`,\r\n            }}\r\n          />\r\n          <div className=\"absolute top-1/2 left-1/2 size-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gray-800 dark:bg-gray-200\" />\r\n        </div>\r\n      </WidgetContent>\r\n    </Widget>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "clock"
+    ],
+    "size": "sm"
+  }
+}

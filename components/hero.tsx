@@ -1,24 +1,24 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 
+import { Button } from "@/registry/default/ui/button";
 import GetStarted from "@/components/get-started";
 
-import Calendar01 from "@/registry/default/widgets/calendar/calendar-01";
-import Clock05 from "@/registry/default/widgets/clock/clock-05";
-import Sports02 from "@/registry/default/widgets/sports/sports-02";
-import Stocks01 from "@/registry/default/widgets/stocks/stock-01";
-import Weather07 from "@/registry/default/widgets/weather/weather-07";
+import Calendar01 from "@/registry/default/widgets/calendar/sm/calendar-01";
+import Clock05 from "@/registry/default/widgets/clock/sm/clock-05";
+import Sports02 from "@/registry/default/widgets/sports/sm/sports-02";
+import Stocks01 from "@/registry/default/widgets/stocks/sm/stock-01";
+import Weather07 from "@/registry/default/widgets/weather/sm/weather-07";
+import Weather09 from "@/registry/default/widgets/weather/sm/weather-09";
 
-import Weather09 from "@/registry/default/widgets/weather/weather-09";
-import Stocks04 from "@/registry/default/widgets/stocks/stock-04";
-import Sports05 from "@/registry/default/widgets/sports/sports-05";
-import Clock12 from "@/registry/default/widgets/clock/clock-12";
-import Calendar04 from "@/registry/default/widgets/calendar/calendar-04";
-import Clock07 from "@/registry/default/widgets/clock/clock-07";
-import Weather04 from "@/registry/default/widgets/weather/weather-04";
-import { Button } from "@/registry/default/ui/button";
-import Link from "next/link";
+import Stocks04 from "@/registry/default/widgets/stocks/sm/stock-04";
+import Sports05 from "@/registry/default/widgets/sports/sm/sports-05";
+import Clock12 from "@/registry/default/widgets/clock/sm/clock-12";
+import Calendar04 from "@/registry/default/widgets/calendar/sm/calendar-04";
+import Clock07 from "@/registry/default/widgets/clock/sm/clock-07";
+import Weather04 from "@/registry/default/widgets/weather/sm/weather-04";
 
 export default function Hero() {
   const widgets = useMemo(

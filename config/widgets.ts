@@ -11,7 +11,17 @@ import {
 export interface WidgetCategory {
   slug: string;
   name: string;
-  widgets: { name: string }[];
+  widgets: {
+    sm: {
+      name: string;
+    }[];
+    md?: {
+      name: string;
+    }[];
+    lg?: {
+      name: string;
+    }[];
+  };
   isNew?: boolean;
   icon: ForwardRefExoticComponent<
     Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
@@ -22,77 +32,96 @@ export const categories: WidgetCategory[] = [
   {
     slug: "calendar",
     name: "Calendar",
-    widgets: [
-      { name: "calendar-01" },
-      { name: "calendar-02" },
-      { name: "calendar-03" },
-      { name: "calendar-04" },
-      { name: "calendar-05" },
-    ],
+    widgets: {
+      sm: [
+        { name: "calendar-sm-01" },
+        { name: "calendar-sm-02" },
+        { name: "calendar-sm-03" },
+        { name: "calendar-sm-04" },
+        { name: "calendar-sm-05" },
+      ],
+      md: [{ name: "calendar-md-01" }, { name: "calendar-md-02" }],
+      lg: [],
+    },
     icon: CalendarIcon,
   },
   {
     slug: "clock",
     name: "Clock",
-    widgets: [
-      { name: "clock-01" },
-      { name: "clock-02" },
-      { name: "clock-03" },
-      { name: "clock-04" },
-      { name: "clock-05" },
-      { name: "clock-06" },
-      { name: "clock-07" },
-      { name: "clock-08" },
-      { name: "clock-09" },
-      { name: "clock-10" },
-      { name: "clock-11" },
-      { name: "clock-12" },
-      { name: "clock-13" },
-    ],
+    widgets: {
+      sm: [
+        { name: "clock-sm-01" },
+        { name: "clock-sm-02" },
+        { name: "clock-sm-03" },
+        { name: "clock-sm-04" },
+        { name: "clock-sm-05" },
+        { name: "clock-sm-06" },
+        { name: "clock-sm-07" },
+        { name: "clock-sm-08" },
+        { name: "clock-sm-09" },
+        { name: "clock-sm-10" },
+        { name: "clock-sm-11" },
+        { name: "clock-sm-12" },
+        { name: "clock-sm-13" },
+      ],
+      md: [],
+      lg: [],
+    },
     icon: Clock3Icon,
   },
   {
     slug: "sports",
     name: "Sports",
-    widgets: [
-      { name: "sports-01" },
-      { name: "sports-02" },
-      { name: "sports-03" },
-      { name: "sports-04" },
-      { name: "sports-05" },
-      { name: "sports-06" },
-      { name: "sports-07" },
-    ],
+    widgets: {
+      sm: [
+        { name: "sports-sm-01" },
+        { name: "sports-sm-02" },
+        { name: "sports-sm-03" },
+        { name: "sports-sm-04" },
+        { name: "sports-sm-05" },
+        { name: "sports-sm-06" },
+        { name: "sports-sm-07" },
+      ],
+      md: [],
+      lg: [],
+    },
     icon: TrophyIcon,
-    isNew: true,
   },
   {
     slug: "stocks",
     name: "Stocks",
-    widgets: [
-      { name: "stock-01" },
-      { name: "stock-02" },
-      { name: "stock-03" },
-      { name: "stock-04" },
-      { name: "stock-05" },
-      { name: "stock-06" },
-    ],
+    widgets: {
+      sm: [
+        { name: "stock-sm-01" },
+        { name: "stock-sm-02" },
+        { name: "stock-sm-03" },
+        { name: "stock-sm-04" },
+        { name: "stock-sm-05" },
+        { name: "stock-sm-06" },
+      ],
+      md: [],
+      lg: [],
+    },
     icon: ChartNoAxesCombinedIcon,
   },
   {
     slug: "weather",
     name: "Weather",
-    widgets: [
-      { name: "weather-01" },
-      { name: "weather-02" },
-      { name: "weather-03" },
-      { name: "weather-04" },
-      { name: "weather-05" },
-      { name: "weather-06" },
-      { name: "weather-07" },
-      { name: "weather-08" },
-      { name: "weather-09" },
-    ],
+    widgets: {
+      sm: [
+        { name: "weather-sm-01" },
+        { name: "weather-sm-02" },
+        { name: "weather-sm-03" },
+        { name: "weather-sm-04" },
+        { name: "weather-sm-05" },
+        { name: "weather-sm-06" },
+        { name: "weather-sm-07" },
+        { name: "weather-sm-08" },
+        { name: "weather-sm-09" },
+      ],
+      md: [],
+      lg: [],
+    },
     icon: CloudSunIcon,
   },
 ];

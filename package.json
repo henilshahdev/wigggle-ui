@@ -3,8 +3,8 @@
   "version": "0.2.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "dev": "next dev",
+    "build": "next build",
     "build:registry": "shadcn build && tsx ./scripts/copy-registry.mts",
     "start": "next start",
     "lint": "eslint"
@@ -24,10 +24,10 @@
     "hast-util-to-jsx-runtime": "^2.3.6",
     "jotai": "^2.15.0",
     "lucide-react": "^0.546.0",
-    "next": "15.5.6",
+    "next": "16.0.1",
     "next-themes": "^0.4.6",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
     "recharts": "^2.15.4",
     "shadcn": "^2.9.3-canary.0",
     "shiki": "^3.13.0",
@@ -37,14 +37,18 @@
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
     "eslint": "^9",
-    "eslint-config-next": "15.5.6",
+    "eslint-config-next": "16.0.1",
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.7.1",
     "tailwindcss": "^4",
     "tw-animate-css": "^1.4.0",
     "typescript": "^5"
+  },
+  "overrides": {
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2"
   }
 }

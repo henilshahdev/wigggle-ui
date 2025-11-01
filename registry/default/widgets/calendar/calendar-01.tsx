@@ -8,7 +8,7 @@ export default function WidgetDemo() {
 
   const day = now.toLocaleDateString("en-US", { weekday: "short" });
   const month = now.toLocaleDateString("en-US", { month: "short" });
-  const date = now.getDate();
+  const date = now.getDate().toString().padStart(2, "0");
 
   return (
     <Widget>

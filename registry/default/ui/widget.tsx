@@ -7,9 +7,9 @@ const widgetVariants = cva(
   {
     variants: {
       size: {
-        square: "size-48",
-        rectangle: "w-96 h-48",
-        large: "size-96",
+        sm: "size-48",
+        md: "w-96 h-48",
+        lg: "size-96",
       },
       design: {
         default: "p-6",
@@ -21,7 +21,7 @@ const widgetVariants = cva(
       },
     },
     defaultVariants: {
-      size: "square",
+      size: "sm",
       design: "default",
       variant: "default",
     },

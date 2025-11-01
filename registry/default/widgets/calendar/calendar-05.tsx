@@ -12,7 +12,7 @@ export default function WidgetDemo() {
   const now = new Date();
 
   const day = now.toLocaleDateString("en-US", { weekday: "long" });
-  const date = now.getDate();
+  const date = now.getDate().toString().padStart(2, "0");
 
   const events = [
     { title: "Scrum", time: "9 AM" },

@@ -283,6 +283,7 @@
     {
       "name": "calendar-md-02",
       "type": "registry:component",
+      "dependencies": ["lucide-react"],
       "registryDependencies": [
         "https://wigggle-ui.vercel.app/r/widget.json",
         "https://wigggle-ui.vercel.app/r/badge.json",
@@ -291,6 +292,26 @@
       "files": [
         {
           "path": "registry/default/widgets/calendar/md/calendar-02.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["calendar"],
+        "size": "md"
+      }
+    },
+    {
+      "name": "calendar-md-03",
+      "type": "registry:component",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/button.json",
+        "https://wigggle-ui.vercel.app/r/badge.json"
+      ],
+      "files": [
+        {
+          "path": "registry/default/widgets/calendar/md/calendar-03.tsx",
           "type": "registry:component"
         }
       ],

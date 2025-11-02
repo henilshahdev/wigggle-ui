@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-md-03",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/widget.json",
+    "https://wigggle-ui.vercel.app/r/button.json",
+    "https://wigggle-ui.vercel.app/r/badge.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/widgets/calendar/md/calendar-03.tsx",
+      "content": "\"use client\";\r\n\r\nimport * as React from \"react\";\r\n\r\nimport { ChevronLeft, ChevronRight } from \"lucide-react\";\r\nimport {\r\n  Widget,\r\n  WidgetContent,\r\n  WidgetTitle,\r\n} from \"@/registry/default/ui/widget\";\r\nimport { Button } from \"@/components/ui/button\";\r\nimport { Badge } from \"@/registry/default/ui/badge\";\r\n\r\nexport default function WidgetDemo() {\r\n  const [date, setDate] = React.useState(() => new Date());\r\n  const today = new Date();\r\n\r\n  const formatMonth = (d: Date) =>\r\n    new Intl.DateTimeFormat(\"en-US\", { month: \"short\" }).format(d);\r\n\r\n  const buildCalendar = React.useCallback((y: number, m: number) => {\r\n    const firstDay = new Date(y, m, 1).getDay();\r\n    const days = new Date(y, m + 1, 0).getDate();\r\n    return [\r\n      ...Array(firstDay).fill(null),\r\n      ...Array.from({ length: days }, (_, i) => i + 1),\r\n    ];\r\n  }, []);\r\n\r\n  const [year, month] = [date.getFullYear(), date.getMonth()];\r\n  const next = new Date(year, month + 1, 1);\r\n\r\n  const calendarDays = React.useMemo(\r\n    () => buildCalendar(year, month),\r\n    [buildCalendar, year, month],\r\n  );\r\n  const nextCalendarDays = React.useMemo(\r\n    () => buildCalendar(next.getFullYear(), next.getMonth()),\r\n    [buildCalendar, next],\r\n  );\r\n\r\n  const isToday = (d: number | null, m: number, y: number) =>\r\n    d &&\r\n    today.getFullYear() === y &&\r\n    today.getMonth() === m &&\r\n    today.getDate() === d;\r\n\r\n  const changeMonth = (step: number) =>\r\n    setDate((d) => new Date(d.getFullYear(), d.getMonth() + step, 1));\r\n\r\n  const WeekdayRow = () =>\r\n    [\"S\", \"M\", \"T\", \"W\", \"T\", \"F\", \"S\"].map((d, i) => (\r\n      <div key={i} className=\"text-xs\">\r\n        {d}\r\n      </div>\r\n    ));\r\n\r\n  const Calendar = ({\r\n    days,\r\n    m,\r\n    y,\r\n  }: {\r\n    days: (number | null)[];\r\n    m: number;\r\n    y: number;\r\n  }) => (\r\n    <div className=\"grid size-full grid-cols-7 gap-1 text-center\">\r\n      <WeekdayRow />\r\n      {days.map((d, i) => (\r\n        <div key={i} className=\"text-muted-foreground text-xs\">\r\n          {isToday(d, m, y) ? (\r\n            <Badge className=\"flex size-4 items-center justify-center p-2\">\r\n              {d}\r\n            </Badge>\r\n          ) : (\r\n            (d ?? <>&nbsp;</>)\r\n          )}\r\n        </div>\r\n      ))}\r\n    </div>\r\n  );\r\n\r\n  return (\r\n    <Widget design=\"mumbai\" size=\"md\" className=\"p-3 pt-2.5\">\r\n      <WidgetContent className=\"flex flex-col gap-2\">\r\n        <div className=\"flex w-full items-center justify-between border-b-2 pb-1\">\r\n          <div className=\"flex items-center gap-2\">\r\n            <Button\r\n              variant=\"ghost\"\r\n              size=\"icon\"\r\n              className=\"size-4 p-0\"\r\n              onClick={() => changeMonth(-1)}\r\n            >\r\n              <ChevronLeft className=\"h-4 w-4\" />\r\n            </Button>\r\n            <WidgetTitle className=\"ms-10 text-sm font-normal\">\r\n              {formatMonth(date)} {year}\r\n            </WidgetTitle>\r\n          </div>\r\n          <div className=\"flex items-center gap-2\">\r\n            <WidgetTitle className=\"me-10 text-sm font-normal\">\r\n              {formatMonth(next)} {next.getFullYear()}\r\n            </WidgetTitle>\r\n            <Button\r\n              variant=\"ghost\"\r\n              size=\"icon\"\r\n              className=\"size-4 p-0\"\r\n              onClick={() => changeMonth(1)}\r\n            >\r\n              <ChevronRight className=\"h-4 w-4\" />\r\n            </Button>\r\n          </div>\r\n        </div>\r\n\r\n        <div className=\"flex w-full flex-1 items-center justify-between gap-2\">\r\n          <Calendar days={calendarDays} m={month} y={year} />\r\n          <div className=\"bg-secondary h-full w-1\" />\r\n          <Calendar\r\n            days={nextCalendarDays}\r\n            m={next.getMonth()}\r\n            y={next.getFullYear()}\r\n          />\r\n        </div>\r\n      </WidgetContent>\r\n    </Widget>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "calendar"
+    ],
+    "size": "md"
+  }
+}

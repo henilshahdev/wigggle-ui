@@ -243,6 +243,25 @@
       }
     },
     {
+      "name": "calendar-sm-06",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/label.json",
+        "https://wigggle-ui.vercel.app/r/button.json",
+        "https://wigggle-ui.vercel.app/r/utils.json"
+      ],
+      "files": [
+        {
+          "path": "registry/default/widgets/calendar/sm/calendar-06.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["calendar"]
+      }
+    },
+    {
       "name": "calendar-md-01",
       "type": "registry:component",
       "registryDependencies": [

@@ -39,6 +39,7 @@ export const categories: WidgetCategory[] = [
         { name: "calendar-sm-03" },
         { name: "calendar-sm-04" },
         { name: "calendar-sm-05" },
+        { name: "calendar-sm-06" },
       ],
       md: [{ name: "calendar-md-01" }, { name: "calendar-md-02" }],
       lg: [],

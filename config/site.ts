@@ -6,7 +6,7 @@ export const siteConfig = {
     "A beautiful collection of copy-and-paste widgets for your next project.",
   links: {
     twitter: "https://twitter.com/wigggleui",
-    github: "https://github.com/henilshahdev/wigggle-ui",
+    github: "https://github.com/wigggle-ui/ui",
   },
 };
 

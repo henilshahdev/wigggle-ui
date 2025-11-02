@@ -7,7 +7,7 @@ Thank you for your interest in contributing to Wigggle UI! We appreciate your su
 ### Fork and Clone the Repository
 
 1. **Fork this repository**
-   Click [here](https://github.com/henilshahdev/wigggle-ui/fork) to fork the repository.
+   Click [here](https://github.com/wigggle-ui/ui/fork) to fork the repository.
 
 2. **Clone your forked repository to your local machine**
 
@@ -186,7 +186,7 @@ https://www.conventionalcommits.org/ or check out the
 
 ### 9. Submit your widget
 
-Once you are satisfied with your widget, submit it by filing a [pull request](https://github.com/henilshahdev/wigggle-ui/compare) to the main repository.
+Once you are satisfied with your widget, submit it by filing a [pull request](https://github.com/wigggle-ui/ui/compare) to the main repository.
 
 Please make sure you do the following:
 

@@ -8,11 +8,11 @@ Visit https://wigggle-ui.vercel.app
 
 ## License
 
-Licensed under the [MIT license](https://github.com/henilshahdev/wigggle-ui/blob/main/LICENSE.md).
+Licensed under the [MIT license](https://github.com/wigggle-ui/ui/blob/main/LICENSE.md).
 
 ## Community
 
-Have questions, comments or feedback? [File an Issue](https://github.com/henilshahdev/wigggle-ui/issues/new).
+Have questions, comments or feedback? [File an Issue](https://github.com/wigggle-ui/ui/issues/new).
 
 ## Star History
 

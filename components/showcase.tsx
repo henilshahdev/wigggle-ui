@@ -15,7 +15,7 @@ export default function Showcase() {
         <div className="mx-auto w-max gap-x-3">
           <Button asChild>
             <Link
-              href="https://github.com/henilshahdev/wigggle-ui/issues/new"
+              href="https://github.com/wigggle-ui/ui/issues/new"
               target="_blank"
             >
               Add Project

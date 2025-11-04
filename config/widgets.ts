@@ -49,6 +49,7 @@ export const categories: WidgetCategory[] = [
       lg: [],
     },
     icon: CalendarIcon,
+    isNew: true,
   },
   {
     slug: "clock",
@@ -124,10 +125,11 @@ export const categories: WidgetCategory[] = [
         { name: "weather-sm-08" },
         { name: "weather-sm-09" },
       ],
-      md: [],
+      md: [{ name: "weather-md-01" }, { name: "weather-md-02" }],
       lg: [],
     },
     icon: CloudSunIcon,
+    isNew: true,
   },
 ];
 

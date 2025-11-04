@@ -66,7 +66,7 @@ export default async function Page({ params }: PageProps) {
           </WidgetCard>
         ))}
       </PageGrid>
-      {category.widgets.md && category.widgets.md?.length > 1 && (
+      {category.widgets.md && category.widgets.md?.length >= 1 && (
         <PageGrid title="md">
           {mdWidgets.map((widget) => (
             <WidgetCard key={widget.name} widget={widget}>
@@ -76,7 +76,7 @@ export default async function Page({ params }: PageProps) {
           ))}
         </PageGrid>
       )}
-      {category.widgets.lg && category.widgets.lg?.length > 1 && (
+      {category.widgets.lg && category.widgets.lg?.length >= 1 && (
         <PageGrid title="lg">
           {lgWidgets.map((widget) => (
             <WidgetCard key={widget.name} widget={widget}>

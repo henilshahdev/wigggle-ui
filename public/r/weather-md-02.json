@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "weather-md-02",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/widget.json",
+    "https://wigggle-ui.vercel.app/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/widgets/weather/md/weather-02.tsx",
+      "content": "import { SunIcon } from \"lucide-react\";\r\n\r\nimport {\r\n  Widget,\r\n  WidgetContent,\r\n  WidgetHeader,\r\n} from \"@/registry/default/ui/widget\";\r\nimport { Label } from \"@/registry/default/ui/label\";\r\n\r\nconst weatherData = [\r\n  { time: \"8 AM\", temp: \"24\", icon: SunIcon },\r\n  { time: \"9 AM\", temp: \"24\", icon: SunIcon },\r\n  { time: \"10 AM\", temp: \"26\", icon: SunIcon },\r\n  { time: \"11 AM\", temp: \"26\", icon: SunIcon },\r\n  { time: \"12 AM\", temp: \"26\", icon: SunIcon },\r\n  { time: \"1 PM\", temp: \"27\", icon: SunIcon },\r\n];\r\n\r\nexport default function WidgetDemo() {\r\n  return (\r\n    <Widget size=\"md\">\r\n      <WidgetHeader className=\"items-start\">\r\n        <div className=\"flex flex-col items-start\">\r\n          <Label>Mumbai</Label>\r\n          <Label className=\"text-4xl\">26&deg;</Label>\r\n        </div>\r\n        <div className=\"flex flex-col items-start\">\r\n          <SunIcon className=\"size-10 stroke-amber-400\" />\r\n        </div>\r\n      </WidgetHeader>\r\n      <WidgetContent className=\"mt-4 grid w-full grid-cols-6 items-end gap-6\">\r\n        {weatherData.map((el) => (\r\n          <div key={el.time} className=\"flex flex-col items-center gap-1\">\r\n            <Label className=\"text-muted-foreground text-xs\">{el.time}</Label>\r\n            <Label>\r\n              {<el.icon className=\"stroke-muted-foreground size-6\" />}\r\n            </Label>\r\n            <Label className=\"text-lg\">{el.temp}&deg;</Label>\r\n          </div>\r\n        ))}\r\n      </WidgetContent>\r\n    </Widget>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "weather"
+    ],
+    "size": "md"
+  }
+}

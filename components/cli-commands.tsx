@@ -10,16 +10,15 @@ import {
 } from "@/registry/default/ui/tabs";
 
 export default function CliCommands({ name }: { name: string }) {
-  const baseURL =
-    process.env.NEXT_PUBLIC_APP_URL || "https://wigggle-ui.vercel.app";
+  const baseURL = "@wigggle-ui";
   const [config, setConfig] = useConfig();
   const packageManager = config.packageManager || "pnpm";
 
   const commands = {
-    pnpm: `pnpm dlx shadcn@latest add ${baseURL}/r/${name}.json`,
-    npm: `npx shadcn@latest add ${baseURL}/r/${name}.json`,
-    yarn: `yarn dlx shadcn@latest add ${baseURL}/r/${name}.json`,
-    bun: `bunx --bun shadcn@latest add ${baseURL}/r/${name}.json`,
+    pnpm: `pnpm dlx shadcn@latest add ${baseURL}/${name}`,
+    npm: `npx shadcn@latest add ${baseURL}/${name}`,
+    yarn: `yarn dlx shadcn@latest add ${baseURL}/${name}`,
+    bun: `bunx --bun shadcn@latest add ${baseURL}/${name}`,
   };
 
   return (

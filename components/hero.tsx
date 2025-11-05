@@ -32,8 +32,10 @@ import Clock12 from "@/registry/default/widgets/clock/sm/clock-12";
 import Calendar04 from "@/registry/default/widgets/calendar/sm/calendar-04";
 import Clock07 from "@/registry/default/widgets/clock/sm/clock-07";
 import Weather04 from "@/registry/default/widgets/weather/sm/weather-04";
+import { useCopy } from "@/hooks/use-copy";
 
 export default function Hero() {
+  const { copied, copy } = useCopy();
   const widgets = useMemo(
     () => [
       <Calendar01 key="cal01" />,
@@ -103,8 +105,19 @@ export default function Hero() {
           <TooltipProvider delayDuration={300}>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Item variant="outline" className="px-4 py-2" asChild>
-                  <Button variant="ghost" className="hover:cursor-pointer">
+                <Item
+                  variant="outline"
+                  className="border-foreground/30 px-4 py-2"
+                  asChild
+                >
+                  <Button
+                    aria-label={copied ? "Copied" : "Copy command"}
+                    onClick={() =>
+                      copy("npx shadcn@latest add @wigggleui/widget")
+                    }
+                    variant="ghost"
+                    className="hover:cursor-pointer"
+                  >
                     <ItemContent>
                       <ItemTitle className={`${courier.className} text-sm`}>
                         npx shadcn@latest add @wigggleui/widget

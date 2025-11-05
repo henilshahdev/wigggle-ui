@@ -2,9 +2,22 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import { Courier_Prime } from "next/font/google";
+
+const courier = Courier_Prime({
+  weight: ["400"],
+  subsets: ["latin"],
+});
 
 import { Button } from "@/registry/default/ui/button";
 import GetStarted from "@/components/get-started";
+import { Item, ItemContent, ItemTitle } from "@/registry/default/ui/item";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/registry/default/ui/tooltip";
 
 import Calendar01 from "@/registry/default/widgets/calendar/sm/calendar-01";
 import Clock05 from "@/registry/default/widgets/clock/sm/clock-05";
@@ -41,20 +54,20 @@ export default function Hero() {
   );
 
   const positions = [
-    "top-56 left-0",
-    "top-56 left-1/6",
-    "top-56 left-2/6",
-    "top-56 left-3/6",
-    "top-56 left-4/6",
-    "top-56 left-5/6",
-    "top-56 left-6/6",
-    "top-[460px] left-0",
-    "top-[460px] left-1/6",
-    "top-[460px] left-2/6",
-    "top-[460px] left-3/6",
-    "top-[460px] left-4/6",
-    "top-[460px] left-5/6",
-    "top-[460px] left-6/6",
+    "top-62 left-0",
+    "top-62 left-1/6",
+    "top-62 left-2/6",
+    "top-62 left-3/6",
+    "top-62 left-4/6",
+    "top-62 left-5/6",
+    "top-62 left-6/6",
+    "top-[480px] left-0",
+    "top-[480px] left-1/6",
+    "top-[480px] left-2/6",
+    "top-[480px] left-3/6",
+    "top-[480px] left-4/6",
+    "top-[480px] left-5/6",
+    "top-[480px] left-6/6",
   ];
 
   const [mounted, setMounted] = useState(false);
@@ -87,6 +100,24 @@ export default function Hero() {
               <Link href="/widgets">View Widgets</Link>
             </Button>
           </div>
+          <TooltipProvider delayDuration={300}>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Item variant="outline" className="px-4 py-2" asChild>
+                  <Button variant="ghost" className="hover:cursor-pointer">
+                    <ItemContent>
+                      <ItemTitle className={`${courier.className} text-sm`}>
+                        npx shadcn@latest add @wigggleui/widget
+                      </ItemTitle>
+                    </ItemContent>
+                  </Button>
+                </Item>
+              </TooltipTrigger>
+              <TooltipContent className="text-muted-foreground px-2 py-1 text-xs">
+                Click to Copy
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
         </div>
         {mounted &&
           widgets.map((widget, i) => (

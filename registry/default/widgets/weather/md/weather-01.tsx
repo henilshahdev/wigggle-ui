@@ -12,7 +12,7 @@ import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from "@/registry/default/ui/tooltip";
 
 export default function WidgetDemo() {
   return (

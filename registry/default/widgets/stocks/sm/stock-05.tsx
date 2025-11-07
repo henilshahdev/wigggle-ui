@@ -7,7 +7,7 @@ import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from "@/registry/default/ui/tooltip";
 
 type Stock = {
   logo: React.FC<React.SVGProps<SVGSVGElement>>;

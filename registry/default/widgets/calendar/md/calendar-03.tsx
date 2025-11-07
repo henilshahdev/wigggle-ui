@@ -8,7 +8,7 @@ import {
   WidgetContent,
   WidgetTitle,
 } from "@/registry/default/ui/widget";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/registry/default/ui/button";
 import { Badge } from "@/registry/default/ui/badge";
 
 export default function WidgetDemo() {

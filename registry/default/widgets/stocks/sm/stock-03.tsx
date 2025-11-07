@@ -7,7 +7,7 @@ import {
   WidgetHeader,
   WidgetTitle,
 } from "@/registry/default/ui/widget";
-import { Label } from "@/components/ui/label";
+import { Label } from "@/registry/default/ui/label";
 import { cn, truncate } from "@/registry/default/lib/utils";
 
 const stocks = [

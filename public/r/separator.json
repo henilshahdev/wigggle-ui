@@ -5,6 +5,9 @@
   "dependencies": [
     "@radix-ui/react-separator"
   ],
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/utils.json"
+  ],
   "files": [
     {
       "path": "registry/default/ui/separator.tsx",

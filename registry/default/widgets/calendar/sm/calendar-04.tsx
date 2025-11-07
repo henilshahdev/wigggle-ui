@@ -9,9 +9,9 @@ import {
   WidgetHeader,
   WidgetTitle,
 } from "@/registry/default/ui/widget";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
+import { Badge } from "@/registry/default/ui/badge";
+import { Button } from "@/registry/default/ui/button";
+import { Separator } from "@/registry/default/ui/separator";
 
 export default function WidgetDemo() {
   const [date, setDate] = useState(new Date());

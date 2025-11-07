@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dashboard-sm-01",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/widget.json",
+    "https://wigggle-ui.vercel.app/r/label.json",
+    "https://wigggle-ui.vercel.app/r/utils.json",
+    "https://wigggle-ui.vercel.app/r/tooltip.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/widgets/dashboard/sm/dashboard-01.tsx",
+      "content": "import {\r\n  Widget,\r\n  WidgetHeader,\r\n  WidgetContent,\r\n  WidgetTitle,\r\n} from \"@/registry/default/ui/widget\";\r\nimport { Label } from \"@/registry/default/ui/label\";\r\nimport { cn } from \"@/registry/default/lib/utils\";\r\nimport {\r\n  Tooltip,\r\n  TooltipContent,\r\n  TooltipTrigger,\r\n} from \"@/registry/default/ui/tooltip\";\r\n\r\nconst visitorsChartData = [\r\n  { percentage: \"40\", color: \"bg-blue-500\" },\r\n  { percentage: \"23\", color: \"bg-yellow-500\" },\r\n  { percentage: \"20\", color: \"bg-red-500\" },\r\n  { percentage: \"17\", color: \"bg-green-500\" },\r\n];\r\n\r\nconst visitorsByDeviceChartData = [\r\n  { device: \"MacOS\", count: 1578, color: \"bg-blue-500\" },\r\n  { device: \"iOS\", count: 908, color: \"bg-yellow-500\" },\r\n  { device: \"Windows\", count: 789, color: \"bg-red-500\" },\r\n  { device: \"Android\", count: 671, color: \"bg-green-500\" },\r\n];\r\n\r\nexport default function WidgetDemo() {\r\n  return (\r\n    <Widget className=\"gap-4\" design=\"mumbai\">\r\n      <WidgetHeader>\r\n        <WidgetTitle>Visitors</WidgetTitle>\r\n        <WidgetTitle>3946</WidgetTitle>\r\n      </WidgetHeader>\r\n      <WidgetContent className=\"flex-col justify-start gap-4\">\r\n        <div className=\"flex h-5 w-full\">\r\n          {visitorsChartData.map((el, i) => (\r\n            <Tooltip key={i} delayDuration={300}>\r\n              <TooltipTrigger asChild>\r\n                <div\r\n                  style={{ width: `${el.percentage}%` }}\r\n                  className={cn(\r\n                    el.color,\r\n                    \"h-full transition-all duration-300 first:rounded-l-full last:rounded-r-full hover:scale-115 hover:cursor-pointer\",\r\n                  )}\r\n                />\r\n              </TooltipTrigger>\r\n              <TooltipContent className=\"text-foreground px-2 py-1 text-sm\">\r\n                {el.percentage}%\r\n              </TooltipContent>\r\n            </Tooltip>\r\n          ))}\r\n        </div>\r\n        <div className=\"w-full space-y-3\">\r\n          {visitorsByDeviceChartData.map((el) => (\r\n            <div\r\n              key={el.device}\r\n              className=\"grid w-full grid-cols-[auto_1fr_auto] items-center gap-2.5\"\r\n            >\r\n              <div className={cn(\"size-3 rounded-xs\", `${el.color}`)} />\r\n              <Label>{el.device}</Label>\r\n              <Label>{el.count}</Label>\r\n            </div>\r\n          ))}\r\n        </div>\r\n      </WidgetContent>\r\n    </Widget>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "dashboard"
+    ]
+  }
+}

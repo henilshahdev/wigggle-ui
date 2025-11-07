@@ -2,10 +2,11 @@ import { ForwardRefExoticComponent, RefAttributes } from "react";
 import {
   LucideProps,
   CalendarIcon,
-  Clock3Icon,
-  TrophyIcon,
   ChartNoAxesCombinedIcon,
+  Clock3Icon,
   CloudSunIcon,
+  LayoutDashboardIcon,
+  TrophyIcon,
 } from "lucide-react";
 
 export interface WidgetCategory {
@@ -74,6 +75,24 @@ export const categories: WidgetCategory[] = [
       lg: [],
     },
     icon: Clock3Icon,
+  },
+  {
+    slug: "dashboard",
+    name: "Dashboard",
+    widgets: {
+      sm: [
+        { name: "dashboard-sm-01" },
+        { name: "dashboard-sm-02" },
+        { name: "dashboard-sm-03" },
+        { name: "dashboard-sm-04" },
+        { name: "dashboard-sm-05" },
+        { name: "dashboard-sm-06" },
+        { name: "dashboard-sm-07" },
+      ],
+      md: [{ name: "dashboard-md-01" }, { name: "dashboard-md-02" }],
+      lg: [{ name: "dashboard-lg-01" }, { name: "dashboard-lg-02" }],
+    },
+    icon: LayoutDashboardIcon,
   },
   {
     slug: "sports",

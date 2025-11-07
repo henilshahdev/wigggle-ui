@@ -15,7 +15,7 @@ export default function Home() {
       </div>
 
       <div className="relative my-16">
-        <div className="grid gap-x-12 gap-y-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+        <div className="mx-auto grid w-max gap-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
           {categories.map((category) => {
             const totalWidgets =
               category.widgets.sm.length +

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dashboard-lg-01",
+  "type": "registry:component",
+  "dependencies": [
+    "recharts",
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/widget.json",
+    "https://wigggle-ui.vercel.app/r/label.json",
+    "https://wigggle-ui.vercel.app/r/chart.json",
+    "https://wigggle-ui.vercel.app/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/widgets/dashboard/lg/dashboard-01.tsx",
+      "content": "import { DotIcon, GlobeIcon, MonitorIcon, UploadIcon } from \"lucide-react\";\r\nimport { Pie, PieChart } from \"recharts\";\r\n\r\nimport {\r\n  Widget,\r\n  WidgetHeader,\r\n  WidgetContent,\r\n  WidgetTitle,\r\n  WidgetFooter,\r\n} from \"@/registry/default/ui/widget\";\r\nimport { Label } from \"@/registry/default/ui/label\";\r\nimport {\r\n  ChartConfig,\r\n  ChartContainer,\r\n  ChartTooltip,\r\n  ChartTooltipContent,\r\n} from \"@/registry/default/ui/chart\";\r\nimport { Button } from \"@/registry/default/ui/button\";\r\n\r\nconst visitorsByTrafficChartData = [\r\n  { medium: \"direct\", visitors: 1578, fill: \"var(--color-direct)\" },\r\n  { medium: \"search\", visitors: 908, fill: \"var(--color-search)\" },\r\n  { medium: \"referrals\", visitors: 789, fill: \"var(--color-referrals)\" },\r\n  { medium: \"socials\", visitors: 671, fill: \"var(--color-socials)\" },\r\n];\r\n\r\nconst chartConfig = {\r\n  mediums: {\r\n    label: \"Mediums\",\r\n  },\r\n  direct: {\r\n    label: \"Direct\",\r\n    color: \"var(--vercel-purple)\",\r\n  },\r\n  search: {\r\n    label: \"Search\",\r\n    color: \"var(--vercel-pink)\",\r\n  },\r\n  referrals: {\r\n    label: \"Referrals\",\r\n    color: \"var(--vercel-yellow)\",\r\n  },\r\n  socials: {\r\n    label: \"Socials\",\r\n    color: \"var(--vercel-blue)\",\r\n  },\r\n} satisfies ChartConfig;\r\n\r\nexport default function WidgetDemo() {\r\n  return (\r\n    <Widget design=\"mumbai\" size=\"lg\" className=\"gap-2\">\r\n      <WidgetHeader>\r\n        <WidgetTitle className=\"text-2xl\">Traffic Source</WidgetTitle>\r\n        <WidgetTitle className=\"text-2xl\">3946</WidgetTitle>\r\n      </WidgetHeader>\r\n      <WidgetContent className=\"flex-col justify-start gap-4\">\r\n        <div className=\"flex w-full items-center justify-start\">\r\n          <div className=\"flex items-center space-x-1\">\r\n            <GlobeIcon className=\"stroke-muted-foreground size-4\" />\r\n            <Label className=\"text-muted-foreground\">Worldwide</Label>\r\n          </div>\r\n          <DotIcon className=\"stroke-muted-foreground/40\" />\r\n          <div className=\"flex items-center space-x-1\">\r\n            <MonitorIcon className=\"stroke-muted-foreground size-4\" />\r\n            <Label className=\"text-muted-foreground\">Desktop</Label>\r\n          </div>\r\n        </div>\r\n        <ChartContainer config={chartConfig} className=\"size-full max-h-44\">\r\n          <PieChart>\r\n            <ChartTooltip\r\n              cursor={false}\r\n              content={<ChartTooltipContent hideLabel />}\r\n            />\r\n            <Pie\r\n              data={visitorsByTrafficChartData}\r\n              dataKey=\"visitors\"\r\n              nameKey=\"medium\"\r\n            />\r\n          </PieChart>\r\n        </ChartContainer>\r\n      </WidgetContent>\r\n      <WidgetFooter className=\"flex flex-col gap-4\">\r\n        <div className=\"flex w-full items-center justify-center gap-6\">\r\n          <div className=\"flex items-center space-x-1.5\">\r\n            <div className=\"bg-vercel-purple size-2.5 rounded-full\" />\r\n            <Label className=\"text-muted-foreground text-sm\">Direct</Label>\r\n          </div>\r\n          <div className=\"flex items-center space-x-1.5\">\r\n            <div className=\"bg-vercel-pink size-2.5 rounded-full\" />\r\n            <Label className=\"text-muted-foreground text-sm\">Search</Label>\r\n          </div>\r\n          <div className=\"flex items-center space-x-1.5\">\r\n            <div className=\"bg-vercel-yellow size-2.5 rounded-full\" />\r\n            <Label className=\"text-muted-foreground text-sm\">Referrals</Label>\r\n          </div>\r\n          <div className=\"flex items-center space-x-1.5\">\r\n            <div className=\"bg-vercel-blue size-2.5 rounded-full\" />\r\n            <Label className=\"text-muted-foreground text-sm\">Socials</Label>\r\n          </div>\r\n        </div>\r\n        <Button className=\"w-full\" variant=\"outline\">\r\n          <UploadIcon /> Export\r\n        </Button>\r\n      </WidgetFooter>\r\n    </Widget>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "dashboard"
+    ],
+    "size": "lg"
+  }
+}

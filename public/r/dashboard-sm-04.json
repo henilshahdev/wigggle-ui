@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dashboard-sm-04",
+  "type": "registry:component",
+  "dependencies": [
+    "recharts"
+  ],
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/widget.json",
+    "https://wigggle-ui.vercel.app/r/chart.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/widgets/dashboard/sm/dashboard-04.tsx",
+      "content": "\"use client\";\r\n\r\nimport Link from \"next/link\";\r\nimport { CartesianGrid, Line, LineChart, XAxis } from \"recharts\";\r\n\r\nimport {\r\n  Widget,\r\n  WidgetContent,\r\n  WidgetHeader,\r\n  WidgetTitle,\r\n} from \"@/registry/default/ui/widget\";\r\nimport {\r\n  ChartConfig,\r\n  ChartContainer,\r\n  ChartTooltip,\r\n  ChartTooltipContent,\r\n} from \"@/registry/default/ui/chart\";\r\n\r\nconst chartData = [\r\n  { month: \"Jan\", desktop: 186, mobile: 80 },\r\n  { month: \"Feb\", desktop: 305, mobile: 200 },\r\n  { month: \"Mar\", desktop: 237, mobile: 120 },\r\n  { month: \"Apr\", desktop: 173, mobile: 56 },\r\n  { month: \"May\", desktop: 299, mobile: 130 },\r\n];\r\n\r\nconst chartConfig = {\r\n  desktop: {\r\n    label: \"Desktop\",\r\n    color: \"var(--productive)\",\r\n  },\r\n  mobile: {\r\n    label: \"Mobile\",\r\n    color: \"var(--destructive)\",\r\n  },\r\n} satisfies ChartConfig;\r\n\r\nexport default function WidgetDemo() {\r\n  return (\r\n    <Widget design=\"mumbai\" className=\"gap-4\">\r\n      <WidgetHeader>\r\n        <Link className=\"mx-auto\" href=\"#\">\r\n          <WidgetTitle className=\"w-full text-blue-500 underline-offset-2 hover:underline\">\r\n            website.com\r\n          </WidgetTitle>\r\n        </Link>\r\n      </WidgetHeader>\r\n      <WidgetContent>\r\n        <ChartContainer className=\"size-full\" config={chartConfig}>\r\n          <LineChart\r\n            accessibilityLayer\r\n            data={chartData}\r\n            margin={{\r\n              left: 12,\r\n              right: 12,\r\n            }}\r\n          >\r\n            <CartesianGrid vertical={false} />\r\n            <XAxis\r\n              dataKey=\"month\"\r\n              tickLine={false}\r\n              axisLine={false}\r\n              tickMargin={8}\r\n              tickFormatter={(value) => value.slice(0, 3)}\r\n            />\r\n            <ChartTooltip\r\n              cursor={false}\r\n              content={<ChartTooltipContent hideLabel />}\r\n            />\r\n            <Line\r\n              dataKey=\"desktop\"\r\n              type=\"natural\"\r\n              stroke=\"var(--color-desktop)\"\r\n              strokeWidth={2}\r\n              dot={{\r\n                fill: \"var(--color-desktop)\",\r\n              }}\r\n              activeDot={{\r\n                r: 6,\r\n              }}\r\n            />\r\n            <Line\r\n              dataKey=\"mobile\"\r\n              type=\"natural\"\r\n              stroke=\"var(--color-mobile)\"\r\n              strokeWidth={2}\r\n              dot={{\r\n                fill: \"var(--color-mobile)\",\r\n              }}\r\n              activeDot={{\r\n                r: 6,\r\n              }}\r\n            />\r\n          </LineChart>\r\n        </ChartContainer>\r\n      </WidgetContent>\r\n    </Widget>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "dashboard"
+    ]
+  }
+}

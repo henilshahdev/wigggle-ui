@@ -1,0 +1,29 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dashboard-md-02",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/widget.json",
+    "https://wigggle-ui.vercel.app/r/avatar.json",
+    "https://wigggle-ui.vercel.app/r/label.json",
+    "https://wigggle-ui.vercel.app/r/icons.json",
+    "https://wigggle-ui.vercel.app/r/button.json",
+    "https://wigggle-ui.vercel.app/r/dropdown-menu.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/widgets/dashboard/md/dashboard-02.tsx",
+      "content": "import Link from \"next/link\";\r\nimport { EllipsisIcon, GitBranchIcon } from \"lucide-react\";\r\n\r\nimport {\r\n  Widget,\r\n  WidgetContent,\r\n  WidgetHeader,\r\n} from \"@/registry/default/ui/widget\";\r\nimport {\r\n  Avatar,\r\n  AvatarFallback,\r\n  AvatarImage,\r\n} from \"@/registry/default/ui/avatar\";\r\nimport { Label } from \"@/registry/default/ui/label\";\r\nimport { Icons } from \"@/registry/default/ui/icons\";\r\nimport { Button } from \"@/registry/default/ui/button\";\r\nimport {\r\n  DropdownMenu,\r\n  DropdownMenuContent,\r\n  DropdownMenuItem,\r\n  DropdownMenuTrigger,\r\n} from \"@/registry/default/ui/dropdown-menu\";\r\nimport { cn } from \"@/registry/default/lib/utils\";\r\n\r\nexport default function WidgetDemo() {\r\n  return (\r\n    <Widget size=\"md\" className=\"gap-3\">\r\n      <WidgetHeader className=\"items-center justify-between\">\r\n        <div className=\"flex justify-start gap-3\">\r\n          <Avatar className=\"size-10\">\r\n            <AvatarImage\r\n              src=\"https://github.com/wigggle-ui.png\"\r\n              alt=\"@wigggleui\"\r\n            />\r\n            <AvatarFallback>WUI</AvatarFallback>\r\n          </Avatar>\r\n          <div className=\"space-y-2\">\r\n            <Label className=\"font-normal\">wigggle-ui</Label>\r\n            <Label className=\"text-muted-foreground\">\r\n              wigggle-ui.vercel.app\r\n            </Label>\r\n          </div>\r\n        </div>\r\n        <DropdownMenu>\r\n          <DropdownMenuTrigger asChild>\r\n            <Button variant=\"ghost\" size=\"icon-sm\">\r\n              <EllipsisIcon />\r\n            </Button>\r\n          </DropdownMenuTrigger>\r\n          <DropdownMenuContent\r\n            className=\"bg-background w-60 p-2 font-light\"\r\n            align=\"start\"\r\n          >\r\n            <DropdownMenuItem className=\"group flex items-center justify-between\">\r\n              Add Favorite\r\n              <AnimatedStar />\r\n            </DropdownMenuItem>\r\n            <DropdownMenuItem>Visit with Toolbar</DropdownMenuItem>\r\n            <DropdownMenuItem>View Logs</DropdownMenuItem>\r\n            <DropdownMenuItem>Manage Domains</DropdownMenuItem>\r\n            <DropdownMenuItem>Transfer Project</DropdownMenuItem>\r\n            <DropdownMenuItem>Settings</DropdownMenuItem>\r\n          </DropdownMenuContent>\r\n        </DropdownMenu>\r\n      </WidgetHeader>\r\n      <WidgetContent className=\"w-full flex-col items-start justify-start gap-3\">\r\n        <Link\r\n          href=\"https://github.com/wigggle-ui/ui\"\r\n          target=\"_blank\"\r\n          className=\"bg-secondary hover:bg-muted/50 flex w-max items-center justify-center gap-1.5 rounded-full px-2 py-1.5 text-xs font-light transition-colors duration-300\"\r\n        >\r\n          <Icons.GitHub className=\"size-4\" />\r\n          wigggle-ui/ui\r\n        </Link>\r\n        <Label className=\"text-sm font-normal\">\r\n          feat: added weather-md-01, weather-md-02 widgets\r\n        </Label>\r\n        <Label className=\"text-muted-foreground text-sm font-normal\">\r\n          <span>3d ago on </span>\r\n          <GitBranchIcon className=\"size-4\" />\r\n          <span>main</span>\r\n        </Label>\r\n      </WidgetContent>\r\n    </Widget>\r\n  );\r\n}\r\n\r\nfunction AnimatedStar() {\r\n  const baseClasses =\r\n    \"invisible absolute scale-0 transition-all ease-in-out group-hover:visible\";\r\n\r\n  return (\r\n    <div className=\"relative flex items-center justify-center\">\r\n      <Icons.vercelMagic\r\n        className={cn(\r\n          baseClasses,\r\n          \"fill-vercel-purple stroke-vercel-purple size-[5px] -translate-x-0.5 -translate-y-1 transition-all duration-[340ms] group-hover:-translate-x-2 group-hover:-translate-y-[9px] group-hover:scale-150\",\r\n        )}\r\n      />\r\n      <Icons.vercelMagic\r\n        className={cn(\r\n          baseClasses,\r\n          \"fill-vercel-yellow stroke-vercel-yellow size-1 translate-x-1 -translate-y-1 transition-all duration-[260ms] group-hover:translate-x-2 group-hover:-translate-y-2.5 group-hover:scale-125\",\r\n        )}\r\n      />\r\n      <Icons.vercelMagic\r\n        className={cn(\r\n          baseClasses,\r\n          \"fill-vercel-blue stroke-vercel-blue size-[3.5px] translate-x-1.5 translate-y-0.5 transition-all duration-200 group-hover:translate-x-[9px] group-hover:translate-y-[3px] group-hover:scale-105\",\r\n        )}\r\n      />\r\n      <Icons.vercelMagic\r\n        className={cn(\r\n          baseClasses,\r\n          \"fill-vercel-teal stroke-vercel-teal size-1 translate-x-0 translate-y-2 transition-all duration-[180ms] group-hover:translate-x-0 group-hover:translate-y-[9px] group-hover:scale-125\",\r\n        )}\r\n      />\r\n      <Icons.vercelMagic\r\n        className={cn(\r\n          baseClasses,\r\n          \"fill-vercel-pink stroke-vercel-pink size-[3.5px] -translate-x-1.5 translate-y-0.5 transition-all duration-150 group-hover:-translate-x-[9px] group-hover:translate-y-[3px] group-hover:scale-105\",\r\n        )}\r\n      />\r\n      <Icons.vercelStar />\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "dashboard"
+    ],
+    "size": "md"
+  }
+}

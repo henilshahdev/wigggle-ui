@@ -18,6 +18,33 @@ export const Icons = {
       <rect width="18" height="18" x="3" y="3" rx="2" />
     </svg>
   ),
+  shadcn: (props: IconProps) => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" {...props}>
+      <rect width="256" height="256" fill="none" />
+      <line
+        x1="208"
+        y1="128"
+        x2="128"
+        y2="208"
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="32"
+      />
+      <line
+        x1="192"
+        y1="40"
+        x2="40"
+        y2="192"
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="32"
+      />
+    </svg>
+  ),
   X: (props: IconProps) => (
     <svg
       {...props}
@@ -130,6 +157,35 @@ export const Icons = {
         d="M13.7688 19.0956L0 3.68759H5.53933L13.6231 12.7337V3.68759H17.7535V17.5746C17.7535 19.6705 15.1654 20.6584 13.7688 19.0956Z"
         fill="currentColor"
       ></path>
+    </svg>
+  ),
+  vercelStar: (props: IconProps) => (
+    <svg
+      {...props}
+      data-testid="geist-icon"
+      height="16"
+      strokeLinejoin="round"
+      viewBox="0 0 16 16"
+      width="16"
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M8.00001 0.433594L8.65845 1.64093L10.5908 5.18412L14.5577 5.92698L15.9094 6.18011L14.9646 7.17942L12.192 10.1121L12.7113 14.1144L12.8883 15.4782L11.6459 14.8884L8.00001 13.1577L4.35408 14.8884L3.11173 15.4782L3.28869 14.1144L3.80802 10.1121L1.03538 7.17942L0.0906067 6.18011L1.44233 5.92698L5.40922 5.18412L7.34156 1.64093L8.00001 0.433594ZM8.00001 3.56646L6.55565 6.21487L6.38519 6.52743L6.03525 6.59296L3.07014 7.14822L5.14259 9.34029L5.38718 9.59899L5.34137 9.95205L4.95318 12.9436L7.67838 11.65L8.00001 11.4973L8.32163 11.65L11.0468 12.9436L10.6586 9.95205L10.6128 9.59899L10.8574 9.34029L12.9299 7.14822L9.96476 6.59296L9.61482 6.52743L9.44436 6.21487L8.00001 3.56646Z"
+        fill="currentColor"
+      ></path>
+    </svg>
+  ),
+  vercelMagic: (props: IconProps) => (
+    <svg
+      {...props}
+      data-testid="geist-icon"
+      height="16"
+      strokeLinejoin="round"
+      viewBox="0 0 16 16"
+      width="16"
+    >
+      <path d="M8.40706 4.92939L8.5 4H9.5L9.59294 4.92939C9.82973 7.29734 11.7027 9.17027 14.0706 9.40706L15 9.5V10.5L14.0706 10.5929C11.7027 10.8297 9.82973 12.7027 9.59294 15.0706L9.5 16H8.5L8.40706 15.0706C8.17027 12.7027 6.29734 10.8297 3.92939 10.5929L3 10.5V9.5L3.92939 9.40706C6.29734 9.17027 8.17027 7.29734 8.40706 4.92939Z"></path>
     </svg>
   ),
 };

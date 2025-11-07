@@ -26,6 +26,18 @@
       ]
     },
     {
+      "name": "avatar",
+      "type": "registry:ui",
+      "dependencies": ["@radix-ui/react-avatar", "class-variance-authority"],
+      "registryDependencies": ["https://wigggle-ui.vercel.app/r/utils.json"],
+      "files": [
+        {
+          "path": "registry/default/ui/avatar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "badge",
       "type": "registry:ui",
       "dependencies": ["@radix-ui/react-slot", "class-variance-authority"],
@@ -61,6 +73,30 @@
       ]
     },
     {
+      "name": "dropdown-menu",
+      "type": "registry:ui",
+      "dependencies": ["@radix-ui/react-dropdown-menu", "lucide-react"],
+      "registryDependencies": ["https://wigggle-ui.vercel.app/r/utils.json"],
+      "files": [
+        {
+          "path": "registry/default/ui/dropdown-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "dependencies": ["@radix-ui/react-input"],
+      "registryDependencies": ["https://wigggle-ui.vercel.app/r/utils.json"],
+      "files": [
+        {
+          "path": "registry/default/ui/input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "label",
       "type": "registry:ui",
       "dependencies": ["@radix-ui/react-label"],
@@ -72,9 +108,33 @@
       ]
     },
     {
+      "name": "popover",
+      "type": "registry:ui",
+      "dependencies": ["@radix-ui/react-popover"],
+      "files": [
+        {
+          "path": "registry/default/ui/popover.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "dependencies": ["@radix-ui/react-select", "lucide-react"],
+      "registryDependencies": ["https://wigggle-ui.vercel.app/r/utis.json"],
+      "files": [
+        {
+          "path": "registry/default/ui/select.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "separator",
       "type": "registry:ui",
       "dependencies": ["@radix-ui/react-separator"],
+      "registryDependencies": ["https://wigggle-ui.vercel.app/r/utils.json"],
       "files": [
         {
           "path": "registry/default/ui/separator.tsx",
@@ -100,6 +160,17 @@
       "files": [
         {
           "path": "registry/default/ui/tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "registryDependencies": ["https://wigggle-ui.vercel.app/r/utis.json"],
+      "files": [
+        {
+          "path": "registry/default/ui/textarea.tsx",
           "type": "registry:ui"
         }
       ]
@@ -552,6 +623,203 @@
             "logo": "<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 640 640'><path fill='var(--foreground)' d='M0 0h640v640H0z'/><path fill='var(--background)' d='M256 448H128v-64h128v64ZM512 256H384v128h128v64H320V192h192v64ZM128 384H64V256h64v128ZM576 384h-64V256h64v128ZM256 256H128v-64h128v64Z'/></svg>"
           }
         ]
+      }
+    },
+    {
+      "name": "dashboard-sm-01",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/label.json",
+        "https://wigggle-ui.vercel.app/r/utils.json",
+        "https://wigggle-ui.vercel.app/r/tooltip.json"
+      ],
+      "files": [
+        {
+          "path": "registry/default/widgets/dashboard/sm/dashboard-01.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["dashboard"]
+      }
+    },
+    {
+      "name": "dashboard-sm-02",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/chart.json",
+        "https://wigggle-ui.vercel.app/r/label.json"
+      ],
+      "dependencies": ["recharts"],
+      "files": [
+        {
+          "path": "registry/default/widgets/dashboard/sm/dashboard-02.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["dashboard"]
+      }
+    },
+    {
+      "name": "dashboard-sm-03",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/table.json"
+      ],
+      "dependencies": ["lucide-react"],
+      "files": [
+        {
+          "path": "registry/default/widgets/dashboard/sm/dashboard-03.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["dashboard"]
+      }
+    },
+    {
+      "name": "dashboard-sm-04",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/chart.json"
+      ],
+      "dependencies": ["recharts"],
+      "files": [
+        {
+          "path": "registry/default/widgets/dashboard/sm/dashboard-04.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["dashboard"]
+      }
+    },
+    {
+      "name": "dashboard-sm-05",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/avatar.json",
+        "https://wigggle-ui.vercel.app/r/button.json",
+        "https://wigggle-ui.vercel.app/r/label.json"
+      ],
+      "dependencies": ["lucide-react"],
+      "files": [
+        {
+          "path": "registry/default/widgets/dashboard/sm/dashboard-05.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["dashboard"]
+      }
+    },
+    {
+      "name": "dashboard-sm-06",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/textarea.json",
+        "https://wigggle-ui.vercel.app/r/button.json"
+      ],
+      "dependencies": ["recharts"],
+      "files": [
+        {
+          "path": "registry/default/widgets/dashboard/sm/dashboard-06.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["dashboard"]
+      }
+    },
+    {
+      "name": "dashboard-md-01",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/table.json"
+      ],
+      "dependencies": ["recharts"],
+      "files": [
+        {
+          "path": "registry/default/widgets/dashboard/md/dashboard-01.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["dashboard"],
+        "size": "md"
+      }
+    },
+    {
+      "name": "dashboard-md-02",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/avatar.json",
+        "https://wigggle-ui.vercel.app/r/label.json",
+        "https://wigggle-ui.vercel.app/r/icons.json",
+        "https://wigggle-ui.vercel.app/r/button.json",
+        "https://wigggle-ui.vercel.app/r/dropdown-menu.json"
+      ],
+      "dependencies": ["lucide-react"],
+      "files": [
+        {
+          "path": "registry/default/widgets/dashboard/md/dashboard-02.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["dashboard"],
+        "size": "md"
+      }
+    },
+    {
+      "name": "dashboard-lg-01",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/label.json",
+        "https://wigggle-ui.vercel.app/r/chart.json",
+        "https://wigggle-ui.vercel.app/r/button.json"
+      ],
+      "dependencies": ["recharts", "lucide-react"],
+      "files": [
+        {
+          "path": "registry/default/widgets/dashboard/lg/dashboard-01.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["dashboard"],
+        "size": "lg"
+      }
+    },
+    {
+      "name": "dashboard-lg-02",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/label.json",
+        "https://wigggle-ui.vercel.app/r/select.json",
+        "https://wigggle-ui.vercel.app/r/chart.json"
+      ],
+      "dependencies": ["recharts", "lucide-react"],
+      "files": [
+        {
+          "path": "registry/default/widgets/dashboard/lg/dashboard-02.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["dashboard"],
+        "size": "lg"
       }
     },
     {

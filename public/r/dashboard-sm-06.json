@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dashboard-sm-06",
+  "type": "registry:component",
+  "dependencies": [
+    "recharts"
+  ],
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/widget.json",
+    "https://wigggle-ui.vercel.app/r/textarea.json",
+    "https://wigggle-ui.vercel.app/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/widgets/dashboard/sm/dashboard-06.tsx",
+      "content": "import {\r\n  Widget,\r\n  WidgetContent,\r\n  WidgetFooter,\r\n} from \"@/registry/default/ui/widget\";\r\nimport { Textarea } from \"@/registry/default/ui/textarea\";\r\nimport { Button } from \"@/registry/default/ui/button\";\r\n\r\nexport default function WidgetDemo() {\r\n  return (\r\n    <Widget className=\"gap-3\" design=\"mumbai\">\r\n      <WidgetContent className=\"w-full flex-col items-start justify-start gap-2\">\r\n        <Textarea\r\n          className=\"h-full max-h-28\"\r\n          placeholder=\"Type your message here.\"\r\n        />\r\n      </WidgetContent>\r\n      <WidgetFooter>\r\n        <Button className=\"w-full\" size=\"sm\">\r\n          Send Feedback\r\n        </Button>\r\n      </WidgetFooter>\r\n    </Widget>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "dashboard"
+    ]
+  }
+}

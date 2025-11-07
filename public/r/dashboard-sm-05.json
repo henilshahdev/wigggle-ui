@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dashboard-sm-05",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/widget.json",
+    "https://wigggle-ui.vercel.app/r/avatar.json",
+    "https://wigggle-ui.vercel.app/r/button.json",
+    "https://wigggle-ui.vercel.app/r/label.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/widgets/dashboard/sm/dashboard-05.tsx",
+      "content": "import {\r\n  GitBranchIcon,\r\n  GitCommitHorizontalIcon,\r\n  ShieldCheckIcon,\r\n} from \"lucide-react\";\r\nimport Link from \"next/link\";\r\n\r\nimport {\r\n  Widget,\r\n  WidgetContent,\r\n  WidgetFooter,\r\n  WidgetHeader,\r\n  WidgetTitle,\r\n} from \"@/registry/default/ui/widget\";\r\nimport {\r\n  Avatar,\r\n  AvatarFallback,\r\n  AvatarImage,\r\n} from \"@/registry/default/ui/avatar\";\r\nimport { Button } from \"@/registry/default/ui/button\";\r\nimport { Label } from \"@/registry/default/ui/label\";\r\nimport {\r\n  Tooltip,\r\n  TooltipContent,\r\n  TooltipTrigger,\r\n} from \"@/registry/default/ui/tooltip\";\r\n\r\nexport default function WidgetDemo() {\r\n  return (\r\n    <Widget className=\"gap-2.5\" design=\"mumbai\">\r\n      <WidgetHeader className=\"items-center\">\r\n        <div className=\"flex items-center justify-start gap-2\">\r\n          <Avatar className=\"size-6\">\r\n            <AvatarImage\r\n              className=\"border-4 border-black\"\r\n              src=\"https://github.com/wigggle-ui.png\"\r\n              alt=\"@wigggle-ui\"\r\n            />\r\n            <AvatarFallback>WUI</AvatarFallback>\r\n          </Avatar>\r\n          <WidgetTitle className=\"text-sm font-medium\">wigggle-ui</WidgetTitle>\r\n        </div>\r\n        <Tooltip delayDuration={300}>\r\n          <TooltipTrigger asChild>\r\n            <div className=\"bg-productive size-2.5 animate-pulse rounded-full\" />\r\n          </TooltipTrigger>\r\n          <TooltipContent className=\"text-foreground px-2 py-1 text-sm\">\r\n            Running\r\n          </TooltipContent>\r\n        </Tooltip>\r\n      </WidgetHeader>\r\n      <WidgetContent className=\"w-full flex-col items-start justify-start gap-2\">\r\n        <div className=\"flex w-max items-center justify-center gap-2\">\r\n          <GitCommitHorizontalIcon className=\"stroke-muted-foreground size-5\" />\r\n          <Label className=\"text-sm\">chore: nextjs v16</Label>\r\n        </div>\r\n        <div className=\"flex w-max items-center justify-center gap-2\">\r\n          <GitBranchIcon className=\"stroke-muted-foreground size-5\" />\r\n          <Label className=\"-mt-1.5 text-sm\">prod</Label>\r\n        </div>\r\n        <div className=\"flex w-max items-center justify-center gap-2\">\r\n          <ShieldCheckIcon className=\"stroke-productive size-5\" />\r\n          <Label className=\"text-sm\">Firewall Active</Label>\r\n        </div>\r\n      </WidgetContent>\r\n      <WidgetFooter>\r\n        <Button className=\"w-full\" variant=\"outline\" size=\"sm\" asChild>\r\n          <Link href=\"https://github.com/wigggle-ui/ui\">Visit</Link>\r\n        </Button>\r\n      </WidgetFooter>\r\n    </Widget>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "dashboard"
+    ]
+  }
+}

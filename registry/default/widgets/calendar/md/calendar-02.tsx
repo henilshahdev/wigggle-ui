@@ -10,7 +10,7 @@ import {
   WidgetTitle,
 } from "@/registry/default/ui/widget";
 import { Label } from "@/registry/default/ui/label";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/registry/default/ui/button";
 import { Badge } from "@/registry/default/ui/badge";
 
 export default function WidgetDemo() {

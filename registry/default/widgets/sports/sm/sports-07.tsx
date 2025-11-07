@@ -14,7 +14,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
+} from "@/registry/default/ui/table";
 import { cn } from "@/registry/default/lib/utils";
 
 const scores = [

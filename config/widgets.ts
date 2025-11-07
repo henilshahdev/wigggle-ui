@@ -50,7 +50,6 @@ export const categories: WidgetCategory[] = [
       lg: [],
     },
     icon: CalendarIcon,
-    isNew: true,
   },
   {
     slug: "clock",
@@ -93,6 +92,7 @@ export const categories: WidgetCategory[] = [
       lg: [{ name: "dashboard-lg-01" }, { name: "dashboard-lg-02" }],
     },
     icon: LayoutDashboardIcon,
+    isNew: true,
   },
   {
     slug: "sports",
@@ -148,7 +148,6 @@ export const categories: WidgetCategory[] = [
       lg: [],
     },
     icon: CloudSunIcon,
-    isNew: true,
   },
 ];
 

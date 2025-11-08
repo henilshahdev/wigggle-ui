@@ -8,6 +8,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import SiteHeader from "@/components/site-header";
 import SiteFooter from "@/components/site-footer";
 import { DotBackground } from "@/components/dot-background";
+import { TailwindIndicator } from "@/components/tailwind-indicator";
 
 const outfit = Outfit({
   weight: ["300", "400", "500", "600", "700", "800"],
@@ -40,10 +41,11 @@ export default function RootLayout({
             </div>
             <div className="mx-auto flex min-h-screen max-w-[1500px] flex-col max-sm:text-center">
               <SiteHeader />
-              <div className="flex-1 px-6">{children}</div>
+              <div className="flex-1 sm:px-6">{children}</div>
               <SiteFooter />
             </div>
           </div>
+          <TailwindIndicator />
         </ThemeProvider>
         <Analytics />
       </body>

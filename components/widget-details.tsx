@@ -46,7 +46,10 @@ export default function WidgetDetails({ widget }: { widget: RegistryItem }) {
 
     const loadCode = async () => {
       try {
-        const response = await fetch(`/r/${widget.name}.json`);
+        const response = await fetch(`/r/${widget.name}.json`, {
+          cache: "force-cache",
+          next: { revalidate: 3600 },
+        });
         if (!response.ok) {
           handleEmptyCode();
           return;

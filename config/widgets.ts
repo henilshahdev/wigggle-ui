@@ -5,6 +5,7 @@ import {
   ChartNoAxesCombinedIcon,
   Clock3Icon,
   CloudSunIcon,
+  GoalIcon,
   LayoutDashboardIcon,
   TrophyIcon,
 } from "lucide-react";
@@ -92,6 +93,22 @@ export const categories: WidgetCategory[] = [
       lg: [{ name: "dashboard-lg-01" }, { name: "dashboard-lg-02" }],
     },
     icon: LayoutDashboardIcon,
+  },
+  {
+    slug: "productivity",
+    name: "Productivity",
+    widgets: {
+      sm: [
+        { name: "productivity-sm-01" },
+        { name: "productivity-sm-02" },
+        { name: "productivity-sm-03" },
+        { name: "productivity-sm-04" },
+        { name: "productivity-sm-05" },
+        { name: "productivity-sm-06" },
+        { name: "productivity-sm-07" },
+      ],
+    },
+    icon: GoalIcon,
     isNew: true,
   },
   {
@@ -129,6 +146,7 @@ export const categories: WidgetCategory[] = [
     },
     icon: ChartNoAxesCombinedIcon,
   },
+
   {
     slug: "weather",
     name: "Weather",

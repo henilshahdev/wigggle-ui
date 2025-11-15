@@ -823,6 +823,148 @@
       }
     },
     {
+      "name": "productivity-sm-01",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/utils.json",
+        "https://wigggle-ui.vercel.app/r/label.json"
+      ],
+      "dependencies": ["lucide-react"],
+      "files": [
+        {
+          "path": "registry/default/widgets/productivity/sm/productivity-01.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["productivity"],
+        "size": "sm"
+      }
+    },
+    {
+      "name": "productivity-sm-02",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/button.json",
+        "https://wigggle-ui.vercel.app/r/select.json",
+        "https://wigggle-ui.vercel.app/r/textarea.json",
+        "https://wigggle-ui.vercel.app/r/utils.json"
+      ],
+      "files": [
+        {
+          "path": "registry/default/widgets/productivity/sm/productivity-02.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["productivity"],
+        "size": "sm"
+      }
+    },
+    {
+      "name": "productivity-sm-03",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/label.json",
+        "https://wigggle-ui.vercel.app/r/button.json"
+      ],
+      "dependencies": ["lucide-react"],
+      "files": [
+        {
+          "path": "registry/default/widgets/productivity/sm/productivity-03.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["productivity"],
+        "size": "sm"
+      }
+    },
+    {
+      "name": "productivity-sm-04",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/separator.json",
+        "https://wigggle-ui.vercel.app/r/tooltip.json",
+        "https://wigggle-ui.vercel.app/r/label.json",
+        "https://wigggle-ui.vercel.app/r/utils.json"
+      ],
+      "files": [
+        {
+          "path": "registry/default/widgets/productivity/sm/productivity-04.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["productivity"],
+        "size": "sm"
+      }
+    },
+    {
+      "name": "productivity-sm-05",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/button.json",
+        "https://wigggle-ui.vercel.app/r/label.json",
+        "https://wigggle-ui.vercel.app/r/utils.json"
+      ],
+      "dependencies": ["lucide-react"],
+      "files": [
+        {
+          "path": "registry/default/widgets/productivity/sm/productivity-05.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["productivity"],
+        "size": "sm"
+      }
+    },
+    {
+      "name": "productivity-sm-06",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/label.json"
+      ],
+      "dependencies": ["lucide-react"],
+      "files": [
+        {
+          "path": "registry/default/widgets/productivity/sm/productivity-06.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["productivity"],
+        "size": "sm"
+      }
+    },
+    {
+      "name": "productivity-sm-07",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/separator.json",
+        "https://wigggle-ui.vercel.app/r/badge.json"
+      ],
+      "dependencies": ["lucide-react"],
+      "files": [
+        {
+          "path": "registry/default/widgets/productivity/sm/productivity-07.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["productivity"],
+        "size": "sm"
+      }
+    },
+    {
       "name": "sports-sm-01",
       "type": "registry:component",
       "registryDependencies": [

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "productivity-sm-04",
+  "type": "registry:component",
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/widget.json",
+    "https://wigggle-ui.vercel.app/r/separator.json",
+    "https://wigggle-ui.vercel.app/r/tooltip.json",
+    "https://wigggle-ui.vercel.app/r/label.json",
+    "https://wigggle-ui.vercel.app/r/utils.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/widgets/productivity/sm/productivity-04.tsx",
+      "content": "import {\n  Widget,\n  WidgetHeader,\n  WidgetTitle,\n  WidgetContent,\n} from \"@/registry/default/ui/widget\";\nimport { Separator } from \"@/registry/default/ui/separator\";\nimport {\n  Tooltip,\n  TooltipTrigger,\n  TooltipContent,\n} from \"@/registry/default/ui/tooltip\";\nimport { Label } from \"@/registry/default/ui/label\";\nimport { cn } from \"@/registry/default/lib/utils\";\n\nconst now = new Date();\nconst month = now.toLocaleString(\"en-US\", { month: \"short\" });\nconst year = now.getFullYear();\nconst dayInitials = [\"S\", \"M\", \"T\", \"W\", \"T\", \"F\", \"S\"];\n\nconst daysInMonth = new Date(year, now.getMonth() + 1, 0).getDate();\nconst firstDay = new Date(year, now.getMonth(), 1).getDay();\n\nconst tasks = Array.from({ length: daysInMonth }, () =>\n  Math.floor(Math.random() * 5),\n);\n\nconst totalTasks = tasks.reduce((a, b) => a + b, 0);\n\nconst taskColor = (level: number | null) =>\n  level === null\n    ? \"bg-transparent\"\n    : [\n        \"bg-muted-foreground/20\",\n        \"bg-muted-foreground/40\",\n        \"bg-muted-foreground/60\",\n        \"bg-muted-foreground/80\",\n        \"bg-muted-foreground\",\n      ][Math.min(level, 4)];\n\nexport default function WidgetDemo() {\n  return (\n    <Widget className=\"gap-1 p-3\" design=\"mumbai\">\n      <WidgetHeader className=\"justify-between px-1\">\n        <WidgetTitle className=\"font-normal\">{`${month} ${year}`}</WidgetTitle>\n        <WidgetTitle className=\"font-normal\">{totalTasks}</WidgetTitle>\n      </WidgetHeader>\n      <Separator className=\"h-0.5 rounded-full\" />\n      <WidgetContent>\n        <div className=\"grid size-full grid-cols-7 gap-1 text-center\">\n          {dayInitials.map((d, i) => (\n            <div key={i} className=\"text-xs\">\n              {d}\n            </div>\n          ))}\n\n          {Array.from({ length: firstDay }).map((_, i) => (\n            <div key={`f-${i}`} className=\"text-xs\">\n              &nbsp;\n            </div>\n          ))}\n          {tasks.map((count, i) => (\n            <Tooltip key={i} delayDuration={300}>\n              <TooltipTrigger asChild>\n                <div className=\"m-auto flex size-3 items-center justify-center\">\n                  <div\n                    className={cn(\n                      \"size-3 rounded-xs transition-all duration-300 hover:scale-125 hover:cursor-pointer\",\n                      taskColor(count),\n                    )}\n                  />\n                </div>\n              </TooltipTrigger>\n              <TooltipContent className=\"flex gap-1\">\n                <Label className=\"font-normal\">\n                  {count} task{count !== 1 ? \"s\" : \"\"}\n                </Label>\n                <Label className=\"font-normal\">on</Label>\n                <Label className=\"font-normal\">{`${i + 1} ${month}`}</Label>\n              </TooltipContent>\n            </Tooltip>\n          ))}\n        </div>\n      </WidgetContent>\n    </Widget>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "productivity"
+    ],
+    "size": "sm"
+  }
+}

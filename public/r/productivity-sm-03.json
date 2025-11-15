@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "productivity-sm-03",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/widget.json",
+    "https://wigggle-ui.vercel.app/r/label.json",
+    "https://wigggle-ui.vercel.app/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/widgets/productivity/sm/productivity-03.tsx",
+      "content": "\"use client\";\r\n\r\nimport React from \"react\";\r\nimport { PauseIcon, PlayIcon, RotateCcwIcon } from \"lucide-react\";\r\n\r\nimport {\r\n  Widget,\r\n  WidgetContent,\r\n  WidgetFooter,\r\n  WidgetHeader,\r\n} from \"@/registry/default/ui/widget\";\r\nimport { Label } from \"@/registry/default/ui/label\";\r\nimport { Button } from \"@/registry/default/ui/button\";\r\n\r\nexport default function WidgetDemo() {\r\n  const [isCountingDown, setIsCountingDown] = React.useState(false);\r\n  const [timeLeft, setTimeLeft] = React.useState(1800);\r\n  const intervalRef = React.useRef<NodeJS.Timeout | null>(null);\r\n\r\n  const minutes = Math.floor(timeLeft / 60);\r\n  const seconds = (timeLeft % 60).toString().padStart(2, \"0\");\r\n\r\n  const resetTimer = React.useCallback(() => {\r\n    setIsCountingDown(false);\r\n    setTimeLeft(1800);\r\n  }, []);\r\n\r\n  const handleToggle = React.useCallback(() => {\r\n    setIsCountingDown((prev) => !prev);\r\n  }, []);\r\n\r\n  React.useEffect(() => {\r\n    if (isCountingDown && !intervalRef.current) {\r\n      intervalRef.current = setInterval(() => {\r\n        setTimeLeft((prev) => (prev > 0 ? prev - 1 : 0));\r\n      }, 1000);\r\n    }\r\n\r\n    if (!isCountingDown) {\r\n      clearInterval(intervalRef.current!);\r\n      intervalRef.current = null;\r\n    }\r\n\r\n    return () => {\r\n      clearInterval(intervalRef.current!);\r\n      intervalRef.current = null;\r\n    };\r\n  }, [isCountingDown]);\r\n\r\n  return (\r\n    <Widget design=\"mumbai\">\r\n      <WidgetHeader className=\"justify-center\">\r\n        <Label className=\"text-muted-foreground text-3xl\">🚀</Label>\r\n      </WidgetHeader>\r\n      <WidgetContent>\r\n        <div className=\"flex h-full w-full flex-col items-center justify-center gap-0.5\">\r\n          <Label className=\"text-4xl\">\r\n            {minutes}:{seconds}\r\n          </Label>\r\n          <Label className=\"text-muted-foreground text-xs\">POMODORO</Label>\r\n        </div>\r\n      </WidgetContent>\r\n      <WidgetFooter>\r\n        <Button\r\n          aria-label=\"Reset timer\"\r\n          onClick={resetTimer}\r\n          variant=\"outline\"\r\n          size=\"icon-sm\"\r\n          className=\"rounded-full\"\r\n        >\r\n          <RotateCcwIcon />\r\n        </Button>\r\n        <Button\r\n          aria-label={isCountingDown ? \"Pause timer\" : \"Start timer\"}\r\n          onClick={handleToggle}\r\n          variant=\"outline\"\r\n          size=\"icon-sm\"\r\n          className=\"rounded-full\"\r\n        >\r\n          {isCountingDown ? (\r\n            <PauseIcon className=\"size-4 fill-current stroke-none\" />\r\n          ) : (\r\n            <PlayIcon className=\"size-4 fill-current stroke-none\" />\r\n          )}\r\n        </Button>\r\n      </WidgetFooter>\r\n    </Widget>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "productivity"
+    ],
+    "size": "sm"
+  }
+}

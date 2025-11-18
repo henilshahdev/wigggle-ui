@@ -62,6 +62,17 @@
       ]
     },
     {
+      "name": "circular-progress",
+      "type": "registry:ui",
+      "registryDependencies": ["https://wigggle-ui.vercel.app/r/utils.json"],
+      "files": [
+        {
+          "path": "registry/default/ui/circular-progress.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "dialog",
       "type": "registry:ui",
       "dependencies": ["@radix-ui/react-dialog"],
@@ -962,6 +973,85 @@
       "meta": {
         "tags": ["productivity"],
         "size": "sm"
+      }
+    },
+    {
+      "name": "productivity-md-01",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/chart.json",
+        "https://wigggle-ui.vercel.app/r/label.json",
+        "https://wigggle-ui.vercel.app/r/icons.json"
+      ],
+      "dependencies": ["recharts"],
+      "files": [
+        {
+          "path": "registry/default/widgets/productivity/md/productivity-01.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["productivity"],
+        "size": "md"
+      }
+    },
+    {
+      "name": "productivity-md-02",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/label.json",
+        "https://wigggle-ui.vercel.app/r/utils.json"
+      ],
+      "dependencies": ["lucide-react"],
+      "files": [
+        {
+          "path": "registry/default/widgets/productivity/md/productivity-02.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["productivity"],
+        "size": "md"
+      }
+    },
+    {
+      "name": "productivity-md-03",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/label.json"
+      ],
+      "dependencies": ["lucide-react", "recharts"],
+      "files": [
+        {
+          "path": "registry/default/widgets/productivity/md/productivity-03.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["productivity"],
+        "size": "md"
+      }
+    },
+    {
+      "name": "productivity-md-04",
+      "type": "registry:component",
+      "registryDependencies": [
+        "https://wigggle-ui.vercel.app/r/widget.json",
+        "https://wigggle-ui.vercel.app/r/separator.json",
+        "https://wigggle-ui.vercel.app/r/circular-progress.json"
+      ],
+      "files": [
+        {
+          "path": "registry/default/widgets/productivity/md/productivity-04.tsx",
+          "type": "registry:component"
+        }
+      ],
+      "meta": {
+        "tags": ["productivity"],
+        "size": "md"
       }
     },
     {

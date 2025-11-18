@@ -1,0 +1,26 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "productivity-md-02",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/widget.json",
+    "https://wigggle-ui.vercel.app/r/label.json",
+    "https://wigggle-ui.vercel.app/r/utils.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/widgets/productivity/md/productivity-02.tsx",
+      "content": "\"use client\";\r\n\r\nimport React from \"react\";\r\nimport { CheckCircle2Icon, CircleIcon, ListIcon } from \"lucide-react\";\r\n\r\nimport {\r\n  Widget,\r\n  WidgetContent,\r\n  WidgetHeader,\r\n  WidgetTitle,\r\n} from \"@/registry/default/ui/widget\";\r\nimport { Label } from \"@/registry/default/ui/label\";\r\nimport { cn } from \"@/registry/default/lib/utils\";\r\n\r\ntype TodoType = {\r\n  id: number;\r\n  task: string;\r\n  time: string;\r\n  completed: boolean;\r\n};\r\n\r\nconst initialTodos = [\r\n  {\r\n    id: 1,\r\n    task: \"Daily Scrum Meeting\",\r\n    time: \"9:00 AM to 9:30 AM\",\r\n    completed: true,\r\n  },\r\n  {\r\n    id: 2,\r\n    task: \"Review mockup designs\",\r\n    time: \"9:00 AM to 9:30 AM\",\r\n    completed: true,\r\n  },\r\n  {\r\n    id: 3,\r\n    task: \"Client report prep\",\r\n    time: \"9:00 AM to 9:30 AM\",\r\n    completed: false,\r\n  },\r\n];\r\n\r\nexport default function WidgetDemo() {\r\n  const [todos, setTodos] = React.useState<TodoType[]>(initialTodos);\r\n  const tasksDone = todos.filter((todo) => todo.completed).length;\r\n\r\n  const handleToggle = (id: number) => {\r\n    setTodos((prevTodos) => {\r\n      const updatedTodos = prevTodos.map((todo) => {\r\n        if (todo.id === id) {\r\n          return { ...todo, completed: !todo.completed };\r\n        }\r\n        return todo;\r\n      });\r\n      return updatedTodos;\r\n    });\r\n  };\r\n\r\n  return (\r\n    <Widget size=\"md\">\r\n      <WidgetContent className=\"flex items-center justify-center gap-4\">\r\n        <div className=\"flex h-full w-max flex-col items-start justify-between gap-3\">\r\n          <WidgetHeader className=\"w-full\">\r\n            <WidgetTitle>\r\n              <ListIcon />\r\n            </WidgetTitle>\r\n          </WidgetHeader>\r\n          <div className=\"flex flex-col\">\r\n            <Label className=\"text-5xl tracking-wide\">{tasksDone}/3</Label>\r\n            <Label className=\"text-muted-foreground text-lg font-normal\">\r\n              tasks done\r\n            </Label>\r\n          </div>\r\n        </div>\r\n        <div className=\"flex size-full flex-col items-center justify-start\">\r\n          {todos.map((todo) => (\r\n            <button\r\n              className=\"w-full\"\r\n              onClick={() => handleToggle(todo.id)}\r\n              key={todo.id}\r\n            >\r\n              <div className=\"hover:bg-muted group flex size-full items-start justify-start gap-2 rounded-md px-2 py-1.5 text-sm hover:cursor-pointer\">\r\n                {todo.completed ? (\r\n                  <CheckCircle2Icon className=\"text-productive size-4\" />\r\n                ) : (\r\n                  <CircleIcon className=\"text-muted-foreground size-4\" />\r\n                )}\r\n                <div className=\"space-y-2\">\r\n                  <Label\r\n                    className={cn(\r\n                      \"text-muted-foreground group-hover:cursor-pointer\",\r\n                      todo.completed && \"text-muted-foreground/70 line-through\",\r\n                    )}\r\n                  >\r\n                    {todo.task}\r\n                  </Label>\r\n                  <Label className=\"text-muted-foreground text-xs font-normal\">\r\n                    {todo.time}\r\n                  </Label>\r\n                </div>\r\n              </div>\r\n            </button>\r\n          ))}\r\n        </div>\r\n      </WidgetContent>\r\n    </Widget>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "productivity"
+    ],
+    "size": "md"
+  }
+}

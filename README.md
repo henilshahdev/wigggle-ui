@@ -16,4 +16,4 @@ Have questions, comments or feedback? [File an Issue](https://github.com/wigggle
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=henilshahdev/wigggle-ui&type=Date)](https://www.star-history.com/#henilshahdev/wigggle-ui&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=wigggle-ui/ui&type=date&legend=top-left)](https://www.star-history.com/#wigggle-ui/ui&type=date&legend=top-left)

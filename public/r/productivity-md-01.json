@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "productivity-md-01",
+  "type": "registry:component",
+  "dependencies": [
+    "recharts"
+  ],
+  "registryDependencies": [
+    "https://wigggle-ui.vercel.app/r/widget.json",
+    "https://wigggle-ui.vercel.app/r/chart.json",
+    "https://wigggle-ui.vercel.app/r/label.json",
+    "https://wigggle-ui.vercel.app/r/icons.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/widgets/productivity/md/productivity-01.tsx",
+      "content": "import { Bar, BarChart, CartesianGrid, XAxis } from \"recharts\";\r\n\r\nimport { Widget, WidgetContent } from \"@/registry/default/ui/widget\";\r\nimport {\r\n  ChartConfig,\r\n  ChartContainer,\r\n  ChartTooltip,\r\n  ChartTooltipContent,\r\n} from \"@/components/ui/chart\";\r\nimport { Label } from \"@/registry/default/ui/label\";\r\nimport { Icons } from \"@/registry/default/ui/icons\";\r\n\r\nconst chartData = [\r\n  { time: \"8 AM\", instagram: 12, whatsapp: 8, x: 5 },\r\n  { time: \"9 AM\", instagram: 25, whatsapp: 15, x: 18 },\r\n  { time: \"10 AM\", instagram: 18, whatsapp: 12, x: 8 },\r\n  {\r\n    time: \"11 AM\",\r\n    instagram: 22,\r\n    whatsapp: 20,\r\n    x: 15,\r\n  },\r\n  {\r\n    time: \"12 PM\",\r\n    instagram: 35,\r\n    whatsapp: 28,\r\n    x: 22,\r\n  },\r\n  { time: \"1 PM\", instagram: 28, whatsapp: 18, x: 16 },\r\n  {\r\n    time: \"2 PM\",\r\n    instagram: 32,\r\n    whatsapp: 22,\r\n    x: 20,\r\n  },\r\n  {\r\n    time: \"3 PM\",\r\n    instagram: 38,\r\n    whatsapp: 25,\r\n    x: 28,\r\n  },\r\n  {\r\n    time: \"4 PM\",\r\n    instagram: 42,\r\n    whatsapp: 30,\r\n    x: 32,\r\n  },\r\n  {\r\n    time: \"5 PM\",\r\n    instagram: 48,\r\n    whatsapp: 35,\r\n    x: 38,\r\n  },\r\n  {\r\n    time: \"6 PM\",\r\n    instagram: 52,\r\n    whatsapp: 40,\r\n    x: 42,\r\n  },\r\n];\r\n\r\nconst chartConfig = {\r\n  instagram: {\r\n    label: \"Instagram\",\r\n    color: \"var(--chart-1)\",\r\n  },\r\n  whatsapp: {\r\n    label: \"WhatsApp\",\r\n    color: \"var(--chart-2)\",\r\n  },\r\n  x: {\r\n    label: \"X\",\r\n    color: \"var(--chart-3)\",\r\n  },\r\n} satisfies ChartConfig;\r\n\r\nexport default function WidgetDemo() {\r\n  return (\r\n    <Widget design=\"mumbai\" size=\"md\" className=\"p-0\">\r\n      <WidgetContent className=\"items-center justify-between gap-5\">\r\n        <div className=\"flex size-full items-center justify-between\">\r\n          <div className=\"mx-auto flex size-full flex-col items-center justify-center gap-6 border-e-2 px-1.5 py-3\">\r\n            <div className=\"flex items-center justify-between gap-2\">\r\n              <Icons.instaram className=\"size-4.5\" />\r\n              <Label>21m</Label>\r\n            </div>\r\n            <div className=\"flex items-center gap-2\">\r\n              <Icons.whatsapp className=\"size-4.5\" />\r\n              <Label>21m</Label>\r\n            </div>\r\n            <div className=\"flex items-center gap-2.5\">\r\n              <Icons.X className=\"size-4\" />\r\n              <Label>21m</Label>\r\n            </div>\r\n          </div>\r\n          <ChartContainer\r\n            className=\"size-full max-w-72 flex-1 px-4 py-2\"\r\n            config={chartConfig}\r\n          >\r\n            <BarChart accessibilityLayer data={chartData}>\r\n              <CartesianGrid vertical={false} />\r\n              <XAxis\r\n                dataKey=\"time\"\r\n                tickLine={true}\r\n                tickMargin={12}\r\n                tick={{ fill: \"hsl(var(--color-foreground))\" }}\r\n              />\r\n              <ChartTooltip content={<ChartTooltipContent hideLabel />} />\r\n              <Bar\r\n                dataKey=\"instagram\"\r\n                stackId=\"a\"\r\n                fill=\"var(--color-instagram)\"\r\n                radius={[0, 0, 4, 4]}\r\n              />\r\n              <Bar\r\n                dataKey=\"whatsapp\"\r\n                stackId=\"a\"\r\n                fill=\"var(--color-whatsapp)\"\r\n              />\r\n              <Bar\r\n                dataKey=\"x\"\r\n                stackId=\"a\"\r\n                fill=\"var(--color-x)\"\r\n                radius={[4, 4, 0, 0]}\r\n              />\r\n            </BarChart>\r\n          </ChartContainer>\r\n        </div>\r\n      </WidgetContent>\r\n    </Widget>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ],
+  "meta": {
+    "tags": [
+      "productivity"
+    ],
+    "size": "md"
+  }
+}

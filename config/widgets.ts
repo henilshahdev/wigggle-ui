@@ -107,6 +107,12 @@ export const categories: WidgetCategory[] = [
         { name: "productivity-sm-06" },
         { name: "productivity-sm-07" },
       ],
+      md: [
+        { name: "productivity-md-01" },
+        { name: "productivity-md-02" },
+        { name: "productivity-md-03" },
+        { name: "productivity-md-04" },
+      ],
     },
     icon: GoalIcon,
     isNew: true,
